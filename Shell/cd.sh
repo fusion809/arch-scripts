@@ -1,0 +1,3 @@
+function cdsh {
+	cd ~/Shell
+}

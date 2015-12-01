@@ -9,3 +9,17 @@ function yaset {
   makepkg -s && sudo pacman -U *.pkg.tar.xz --noconfirm
   cd ..
 }
+
+function yain {
+	yaourt -Sy $@ --noconfirm
+}
+
+function yarm {
+	yaourt -Rsc $@ --noconfirm
+}
+
+function update {
+	yaourt -Syua --noconfirm
+}
+
+alias yaup=update
