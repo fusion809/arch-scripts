@@ -1,3 +1,7 @@
+function cdg {
+	cd ~/GitHub
+}
+
 function cdsh {
 	cd ~/Shell
 }
