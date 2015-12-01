@@ -1,6 +1,9 @@
 function cpman {
-  mkdir $HOME/Documents/Manpages
-  sudo cp -a /usr/share/man/man$1/$2.$1.bz2 ~/Documents/Manpages
+  sudo cp -a /usr/share/man/man$1/$2.$1 ~/Documents/Manpages
+}
+
+function cpmang {
+  sudo cp -a /usr/share/man/man$1/$2.$1.gz ~/Documents/Manpages
 }
 
 function manconv {
@@ -12,8 +15,18 @@ function manconv {
   popd
 }
 
+function manconvg {
+  pushd $HOME/Documents/Manpages
+  zcat $2.$1.gz | groff -mandoc -Thtml > $2.$1.html
+  sudo chmod 777 -R *
+  rm $2.$1.gz
+  popd
+}
+
 function manhtml {
-  cpman $1 $2 && manconv $1 $2 && cp -a * 
-$HOME/GitHub/fusion809.github.io/man && cd 
-$HOME/GitHub/fusion809.github.io/man
+  cpman $1 $2 && manconv $1 $2 && cp -a * $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
+}
+
+function manhtmlg {
+  cpmang $1 $2 && manconvg $1 $2 && cp -a * $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
 }
