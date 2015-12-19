@@ -25,7 +25,7 @@ function push {
 
 # Push GitHub pages changes
 function pushp {
-  git add --all && git commit -m "$1" && git push -u origin 
+  git add --all && git commit -m "$1" && git push -u origin
 master
 }
 
@@ -69,11 +69,16 @@ function pushss {
 #############################################################
 # Sign in with SSH at startup
 # Makes contributing to GitHub projects a lot simpler.
-SSH_ENV=$HOME/.ssh/environment
-
-function ssh-setup {
-	ssh-keygen -t rsa -b 4096 -C "brentonhorne77@gmail.com"
-}
+if [ -a $HOME/.ssh/environment ]
+then
+  SSH_ENV=$HOME/.ssh/environment
+elif [ $USER == fusion809 ]
+then
+  ssh-keygen -t rsa -b 4096 -C "brentonhorne77@gmail.com"
+  SSH_ENV=$HOME/.ssh/environment
+  git config --global user.name "fusion809"
+  git config --global user.email "brentonhorne77@gmail.com"
+fi
 
 # start the ssh-agent
 # Remember, for this to work you need your SSH keys setup
@@ -97,4 +102,3 @@ else
     start_agent;
 fi
 #############################################################
-
