@@ -9,3 +9,11 @@ function cdsh {
 function cdpk {
 	cd ~/GitHub/PKGBUILDs
 }
+
+function cdfgi {
+	cd ~/GitHub/fusion809.github.io
+}
+
+function cdoct {
+	cd ~/GNU_Octave
+}
