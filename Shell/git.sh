@@ -4,7 +4,7 @@ function gitsw {
   # $1 is the username of the repo
   git remote rm origin
   git remote rm upstream
-  if [[[ -n "$1" ]]]
+  if [[ -n "$1" ]]
     then
       git remote add origin git@github.com:$1/"${PWD##*/}".git
       git remote add upstream git@github.com:$1/"${PWD##*/}".git
