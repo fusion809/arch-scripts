@@ -21,3 +21,7 @@ function ps_ap {
 function ps_apl {
   ps_mem ${$(pgrep $@ | tr '\n' ,)%,*}
 }
+
+function octcli {
+	octave --no-gui
+}
