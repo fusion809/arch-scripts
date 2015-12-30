@@ -17,3 +17,7 @@ function cdfgi {
 function cdoct {
 	cd ~/GNU_Octave
 }
+
+function cdp {
+	cd ~/Programs
+}

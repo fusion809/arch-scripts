@@ -1,5 +1,5 @@
 function jekex {
-  bundle exec jekyll serve
+  cdfgi && bundle exec jekyll serve
 }
 
 function ps_mem {
