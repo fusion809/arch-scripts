@@ -21,3 +21,7 @@ function cdoct {
 function cdp {
 	cd ~/Programs
 }
+
+function cdarch {
+	cd ~/GitHub/arch-scripts
+}
