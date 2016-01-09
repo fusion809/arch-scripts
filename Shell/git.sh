@@ -1,4 +1,8 @@
 # git tools
+function gitc {
+	git clone https://github.com/fusion809/$@.git
+}
+
 # Switch to SSH
 function gitsw {
   # $1 is the username of the repo
