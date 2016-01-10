@@ -16,3 +16,11 @@ function gentoo-chroot {
       sudo mount --rbind /dev ~/gentoo-chroot/dev
       sudo mount --rbind /sys ~/gentoo-chroot/sys
 }
+
+function groot {
+  sudo chroot ~/gentoo-chroot /bin/bash
+}
+
+function aroot {
+  sudo chroot ~/chroot /bin/bashup
+}
