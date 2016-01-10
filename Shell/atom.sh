@@ -11,6 +11,8 @@ function apmu {
 	apm update
 }
 
+alias apmup=apmu
+
 function edblog {
 	atom ~/GitHub/fusion809.github.io
 }

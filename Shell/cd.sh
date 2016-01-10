@@ -25,3 +25,19 @@ function cdp {
 function cdarch {
 	cd ~/GitHub/arch-scripts
 }
+
+function cdi {
+	cd ~/.local/share/icons
+}
+
+function cdap {
+	cd ~/.local/share/applications
+}
+
+function cdd {
+	cd ~/Desktop
+}
+
+function cdab {
+	cd ~/GitHub/arch-builder
+}
