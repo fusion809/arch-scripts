@@ -41,3 +41,19 @@ function cdd {
 function cdab {
 	cd ~/GitHub/arch-builder
 }
+
+function cdv {
+	cd ~/"VirtualBox VMs"
+}
+
+function cdvi {
+	cd ~/"VirtualBox VMs/ISOs"
+}
+
+function cdvdi {
+	cd ~/"VirtualBox VMs"/VDIs
+}
+
+function cddo {
+	cd ~/Downloads
+}

@@ -9,3 +9,7 @@ function cdpm {
 function cdap {
 	cd /usr/share/applications
 }
+
+function cdx {
+	cd /usr/share/xsessions
+}
