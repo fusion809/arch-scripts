@@ -62,7 +62,8 @@ function pushss {
     cp -a ~/.bashrc ~/GitHub/arch-scripts/
     cp -a ~/.zshrc ~/GitHub/arch-scripts
     sudo cp -a /root/.zshrc ~/GitHub/arch-scripts/root/.zshrc
-    sudo cp -a /root/Shell ~/GitHub/arch-scripts/root/Shell
+		sudo cp -a /root/.bashrc ~/GitHub/arch-scripts/root/.bashrc
+    sudo cp -a /root/Shell ~/GitHub/arch-scripts/root/
   }
 
   function cdss {
