@@ -2,6 +2,18 @@ function jekex {
   cdfgi && bundle exec jekyll serve
 }
 
+function wgetg {
+	wget -c https://gist.github.com/$1
+}
+
+function wgetjs {
+  cd $HOME/GitHub/fusion809.github.io/js
+	for i in "$@"
+	do
+		wget -c https://gist.github.com/$i.js
+	done
+}
+
 function ps_mem {
   sudo python $HOME/GitHub/ps_mem/ps_mem.py -p $@
 }
@@ -19,7 +31,17 @@ function ps_ap {
 }
 
 function ps_apl {
-  ps_mem ${$(pgrep $@ | tr '\n' ,)%,*}
+  if [[ -n $3 ]]; then
+    ps_mem ${$(pgrep $1 | tr '\n' ,)%,*},${$(pgrep $2 | tr '\n' ,)%,*},${$(pgrep $3 | tr '\n' ,)%,*}
+  elif [[ -n $2 ]]; then
+    ps_mem ${$(pgrep $1 | tr '\n' ,)%,*},${$(pgrep $2 | tr '\n' ,)%,*}
+  else
+    ps_mem ${$(pgrep $1 | tr '\n' ,)%,*}
+  fi
+}
+
+function ps_gist {
+  ps_apl "$1" > "$1-sabayon-psmem.sh" && gist "$1-sabayon-psmem.sh" && rm "$1-sabayon-psmem.sh"
 }
 
 function octcli {

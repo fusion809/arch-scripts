@@ -75,6 +75,19 @@ function pushss {
     cps && cdss && push "$1"
   }
 
+	function cpm {
+		sudo cp -a /etc/xdg/menus/{cinnamon,lxde,xfce}-applications.menu /home/fusion809/GitHub/LXDE-menu/etc/xdg/menus/
+		sudo cp -a /usr/share/desktop-directories/* /home/fusion809/GitHub/LXDE-menu/usr/share/desktop-directories/
+	}
+
+	function cdm {
+		cd /home/fusion809/GitHub/LXDE-menu/
+	}
+
+	function mup {
+		cpm && cdm && push "$1"
+	}
+
 #############################################################
 # The following script was taken from
 # http://stackoverflow.com/a/18915067/1876983
