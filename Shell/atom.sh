@@ -1,4 +1,3 @@
-
 function apmi {
 	apm install $@
 }
