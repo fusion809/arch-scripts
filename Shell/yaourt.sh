@@ -20,6 +20,7 @@ function yarm {
 
 function update {
 	yaourt -Syua --noconfirm
+	apmup
 }
 
 alias yaup=update
