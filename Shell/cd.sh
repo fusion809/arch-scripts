@@ -1,31 +1,6 @@
-function cdg {
-	cd ~/GitHub
-}
-
-function cdsh {
-	cd ~/Shell
-}
-
-function cdpk {
-	cd ~/GitHub/PKGBUILDs
-}
-
-function cdfgi {
-	cd ~/GitHub/fusion809.github.io
-}
-
-function cdoct {
-	cd ~/GNU_Octave
-}
-
-function cdp {
-	cd ~/Programs
-}
-
-function cdarch {
-	cd ~/GitHub/arch-scripts
-}
-
+# file system structure
+# ~/
+#	- .local/share
 function cdi {
 	cd ~/.local/share/icons
 }
@@ -33,15 +8,51 @@ function cdi {
 function cdap {
 	cd ~/.local/share/applications
 }
-
+# - Desktop
 function cdd {
 	cd ~/Desktop
+}
+# - Downloads
+function cddo {
+	cd ~/Downloads
+}
+# - GitHub
+function cdg {
+	cd ~/GitHub
 }
 
 function cdab {
 	cd ~/GitHub/arch-builder
 }
 
+function cdarch {
+	cd ~/GitHub/arch-scripts
+}
+
+function cdfgi {
+	cd ~/GitHub/fusion809.github.io
+}
+
+function cdpk {
+	cd ~/GitHub/PKGBUILDs
+}
+
+# - GNU_Octave
+function cdoct {
+	cd ~/GNU_Octave
+}
+
+# - Programs
+function cdp {
+	cd ~/Programs
+}
+
+# - Shell
+function cdsh {
+	cd ~/Shell
+}
+
+# - VirtualBox VMs
 function cdv {
 	cd ~/"VirtualBox VMs"
 }
@@ -52,8 +63,4 @@ function cdvi {
 
 function cdvdi {
 	cd ~/"VirtualBox VMs"/VDIs
-}
-
-function cddo {
-	cd ~/Downloads
 }
