@@ -21,3 +21,7 @@ function cdm {
 function cdd {
 	cd /usr/share/desktop-directories
 }
+
+function cdi {
+	cd /usr/share/icons
+}

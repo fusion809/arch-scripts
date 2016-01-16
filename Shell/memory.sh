@@ -3,13 +3,53 @@ function ps_ap {
 }
 
 function ps_apl {
-  if [[ -n $3 ]]; then
-    ps_mem ${$(pgrep $1 | tr '\n' ,)%,*},${$(pgrep $2 | tr '\n' ,)%,*},${$(pgrep $3 | tr '\n' ,)%,*}
-  elif [[ -n $2 ]]; then
-    ps_mem ${$(pgrep $1 | tr '\n' ,)%,*},${$(pgrep $2 | tr '\n' ,)%,*}
-  else
-    ps_mem ${$(pgrep $1 | tr '\n' ,)%,*}
+  # A is the name of a program
+  # B is the name of a program
+  # I is the process ID of a program
+  re='^[0-9]+$'
+  if ! [[ -n "$A" ]]; then
+    if [[ "$1" =~ "$re" ]]; then
+      I="$1"
+    else
+      A="$1"
+    fi
   fi
+  if [[ -n $K ]]; then
+  K=$(pgrep $A | tr '\n' ,) && K=${K%,*}
+  fi
+  if [[ -n $B ]]; then
+    L=$(pgrep $B | tr '\n' ,) && L=${L%,*}
+  fi
+  if [[ -n $C ]]; then
+    M=$(pgrep $C | tr '\n' ,) && M=${M%,*}
+  fi
+  if [[ -n $D ]]; then
+    N=$(pgrep $D | tr '\n' ,) && N=${N%,*}
+  fi
+
+  if [[ -n "$N" ]] && [[ -n "$I" ]]; then
+    Q=$(sudo ps_mem -p "$K","$L","$M","$N","$I")
+  elif [[ -n "$N" ]]; then
+    Q=$(sudo ps_mem -p "$K","$L","$M","$N")
+  elif [[ -n "$M" ]] && [[ -n "$I" ]]; then
+    Q=$(sudo ps_mem -p "$K","$L","$M","$I")
+  elif [[ -n "$M" ]]; then
+    Q=$(sudo ps_mem -p "$K","$L","$M")
+  elif [[ -n "$L" ]] && [[ -n "$I" ]]; then
+    Q=$(sudo ps_mem -p "$K","$L","$I")
+  elif [[ -n "$L" ]]; then
+    Q=$(sudo ps_mem -p "$K","$L")
+  elif [[ -n $I ]] && [[ -n "$K" ]]; then
+    Q=$(sudo ps_mem -p "$K","$I")
+  elif [[ -n $I ]]; then
+    Q=$(sudo ps_mem -p "$I")
+  else
+    Q=$(sudo ps_mem -p "$K")
+  fi
+  echo "$Q"
+  unset Q
+  unset A
+  unset I
 }
 
 function ps_pm {
@@ -52,28 +92,43 @@ function ps_gistv {
   N=$(pgrep $D | tr '\n' ,) && N=${N%,*}
 
   if [[ -n "$DESC" ]]; then
+    # A is the name of a program
+    # B is the name of a program
+    # I is the process ID of a program
+    if [[ -n "$A" ]]; then
+    else
+      A="$1"
+    fi
+
+    K=$(pgrep $A | tr '\n' ,) && K=${K%,*}
+    if [[ -n $B ]]; then
+      L=$(pgrep $B | tr '\n' ,) && L=${L%,*}
+    fi
+    if [[ -n $C ]]; then
+      M=$(pgrep $C | tr '\n' ,) && M=${M%,*}
+    fi
+    if [[ -n $D ]]; then
+      N=$(pgrep $D | tr '\n' ,) && N=${N%,*}
+    fi
+
     if [[ -n "$N" ]] && [[ -n "$I" ]]; then
       Q=$(sudo ps_mem -p "$K","$L","$M","$N","$I")
-      echo "$Q" > "$DESC-manjaro-psmem.sh" && gist "$DESC-manjaro-psmem.sh" && rm "$DESC-manjaro-psmem.sh"
     elif [[ -n "$N" ]]; then
       Q=$(sudo ps_mem -p "$K","$L","$M","$N")
-      echo "$Q" > "$DESC-manjaro-psmem.sh" && gist "$DESC-manjaro-psmem.sh" && rm "$DESC-manjaro-psmem.sh"
     elif [[ -n "$M" ]] && [[ -n "$I" ]]; then
       Q=$(sudo ps_mem -p "$K","$L","$M","$I")
-      echo "$Q" > "$DESC-manjaro-psmem.sh" && gist "$DESC-manjaro-psmem.sh" && rm "$DESC-manjaro-psmem.sh"
     elif [[ -n "$M" ]]; then
       Q=$(sudo ps_mem -p "$K","$L","$M")
-      echo "$Q" > "$DESC-manjaro-psmem.sh" && gist "$DESC-manjaro-psmem.sh" && rm "$DESC-manjaro-psmem.sh"
     elif [[ -n "$L" ]] && [[ -n "$I" ]]; then
       Q=$(sudo ps_mem -p "$K","$L","$I")
-      echo "$Q" > "$DESC-manjaro-psmem.sh" && gist "$DESC-manjaro-psmem.sh" && rm "$DESC-manjaro-psmem.sh"
+    elif [[ -n "$L" ]]; then
+      Q=$(sudo ps_mem -p "$K","$L")
     elif [[ -n $I ]]; then
       Q=$(sudo ps_mem -p "$K","$I")
-      echo "$Q" > "$DESC-manjaro-psmem.sh" && gist "$DESC-manjaro-psmem.sh" && rm "$DESC-manjaro-psmem.sh"
     else
       Q=$(sudo ps_mem -p "$K")
-      echo "$Q" > "$DESC-manjaro-psmem.sh" && gist "$DESC-manjaro-psmem.sh" && rm "$DESC-manjaro-psmem.sh"
     fi
+    echo "$Q" > "$DESC-manjaro-psmem.sh" && gist "$DESC-manjaro-psmem.sh" && rm "$DESC-manjaro-psmem.sh"
   fi
 }
 
