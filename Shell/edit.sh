@@ -13,3 +13,7 @@ function edpk {
 function edmen {
 	sudo atom /etc/xdg/menus && sudo atom /usr/share/desktop-directories
 }
+
+function edpy {
+	atom ~/GitHub/python-scripts
+}

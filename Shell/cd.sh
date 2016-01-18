@@ -5,8 +5,16 @@ function cdi {
 	cd ~/.local/share/icons
 }
 
+function cdpy {
+	cd ~/GitHub/python-scripts
+}
+
 function cdap {
 	cd ~/.local/share/applications
+}
+
+function cdvap {
+	cd ~/.local/share/applications/VirtualBox
 }
 # - Desktop
 function cdd {

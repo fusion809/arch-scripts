@@ -6,6 +6,7 @@ function ps_apl {
   # A is the name of a program
   # B is the name of a program
   # I is the process ID of a program
+
   re='^[0-9]+$'
   if ! [[ -n "$A" ]]; then
     if [[ "$1" =~ "$re" ]]; then
@@ -14,7 +15,8 @@ function ps_apl {
       A="$1"
     fi
   fi
-  if [[ -n $K ]]; then
+
+  if [[ -n $A ]]; then
   K=$(pgrep $A | tr '\n' ,) && K=${K%,*}
   fi
   if [[ -n $B ]]; then
@@ -95,8 +97,7 @@ function ps_gistv {
     # A is the name of a program
     # B is the name of a program
     # I is the process ID of a program
-    if [[ -n "$A" ]]; then
-    else
+    if ![[ -n "$A" ]]; then
       A="$1"
     fi
 
