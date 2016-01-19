@@ -6,34 +6,11 @@ function gitc {
 	done
 }
 
-# Switch to SSH
-function gitsw {
-  # $1 is the username of the repo
-  git remote rm origin
-  git remote rm upstream
-  if [[ -n "$1" ]]
-    then
-      git remote add origin git@github.com:$1/"${PWD##*/}".git
-      git remote add upstream git@github.com:$1/"${PWD##*/}".git
-    else
-      git remote add origin git@github.com:fusion809/"${PWD##*/}".git
-      git remote add upstream git@github.com:fusion809/"${PWD##*/}".git
-  fi
-}
-
-alias SSH=gitsw
-alias gitssh=gitsw
-alias gits=gitsw
-
-# Push changes
-function push {
-  git add --all && git commit -m "$1" && git push origin master
-}
-
-# Push GitHub pages changes
-function pushp {
-  git add --all && git commit -m "$1" && git push -u origin
-master
+# Git shrink
+# Taken from http://stackoverflow.com/a/2116892/1876983
+function gitsh {
+  git reflog expire --all --expire=now
+  git gc --prune=now --aggressive
 }
 
 # Estimate the size of the current repo
@@ -43,15 +20,55 @@ function gitsize {
   git count-objects -vH
 }
 
-# Git shrink
-# Taken from http://stackoverflow.com/a/2116892/1876983
-function gitsh {
-  git reflog expire --all --expire=now
-  git gc --prune=now --aggressive
-}
-
 function gitssi {
   gitsh && gitsize
+}
+
+# Switch to SSH
+function gitsw {
+  # $1 is the username of the repo
+  git remote rm origin
+  git remote rm upstream
+	CWD=${PWD##*/}
+	if [[ "$CWD" =~ ^\. ]]; then
+		GWD="${CWD#.}"
+	  if [[ -n "$1" ]]
+	    then
+	      git remote add origin git@github.com:$1/$GWD.git
+	      git remote add upstream git@github.com:$1/$GWD.git
+	    else
+	      git remote add origin git@github.com:fusion809/$GWD.git
+	      git remote add upstream git@github.com:fusion809/$GWD.git
+	  fi
+	else
+		if [[ -n "$1" ]]
+			then
+				git remote add origin git@github.com:$1/$CWD.git
+				git remote add upstream git@github.com:$1/$CWD.git
+			else
+				git remote add origin git@github.com:fusion809/$CWD.git
+				git remote add upstream git@github.com:fusion809/$CWD.git
+		fi
+	fi
+}
+
+alias SSH=gitsw
+alias gitssh=gitsw
+alias gits=gitsw
+
+# Push changes
+function pushat {
+	git add *.cson LICENSE && git commit -m "$1" && git push origin master
+}
+
+function push {
+  git add --all && git commit -m "$1" && git push origin master
+}
+
+# Push GitHub pages changes
+function pushp {
+  git add --all && git commit -m "$1" && git push -u origin
+master
 }
 
 function pushss {
