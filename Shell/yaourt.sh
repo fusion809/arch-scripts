@@ -2,16 +2,16 @@ function yaset {
   sudo pacman -Sy git
   git clone https://aur.archlinux.org/package-query.git
   cd package-query
-  makepkg -s && sudo pacman -U *.pkg.tar.xz --noconfirm
+  makepkg -si --noconfirm
   cd ..
   git clone https://aur.archlinux.org/yaourt.git
   cd yaourt
-  makepkg -s && sudo pacman -U *.pkg.tar.xz --noconfirm
+  makepkg -si --noconfirm
   cd ..
 }
 
 function yain {
-	yaourt -Sy $@ --noconfirm
+	yaourt -Sy $@ --noconfirm --needed --force
 }
 
 function yarm {
@@ -20,7 +20,9 @@ function yarm {
 
 function update {
 	yaourt -Syua --noconfirm
-	apmup
+	if hash apm 2>/dev/null; then
+		apmup
+	fi
 }
 
 alias yaup=update

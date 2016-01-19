@@ -1,6 +1,10 @@
 # file system structure
 # ~/
 #	- .local/share
+function cda {
+	cd ~/AUR
+}
+
 function cdi {
 	cd ~/.local/share/icons
 }
