@@ -1,5 +1,4 @@
 function cpsh {
-  export ARS=$HOME/GitHub/arch-scripts
   if ! [[ -d $ARS ]]; then
     mkdir -p $ARS
     git clone https://github.com/fusion809/arch-scripts $ARS

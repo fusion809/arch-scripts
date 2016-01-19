@@ -41,10 +41,6 @@ function cdarch {
 	cd ~/GitHub/arch-scripts
 }
 
-function cdfgi {
-	cd ~/GitHub/fusion809.github.io
-}
-
 function cdpk {
 	cd ~/GitHub/PKGBUILDs
 }

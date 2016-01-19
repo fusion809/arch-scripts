@@ -1,6 +1,9 @@
 # git tools
 function gitc {
-	git clone https://github.com/fusion809/$@.git
+	for i in "$@"
+	do
+		git clone https://github.com/fusion809/$i.git $GHUB/$i
+	done
 }
 
 # Switch to SSH
