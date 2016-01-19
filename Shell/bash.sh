@@ -2,7 +2,7 @@ function abash {
 	atom ~/.bashrc ~/Shell
 }
 
-function nbash {	
+function nbash {
 	nano ~/.bashrc
 }
 
