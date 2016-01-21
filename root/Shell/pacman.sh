@@ -1,9 +1,9 @@
 function pacin {
-	pacman -S $@ --noconfirm --force
+	pacman -S $@ --noconfirm --force --needed
 }
 
 function pacup {
-	pacman -Syu --noconfirm --force
+	pacman -Syu --noconfirm --force --needed
 }
 
 alias update=pacup

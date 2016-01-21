@@ -1,4 +1,11 @@
 # git tools
+function gita {
+	for i in "$@"
+	do
+		git clone https://aur.archlinux.org/$i.git /home/fusion809/AUR/$i
+	done
+}
+
 function gitc {
 	for i in "$@"
 	do
