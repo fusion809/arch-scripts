@@ -5,6 +5,11 @@ function cda {
 	cd ~/AUR
 }
 
+function cdat {
+	echo "Use pushat for this repo"
+	cd ~/.atom
+}
+
 function cdi {
 	cd ~/.local/share/icons
 }
