@@ -18,6 +18,8 @@ function cdm {
 	cd /etc/xdg/menus
 }
 
+alias cdmen=cdm
+
 function cdd {
 	cd /usr/share/desktop-directories
 }

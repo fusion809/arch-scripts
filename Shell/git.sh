@@ -6,6 +6,27 @@ function gita {
 	done
 }
 
+function gitaur {
+	for i in "$@"
+	do
+		git clone ssh://aur@aur.archlinux.org/$i.git
+	done
+}
+
+function pushaur {
+	if [[ -n $1 ]]; then
+		mksrcinfo
+		git add PKGBUILD .SRCINFO
+		git commit -m '$1'
+		git push origin master
+	else
+		mksrcinfo
+		git add PKGBUILD .SRCINFO
+		git commit -m 'Initial import'
+		git push origin master
+	fi
+}
+
 function gitc {
 	for i in "$@"
 	do
