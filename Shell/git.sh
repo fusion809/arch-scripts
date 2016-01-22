@@ -17,7 +17,7 @@ function pushaur {
 	if [[ -n $1 ]]; then
 		mksrcinfo
 		git add PKGBUILD .SRCINFO
-		git commit -m '$1'
+		git commit -m "$1"
 		git push origin master
 	else
 		mksrcinfo
