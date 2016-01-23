@@ -27,3 +27,11 @@ function wgetjs {
 		wget -c https://gist.github.com/$i.js
 	done
 }
+
+function wgetcss {
+	cd $FGI/css
+	for i in "$@"
+	do
+		wget -c https://assets-cdn.github.com/assets/gist/embed-$i.css
+	done
+}
