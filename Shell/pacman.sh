@@ -13,3 +13,11 @@ function pacrm {
 function pacs {
 	sudo pacsearch $@
 }
+
+function pacloc {
+	if [[ -n $@ ]]; then
+		sudo pacman -U $@ --noconfirm --force
+	else
+		sudo pacman -U *.pkg.tar.xz --noconfirm
+	fi
+}

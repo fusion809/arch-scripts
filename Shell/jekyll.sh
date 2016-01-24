@@ -21,7 +21,7 @@ function wgetg {
 }
 
 function wgetjs {
-  cd $FGI/js
+  cd $FGI/js/gist
 	for i in "$@"
 	do
 		wget -c https://gist.github.com/$i.js
@@ -29,7 +29,7 @@ function wgetjs {
 }
 
 function wgetcss {
-	cd $FGI/css
+	cd $FGI/css/gist
 	for i in "$@"
 	do
 		wget -c https://assets-cdn.github.com/assets/gist/embed-$i.css

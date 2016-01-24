@@ -9,7 +9,7 @@ function pacup {
 alias update=pacup
 
 function pacrm {
-	pacman -Rsc $@ --noconfirm --force
+	pacman -Rsc $@ --noconfirm
 }
 
 function pacq {
