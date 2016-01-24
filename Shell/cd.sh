@@ -5,7 +5,7 @@ function cda {
 	cd ~/AUR
 }
 
-function cdab {
+function cdabs {
 	cd ~/abs
 }
 
