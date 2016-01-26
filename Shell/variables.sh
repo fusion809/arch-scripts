@@ -6,3 +6,4 @@ export GHUB=$HOME/GitHub
 export GOPATH=$HOME/limetext
 export GOROOT=$GOPATH/go
 export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin/:$GOPATH/bin:$GOROOT/bin:$GEMPATH
+export EDITOR=nano
