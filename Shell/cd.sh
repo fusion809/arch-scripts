@@ -9,6 +9,10 @@ function cdabs {
 	cd ~/abs
 }
 
+function cdch {
+	cd ~/chroot
+}
+
 function cdat {
 	echo "Use pushat for this repo"
 	cd ~/.atom
