@@ -9,7 +9,7 @@ function gita {
 function gitaur {
 	for i in "$@"
 	do
-		git clone ssh://aur@aur.archlinux.org/$i.git
+		git clone ssh://aur@aur.archlinux.org/$i.git ~/AUR/$i
 	done
 }
 

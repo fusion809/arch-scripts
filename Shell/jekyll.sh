@@ -3,7 +3,8 @@ function cdfgi {
 }
 
 function jekex {
-  cdfgi && bundle exec jekyll serve
+  cd $FGI
+  jekyll serve -ID --future --unpublished -o
 }
 
 function jekset {
