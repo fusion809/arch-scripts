@@ -13,6 +13,14 @@ function cdch {
 	cd ~/chroot
 }
 
+function cdmen {
+	cd ~/.config/menus/
+}
+
+function cddd {
+	cd ~/.local/share/desktop-directories
+}
+
 function cdat {
 	echo "Use pushat for this repo"
 	cd ~/.atom
