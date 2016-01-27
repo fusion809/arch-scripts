@@ -78,9 +78,9 @@ function ps_gax {
 
 function ps_gist {
   if [[ -n $2 ]]; then
-    ps_mem ${$(pgrep $1 | tr '\n' ,)%,*},$2 > "$1-manjaro-psmem.sh" && gist "$1-manjaro-psmem.sh" && rm "$1-manjaro-psmem.sh"
+    ps_mem ${$(pgrep $1 | tr '\n' ,)%,*},$2 > "$1-arch-psmem.sh" && gist "$1-arch-psmem.sh" && rm "$1-arch-psmem.sh"
   elif [[ -n $1 ]]; then
-    ps_apl "$1" > "$1-manjaro-psmem.sh" && gist "$1-manjaro-psmem.sh" && rm "$1-manjaro-psmem.sh"
+    ps_apl "$1" > "$1-arch-psmem.sh" && gist "$1-arch-psmem.sh" && rm "$1-arch-psmem.sh"
   fi
 }
 
@@ -129,10 +129,10 @@ function ps_gistv {
     else
       Q=$(sudo ps_mem -p "$K")
     fi
-    echo "$Q" > "$DESC-manjaro-psmem.sh" && gist "$DESC-manjaro-psmem.sh" && rm "$DESC-manjaro-psmem.sh"
+    echo "$Q" > "$DESC-arch-psmem.sh" && gist "$DESC-arch-psmem.sh" && rm "$DESC-arch-psmem.sh"
   fi
 }
 
 function ps_gistid {
-  ps_mem $@ >> manjaro-psmem.sh
+  ps_mem $@ >> arch-psmem.sh
 }
