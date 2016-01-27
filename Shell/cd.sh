@@ -93,3 +93,7 @@ function cdvi {
 function cdvdi {
 	cd ~/"VirtualBox VMs"/VDIs
 }
+
+function cdvim {
+	cd ~/vim
+}

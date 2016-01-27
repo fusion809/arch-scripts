@@ -5,3 +5,7 @@ function nvim {
 function avim {
 	atom ~/.vimrc
 }
+
+function vvim {
+	vim ~/.vimrc
+}
