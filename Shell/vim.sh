@@ -21,3 +21,11 @@ function vsh {
 function vzsh {
 	vim ~/.zshrc
 }
+
+function vfgi {
+	vim -c ":call FGI()"
+}
+
+function vpk {
+	vim -c ":call PKG()"
+}
