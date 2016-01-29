@@ -4,7 +4,7 @@ function cdfgi {
 
 function jekex {
   cd $FGI
-  jekyll serve -IDo --future --unpublished
+  jekyll serve --future
 }
 
 function jekset {
