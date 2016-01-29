@@ -24,7 +24,7 @@ function update {
 		apmup
 	fi
 	pushd /home/fusion809/GitHub/PKGBUILDs 
-	. /update-vim.sh
+	./update-vim.sh
 	popd
 }
 
