@@ -23,6 +23,11 @@ function update {
 	if hash apm 2>/dev/null; then
 		apmup
 	fi
+	pushd /home/fusion809/GitHub/PKGBUILDs 
+	. /update-vim.sh
+	popd
 }
+
+
 
 alias yaup=update
