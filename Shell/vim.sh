@@ -2,7 +2,7 @@ function avim {
 	atom ~/.vimrc
 }
 
-function nvim {
+function navim {
         nano ~/.vimrc
 }
 
