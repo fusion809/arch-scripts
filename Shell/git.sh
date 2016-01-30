@@ -110,11 +110,8 @@ function pushss {
   ## Update local sabayon-scripts repo
   function cps {
     cp -a ~/Shell/* ~/GitHub/arch-scripts/Shell
-    cp -a ~/.bashrc ~/GitHub/arch-scripts/
-    cp -a ~/.zshrc ~/GitHub/arch-scripts
-    sudo cp -a /root/.zshrc ~/GitHub/arch-scripts/root/.zshrc
-		sudo cp -a /root/.bashrc ~/GitHub/arch-scripts/root/.bashrc
-    sudo cp -a /root/Shell ~/GitHub/arch-scripts/root/
+    cp -a ~/{.bashrc,.zshrc} ~/GitHub/arch-scripts/
+    sudo cp -a /root/{Shell,.bashrc,.zshrc} ~/GitHub/arch-scripts/root/
   }
 
   function cdss {
