@@ -11,23 +11,25 @@ function yaset {
 }
 
 function yain {
-	yaourt -Sy $@ --noconfirm --needed --force
+	trizen -Sy $@ --noconfirm --needed --force
 }
 
 function yarm {
-	yaourt -Rsc $@ --noconfirm
+	trizen -Rsc $@ --noconfirm
 }
 
 function update {
-	yaourt -Syua --noconfirm --needed
+	trizen -Syu --noconfirm --needed
 	if hash apm 2>/dev/null; then
 		apmup
 	fi
-	pushd /home/fusion809/GitHub/PKGBUILDs 
-	./update-vim.sh
-	popd
 }
 
-
-
 alias yaup=update
+
+function updatev {
+	update
+	pushd /home/fusion809/GitHub/PKGBUILDs
+        ./update-vim.sh
+        popd
+}
