@@ -19,7 +19,7 @@ function yarm {
 }
 
 function update {
-	yaourt -Syu --noconfirm --needed
+	yaourt -Syua --noconfirm --needed
 	if hash apm 2>/dev/null; then
 		apmup
 	fi
