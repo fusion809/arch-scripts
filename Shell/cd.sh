@@ -54,6 +54,11 @@ function cdg {
 	cd ~/GitHub
 }
 
+# - gVim
+function cdgv {
+    cd ~/AUR/gvim-git
+}
+
 function cdab {
 	cd ~/GitHub/arch-builder
 }
