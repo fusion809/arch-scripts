@@ -3,23 +3,11 @@ function avim {
 }
 
 function navim {
-        nano ~/.vimrc
-}
-
-function vvim {
-	vim ~/.vimrc
+	nano ~/.vimrc
 }
 
 function vbash {
 	vim ~/.bashrc
-}
-
-function vsh {
-	vim -c ":call SH()"
-}
-
-function vzsh {
-	vim ~/.zshrc
 }
 
 function vfgi {
@@ -28,4 +16,16 @@ function vfgi {
 
 function vpk {
 	vim -c ":call PKG()"
+}
+
+function vvim {
+	vim ~/.vimrc
+}
+
+function vsh {
+	vim -c ":call SH()"
+}
+
+function vzsh {
+	vim ~/.zshrc
 }
