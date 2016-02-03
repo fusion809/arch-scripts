@@ -3,9 +3,8 @@ function cdfgi {
 }
 
 function jekex {
-  pushd $FGI
+  cd $FGI
   jekyll serve -I --future
-  popd
 }
 
 function jekset {

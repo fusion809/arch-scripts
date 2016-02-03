@@ -38,6 +38,10 @@ function cdap {
 	cd ~/.local/share/applications
 }
 
+function cdapa {
+	cd ~/.local/share/applications/Atom
+}
+
 function cdvap {
 	cd ~/.local/share/applications/VirtualBox
 }
