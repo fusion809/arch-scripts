@@ -114,6 +114,11 @@ function pushss {
     sudo cp -a /root/{Shell,.bashrc,.zshrc} ~/GitHub/arch-scripts/root/
   }
 
+  function cpsh {
+	cp -a ~/GitHub/arch-scripts/{Shell,.bashrc,.zshrc} ~/
+	sudo cp -a ~/GitHub/arch-scripts/root/{Shell,.bashrc,.zshrc} /root/
+  }
+
   function cdss {
 	cd ~/GitHub/arch-scripts
   }
