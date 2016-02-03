@@ -1,5 +1,9 @@
 function cpsh {
-  if ! [[ -d $ARS ]]; then
+  if [[ -d $ARS ]]; then
+    cd $ARS
+    git pull origin master
+    cd -
+  else
     mkdir -p $ARS
     git clone https://github.com/fusion809/arch-scripts $ARS
   fi

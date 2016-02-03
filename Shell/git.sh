@@ -120,7 +120,7 @@ function pushss {
 
   ## Update sabayon-scripts GitHub repo
   function shup {
-    cps && cdss && push "$1"
+    cps && cdss && push "$1" && cd -
   }
 
 	function cpm {
