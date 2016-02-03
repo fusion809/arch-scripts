@@ -4,7 +4,7 @@ function cdfgi {
 
 function jekex {
   pushd $FGI
-  jekyll serve --future
+  jekyll serve -I --future
   popd
 }
 

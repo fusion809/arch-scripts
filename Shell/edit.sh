@@ -22,3 +22,11 @@ function edpy {
 function edsh {
 	atom ~/Shell
 }
+
+function nx {
+	nano ~/.xinitrc
+}
+
+function vx {
+	vim ~/.xinitrc
+}

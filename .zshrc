@@ -86,3 +86,9 @@ for i in ~/Shell/*.sh
 do
   . "$i"
 done
+
+PATH="/home/fusion809/perl5/bin${PATH+:}${PATH}"; export PATH;
+PERL5LIB="/home/fusion809/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/fusion809/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/fusion809/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/fusion809/perl5"; export PERL_MM_OPT;
