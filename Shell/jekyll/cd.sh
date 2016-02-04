@@ -1,0 +1,3 @@
+function cdfgi {
+	cd $FGI
+}
