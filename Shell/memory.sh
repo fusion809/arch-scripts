@@ -112,6 +112,9 @@ function ps_gistv {
     if [[ -n $D ]]; then
       N=$(pgrep $D | tr '\n' ,) && N=${N%,*}
     fi
+    if [[ -n $E ]]; then
+      N=$(pgrep $E | tr '\n' ,) && O=${O%,*}
+    fi
 
     if [[ -n "$O" ]]; then
       Q=$(sudo ps_mem -p "$K","$L","$M","$N","$O")
