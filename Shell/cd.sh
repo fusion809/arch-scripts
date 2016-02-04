@@ -60,7 +60,7 @@ function cdg {
 
 # - gVim
 function cdgv {
-    cd ~/AUR/gvim-git
+    cd ~/GitHub/PKGBUILDs/gvim-git
 }
 
 function cdab {

@@ -26,6 +26,9 @@ function wgetjs {
 	for i in "$@"
 	do
 		wget -c https://gist.github.com/$i.js
+		GIST=https://assets-cdn.github.com/assets/
+		CSS=/css/
+		sed -i 's%$GIST%$CSS%g' $i.js
 	done
 }
 
