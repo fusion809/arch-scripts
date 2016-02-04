@@ -92,6 +92,7 @@ function ps_gistv {
   L=$(pgrep $B | tr '\n' ,) && L=${L%,*}
   M=$(pgrep $C | tr '\n' ,) && M=${M%,*}
   N=$(pgrep $D | tr '\n' ,) && N=${N%,*}
+  O=$(pgrep $E | tr '\n' ,) && O=${O%,*}
 
   if [[ -n "$DESC" ]]; then
     # A is the name of a program
@@ -112,7 +113,9 @@ function ps_gistv {
       N=$(pgrep $D | tr '\n' ,) && N=${N%,*}
     fi
 
-    if [[ -n "$N" ]] && [[ -n "$I" ]]; then
+    if [[ -n "$O" ]]; then
+      Q=$(sudo ps_mem -p "$K","$L","$M","$N","$O")
+    elif [[ -n "$N" ]] && [[ -n "$I" ]]; then
       Q=$(sudo ps_mem -p "$K","$L","$M","$N","$I")
     elif [[ -n "$N" ]]; then
       Q=$(sudo ps_mem -p "$K","$L","$M","$N")
