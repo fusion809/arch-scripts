@@ -11,7 +11,7 @@ function wgetjs {
     # Replace GIST CSS link with local equiv
 		GIST=https://assets-cdn.github.com/assets/
 		CSS=/css/
-		sed -i 's%$GIST%$CSS%g' $i.js
+		sed -i "s%$GIST%$CSS%g" $i.js
 	done
 }
 
