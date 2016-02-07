@@ -114,13 +114,13 @@ function pushss {
     sudo cp -a /root/{Shell,.bashrc,.zshrc} ~/GitHub/arch-scripts/root/
   }
 
-  function cdss {
+  function cdas {
 	cd ~/GitHub/arch-scripts
   }
 
   ## Update sabayon-scripts GitHub repo
   function shup {
-    cps && cdss && push "$1" && cd -
+    cps && cdas && push "$1" && cd -
   }
 
 	# Menus
