@@ -123,6 +123,7 @@ function pushss {
     cps && cdss && push "$1" && cd -
   }
 
+	# Menus
 	function cpm {
 		sudo cp -a /etc/xdg/menus/{cinnamon,lxde,xfce}-applications.menu /home/fusion809/GitHub/xdg-menus/etc/xdg/menus/
 		sudo cp -a /usr/share/desktop-directories/* /home/fusion809/GitHub/xdg-menus/usr/share/desktop-directories/
