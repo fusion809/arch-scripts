@@ -14,5 +14,5 @@ function pk {
 }
 
 function jist {
-  $1 >> $2-manjaro-psmem.sh && gist $2-manjaro-psmem.sh && rm $2-manjaro-psmem.sh
+  $1 >> $2-arch-psmem.sh && gist $2-arch-psmem.sh && rm $2-arch-psmem.sh
 }
