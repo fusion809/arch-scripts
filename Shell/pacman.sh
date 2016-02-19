@@ -7,7 +7,7 @@ function pacin {
 }
 
 function pacrm {
-	sudo pacman -Rsc $@ --noconfirm
+	sudo pacman -Rs $@ --noconfirm
 }
 
 function pacs {
