@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-for i in ~/Shell/{jekyll,}/*.sh
+for i in ~/Shell/*.sh ~/Shell/*/*.sh
 do
   . "$i"
 done

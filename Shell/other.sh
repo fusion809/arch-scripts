@@ -1,7 +1,3 @@
-function octcli {
-	octave --no-gui
-}
-
 function pbuild {
 	packer-io build -only=virtualbox-iso $@
 }
