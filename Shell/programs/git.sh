@@ -132,12 +132,12 @@ function pushss {
         cp -a ~/.config/menus/applications-kmenuedit.menu ~/GitHub/xdg-menus/.config/menus/
 	}
 
-	function cdm {
+	function cdxm {
 		cd /home/fusion809/GitHub/xdg-menus/
 	}
 
 	function mup {
-		cpm && cdm && push "$1"
+		cpm && cdxm && push "$1"
 	}
 
 #############################################################
