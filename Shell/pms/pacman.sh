@@ -1,3 +1,8 @@
+# Equivalent to autoremove
+function pacar {
+	pacman -Qdtq | pacman -Rs -
+}
+
 function pacup {
 	sudo pacman -Syu --noconfirm --force
 }

@@ -1,3 +1,7 @@
+function yaar {
+  yaourt -Qdtq | yaourt -Rs -
+}
+
 function yaset {
   sudo pacman -Sy git
   git clone https://aur.archlinux.org/package-query.git
