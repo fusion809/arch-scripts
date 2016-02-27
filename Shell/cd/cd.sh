@@ -109,6 +109,10 @@ function cdp {
 	cd ~/Programs
 }
 
+function cdpa {
+	cd ~/Programs/atom
+}
+
 # - Shell
 function cdsh {
 	cd ~/Shell

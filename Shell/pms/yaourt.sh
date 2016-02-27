@@ -23,6 +23,8 @@ function update {
 	if hash apm 2>/dev/null; then
 		apmup
 	fi
+  vimup
+  atomup
 }
 
 alias yaup=update
