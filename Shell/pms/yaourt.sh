@@ -11,7 +11,15 @@ function yaset {
 }
 
 function yain {
-	yaourt -Sy $@ --noconfirm --needed --force
+	yaourt -Syyu $@ --noconfirm --needed --force
+}
+
+function yainw {
+  yain $(yaourt -Ssq $@)
+}
+
+function yasw {
+  yaourt -Ssq $@
 }
 
 function yarm {

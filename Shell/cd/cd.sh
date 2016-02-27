@@ -104,6 +104,11 @@ function cdoct {
 	cd ~/GNU_Octave
 }
 
+# - Music
+function cdm {
+	cd ~/Music
+}
+
 # - Programs
 function cdp {
 	cd ~/Programs
