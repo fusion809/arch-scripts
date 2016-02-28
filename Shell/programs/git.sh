@@ -16,12 +16,20 @@ function gitaur {
 function pushaur {
 	if [[ -n $1 ]]; then
 		mksrcinfo
-		git add PKGBUILD .SRCINFO *.install
+		if [[ -f {*.install} ]]; then
+			git add PKGBUILD .SRCINFO *.install
+		else
+			git add PKGBUILD .SRCINFO
+		fi
 		git commit -m "$1"
 		git push origin master
 	else
 		mksrcinfo
-		git add PKGBUILD .SRCINFO *.install
+		if [[ -f {*.install} ]]; then
+			git add PKGBUILD .SRCINFO *.install
+		else
+			git add PKGBUILD .SRCINFO
+		fi
 		git commit -m 'Initial import'
 		git push origin master
 	fi

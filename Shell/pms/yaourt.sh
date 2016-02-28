@@ -15,7 +15,7 @@ function yaset {
 }
 
 function yain {
-	yaourt -S $@ --noconfirm --needed --force
+	yaourt -Sy $@ --noconfirm --needed
 }
 
 function yainw {
