@@ -3,7 +3,7 @@ function cdabs {
 	cd ~/abs
 }
 
-function cdap {
+function cdaps {
 	cd ~/Arch_Packages
 }
 
