@@ -27,3 +27,7 @@ function cdd {
 function cdi {
 	cd /usr/share/icons
 }
+
+function cdp {
+	cd /etc/pacman.d/
+}
