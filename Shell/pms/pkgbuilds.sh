@@ -45,13 +45,13 @@ function vimup {
 	unset verl
 	unset VIMDIR
 	ORPWD=$PWD
-	pushd /home/fusion809/GitHub/vim
+	pushd /home/fusion809/GitHub/vim-src
 	git checkout master
 	git fetch -p
 	git pull origin master # Update local repo
 	# verc is the current patch version of Vim in vim.spec
 	# verl is the latest patch version of Vim.
-	VIMDIR=/home/fusion809/GitHub/PKGBUILDs/gvim-git
+	VIMDIR=$HOME/GitHub/PKGBUILDs/gvim-git
 	verc=$(sed -n 's/pkgver=7.4.//p' $VIMDIR/PKGBUILD)
 	verl=$(git describe --abbrev=0 --tags | sed 's/v7.4.//g')
 	popd
@@ -59,8 +59,9 @@ function vimup {
 		echo "Vim is up-to-date"
 	else
 		pushd $VIMDIR
-		sed -i -e "s/pkgver=7.4.$verc/pkgver=7.4.$verl/g" PKGBUILD
+		makepkg -si --noconfirm
 		push "[gvim-git] Updating to 7.4.$verl"
 		popd
 	fi
+  cd $ORPWD
 }

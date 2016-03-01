@@ -8,6 +8,11 @@ function azsh {
   atom ~/.bashrc ~/Shell
 }
 
+# atom
+function edat {
+	atom ~/.atom
+}
+
 # Blog
 function edblog {
 	atom ~/GitHub/fusion809.github.io
