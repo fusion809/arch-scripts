@@ -18,6 +18,8 @@ function edblog {
 	atom ~/GitHub/fusion809.github.io
 }
 
+alias edfgi=edblog
+
 # Menus
 function edmen {
 	sudo atom /etc/xdg/menus && sudo atom /usr/share/desktop-directories
@@ -36,4 +38,8 @@ function edpy {
 # Shell scripts
 function edsh {
 	atom ~/Shell
+}
+
+function edau {
+	atom ~/AUR
 }
