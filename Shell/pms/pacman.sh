@@ -11,6 +11,10 @@ function pacin {
 	sudo pacman -S $@ --noconfirm --force --needed
 }
 
+function pacrin {
+	sudo pacman -S home_fusion809_Arch_Extra/$1 --noconfirm --force --needed
+}
+
 function pacrm {
 	sudo pacman -Rs $@ --noconfirm
 }

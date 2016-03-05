@@ -1,8 +1,9 @@
-export ARS=$HOME/GitHub/arch-scripts
-export CHROOT=$HOME/chroot
-export FGI=$HOME/GitHub/fusion809.github.io
-export GEMPATH=/root/.gem/ruby/2.3.0/bin:$HOME/.gem/ruby/2.3.0/bin
 export GHUB=$HOME/GitHub
+export ARS=$GHUB/arch-scripts
+export FGI=$GHUB/fusion809.github.io
+export PKG=$GHUB/PKGBUILDs
+export CHROOT=$HOME/chroot
+export GEMPATH=/root/.gem/ruby/2.3.0/bin:$HOME/.gem/ruby/2.3.0/bin
 export GOPATH=$HOME
 export GOROOT=/usr/lib/go
 export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin/:$GOPATH/bin:$GOROOT/bin:$GEMPATH

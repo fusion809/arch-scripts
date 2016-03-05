@@ -5,3 +5,10 @@ function cppk {
 function cpau {
 	cp -a ~/AUR/${PWD##*/}/{PKGBUILD,*.install} ~/GitHub/PKGBUILDs/${PWD##*/}/
 }
+
+function getaur {
+	for i in "$@"
+	do
+		wget -cqO- https://aur.archlinux.org/cgit/aur.git/snapshot/$i.tar.gz | tar -xz
+	done
+}
