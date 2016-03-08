@@ -6,7 +6,7 @@ function atomup {
   git pull origin master
   TAG=$(git describe --tags $(git rev-list --tags --max-count=2) | sed 's/v//g')
   verls=$(echo $TAG | sed -n 2p)
-  verlb=$(echo $TAG | sed -n 1p)
+  verlb=$(echo $TAG | sed -n 1p | sed 's/-/./g')
   popd
   pushd ~/GitHub/PKGBUILDs/atom-editor
   vercs=$(sed -n 's/pkgver=//p' PKGBUILD)
