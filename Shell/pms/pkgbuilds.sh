@@ -1,13 +1,12 @@
 function atomup {
+  unset TAG
   unset verc
   unset verl
   pushd ~/Programs/atom
-  git checkout stable
-	git pull origin stable
-	verls=$(git describe --tags | sed 's/^v//;s/-/./g')
-  git checkout beta
-  git pull origin beta
-  verlb=$(git describe --tags | sed 's/^v//;s/-/./g')
+  git pull origin master
+  TAG=$(git describe --tags $(git rev-list --tags --max-count=2))
+  verls=$(echo $TAG | sed -n 2p)
+  verlb=$(echo $TAG | sed -n 1p)
   popd
   pushd ~/GitHub/PKGBUILDs/atom-editor
   vercs=$(sed -n 's/pkgver=//p' PKGBUILD)
@@ -38,30 +37,4 @@ function atomup {
     push "[atom-editor-beta] Bumping to $verlbd"
   fi
   popd
-}
-
-function vimup {
-	unset verc
-	unset verl
-	unset VIMDIR
-	ORPWD=$PWD
-	pushd /home/fusion809/GitHub/vim-src
-	git checkout master
-	git fetch -p
-	git pull origin master # Update local repo
-	# verc is the current patch version of Vim in vim.spec
-	# verl is the latest patch version of Vim.
-	VIMDIR=$HOME/GitHub/PKGBUILDs/gvim-git
-	verc=$(sed -n 's/pkgver=7.4.//p' $VIMDIR/PKGBUILD)
-	verl=$(git describe --abbrev=0 --tags | sed 's/v7.4.//g')
-	popd
-	if [[ $verc == $verl ]]; then
-		echo "Vim is up-to-date"
-	else
-		pushd $VIMDIR
-		makepkg -si --noconfirm
-		push "[gvim-git] Updating to 7.4.$verl"
-		popd
-	fi
-  cd $ORPWD
 }
