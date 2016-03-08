@@ -4,7 +4,7 @@ function atomup {
   unset verl
   pushd ~/Programs/atom
   git pull origin master
-  TAG=$(git describe --tags $(git rev-list --tags --max-count=2))
+  TAG=$(git describe --tags $(git rev-list --tags --max-count=2) | sed 's/v//g')
   verls=$(echo $TAG | sed -n 2p)
   verlb=$(echo $TAG | sed -n 1p)
   popd
