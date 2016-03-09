@@ -24,8 +24,8 @@ function atomup {
   vercbb=$(sed -n 's/_pkgver=//p' PKGBUILD)
   vercbr=$(sed -n 's/_pkgrel=//p' PKGBUILD)
   vercb=$vercbb.$vercbr
-  vercd=$vercbb-$vercbr
-  if [[ $vercb == $verlb ]]; then
+  vercd=$vercbb-beta$vercbr
+  if [[ $vercd == $verlb ]]; then
       echo "Atom Beta is up-to-date"
   else
     verlbb=${verlb%.*}
