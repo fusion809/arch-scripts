@@ -4,9 +4,10 @@ function atomup {
   unset verl
   pushd ~/Programs/atom
   git pull origin master
-  TAG=$(git describe --tags $(git rev-list --tags --max-count=2) | sed 's/v//g')
-  verls=$(echo $TAG | sed -n 2p)
-  verlb=$(echo $TAG | sed -n 1p | sed 's/-/./g')
+  git fetch -p
+  git checkout master
+  verls=$(git tag | tail -n "10" | grep -v beta | sed 's/v//g' | sort -nr | head -n1)
+  verlb=$(git tag | tail -n "5" | grep beta | sed 's/v//g' | sort -nr | head -n1)
   popd
   pushd ~/GitHub/PKGBUILDs/atom-editor
   vercs=$(sed -n 's/pkgver=//p' PKGBUILD)
