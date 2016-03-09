@@ -1,15 +1,23 @@
 function atomup {
-  unset TAG
+  unset OPWD
+  unset verls
+  unset verlb
   unset verc
+  unset vercbb
+  unset vercbd
+  unset vercbr
+  unset vercb
+  unset vercd
   unset verl
-  pushd ~/Programs/atom
+  export OPWD=$PWD
+  cd ~/Programs/atom
   git pull origin master
   git fetch -p
   git checkout master
   verls=$(git tag | tail -n "10" | grep -v beta | sed 's/v//g' | sort -nr | head -n1)
   verlb=$(git tag | tail -n "5" | grep beta | sed 's/v//g' | sort -nr | head -n1)
-  popd
-  pushd ~/GitHub/PKGBUILDs/atom-editor
+  cd -
+  cd ~/GitHub/PKGBUILDs/atom-editor
   vercs=$(sed -n 's/pkgver=//p' PKGBUILD)
   if [[ $vercs == $verls ]]; then
 			echo "Atom is up-to-date"
@@ -19,8 +27,8 @@ function atomup {
     updpkgsums
     push "[atom-editor] Bumping to $verls"
   fi
-  popd
-  pushd ~/GitHub/PKGBUILDs/atom-editor-beta
+  cd -
+  cd ~/GitHub/PKGBUILDs/atom-editor-beta
   vercbb=$(sed -n 's/_pkgver=//p' PKGBUILD)
   vercbr=$(sed -n 's/_pkgrel=//p' PKGBUILD)
   vercb=$vercbb.$vercbr
@@ -37,5 +45,6 @@ function atomup {
     updpkgsums
     push "[atom-editor-beta] Bumping to $verlbd"
   fi
-  popd
+  cd -
+  cd $OPWD
 }
