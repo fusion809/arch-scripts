@@ -43,3 +43,7 @@ function edsh {
 function edau {
 	atom ~/AUR
 }
+
+function edobs {
+	atom ~/OBS/home:fusion809
+}
