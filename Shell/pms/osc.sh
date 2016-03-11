@@ -1,4 +1,4 @@
-function vimup {
+function vimupo {
   unset verc
   unset verl
   unset VIMDIR
