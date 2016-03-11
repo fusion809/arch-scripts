@@ -3,6 +3,10 @@ function nbash {
 	nano ~/.bashrc
 }
 
+function nsp {
+	nano ~/.spacemacs
+}
+
 # xinitrc
 function nx {
 	nano ~/.xinitrc
@@ -12,3 +16,4 @@ function nx {
 function nzsh {
   nano ~/.zshrc
 }
+
