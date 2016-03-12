@@ -36,6 +36,7 @@ function update {
 		apmup
 	fi
   vimup
+  vimupo
 }
 
 alias yaup=update

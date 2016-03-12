@@ -49,7 +49,7 @@ function atomup {
   cd $OPWD
 }
 
-function vimup {
+function vimupo {
   OPWD=$PWD
   cd $PKG/gvim-git
     makepkg -si --noconfirm --needed

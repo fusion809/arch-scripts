@@ -1,4 +1,4 @@
-function vimupo {
+function vimup {
   unset verc
   unset verl
   unset VIMDIR
@@ -19,7 +19,7 @@ function vimupo {
     pushd $VIMDIR
     sed -i -e "s/%define patchlevel  $verc/%define patchlevel  $verl/g" vim.spec
     sed -i -e "s/pkgver=7.4.$verc/pkgver=7.4.$verl/g" PKGBUILD
-    osc ci -m --noservice "Updating to version 7.4.$verl"
+    osc ci -m "Updating to version 7.4.$verl"
     popd
   fi
 }
