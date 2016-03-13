@@ -41,6 +41,10 @@ function update {
 
 alias yaup=update
 
+function vimu {
+  vimup && vimupo
+}
+
 function updatev {
 	update
 	pushd /home/fusion809/GitHub/PKGBUILDs
