@@ -2,7 +2,7 @@ function cpobs {
 	cdobs
 	for i in "$@"
 	do
-		pbget $i
+		pbget --aur $i
 		cp -a package-query/_service $i
                 osc add $i
                 cd $i
