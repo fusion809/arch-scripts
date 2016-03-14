@@ -4,8 +4,9 @@ function cpobs {
 	do
 		pbget --aur $i
 		cp -a package-query/_service $i
-                osc add $i
-                cd $i
-                osc ci -m "Initial commit"
+    osc add $i
+    cd $i
+  	osc ci -m "Initial commit"
+		cd ..
 	done
 }
