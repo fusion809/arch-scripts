@@ -1,5 +1,5 @@
 function cpobs {
-	cdobs
+	cd ~/OBS/home:fusion809:arch_extra
 	for i in "$@"
 	do
 		pbget --aur $i

@@ -17,9 +17,21 @@ function vimup {
     echo "Vim is up-to-date"
   else
     pushd $VIMDIR
-    sed -i -e "s/%define patchlevel  $verc/%define patchlevel  $verl/g" vim.spec
-    sed -i -e "s/pkgver=7.4.$verc/pkgver=7.4.$verl/g" PKGBUILD
-    osc ci -m "Updating to version 7.4.$verl"
+      sed -i -e "s/%define patchlevel  $verc/%define patchlevel  $verl/g" vim.spec
+      sed -i -e "s/pkgver=7.4.$verc/pkgver=7.4.$verl/g" PKGBUILD
+      osc ci -m "Updating to version 7.4.$verl"
+    popd
+    pushd $PKG/gvim
+      sed -i -e "s/pkgver=7.4.$verc/pkgver=7.4.$verl/g" PKGBUILD
+      makepkg -si --noconfirm --needed
+      push "[gvim] Bumping to 7.4.$verl"
     popd
   fi
+}
+
+function cpc {
+	for i in "$@"
+	do
+		osc copypac home:fusion809 $i home:fusion809:arch_extra $i
+	done
 }
