@@ -36,18 +36,6 @@ function update {
 		apmup
 	fi
   vimup
-  vimupo
 }
 
 alias yaup=update
-
-function vimu {
-  vimup && vimupo
-}
-
-function updatev {
-	update
-	pushd /home/fusion809/GitHub/PKGBUILDs
-    ./update-vim.sh
-  popd
-}
