@@ -22,7 +22,9 @@ function vimup {
       osc ci -m "Updating to version 7.4.$verl"
     popd
     pushd $PKG/gvim
-      sed -i -e "s/pkgver=7.4.$verc/pkgver=7.4.$verl/g" PKGBUILD
+      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
+      rm *.gz *.xz
+      updpkgsums
       makepkg -si --noconfirm --needed
       push "[gvim] Bumping to 7.4.$verl"
     popd
