@@ -47,3 +47,7 @@ function edau {
 function edobs {
 	atom ~/OBS/home:fusion809
 }
+
+function edpka {
+	atom ~/GitHub/packer-arch
+}
