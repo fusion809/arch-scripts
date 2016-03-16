@@ -13,3 +13,7 @@ function cdarch {
 function cdpy {
 	cd ~/GitHub/python-scripts
 }
+
+function cdpka {
+	cd ~/GitHub/packer-arch
+}
