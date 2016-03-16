@@ -8,3 +8,4 @@ export GOPATH=$HOME
 export GOROOT=/usr/lib/go
 export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin/:$GOPATH/bin:$GOROOT/bin:$GEMPATH
 export EDITOR=vim
+export OBS=$HOME/OBS/home:fusion809:arch_extra

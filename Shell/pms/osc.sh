@@ -28,6 +28,13 @@ function vimup {
       makepkg -si --noconfirm --needed
       push "[gvim] Bumping to 7.4.$verl"
     popd
+    pushd $OBS/gvim
+      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
+      rm *.gz *.xz
+      updpkgsums
+      makepkg -si --noconfirm --needed
+      osc ci -m "Bumping to 7.4.$verl"
+    popd
   fi
 }
 
