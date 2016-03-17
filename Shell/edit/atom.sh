@@ -48,6 +48,12 @@ function edobs {
 	atom ~/OBS/home:fusion809
 }
 
+function edobsa {
+	atom ~/OBS/home:fusion809:arch_extra
+}
+
+alias edoba=edobsa
+
 function edpka {
 	atom ~/GitHub/packer-arch
 }
