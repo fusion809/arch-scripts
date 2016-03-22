@@ -6,5 +6,5 @@ function edblog {
 alias edfgi=edblog
 
 function edproj {
-  atom $FGI $FGI/pages/project.md
+  atom $FGI $FGI/pages/projects.md
 }
