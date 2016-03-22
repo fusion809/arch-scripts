@@ -1,3 +1,7 @@
+function cda {
+	cd ~/archlive
+}
+
 function cdsh {
 	cd ~/Shell
 }

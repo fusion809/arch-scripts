@@ -18,19 +18,18 @@ function vimup {
   else
     pushd $VIMDIR
       sed -i -e "s/%define patchlevel  $verc/%define patchlevel  $verl/g" vim.spec
-      sed -i -e "s/pkgver=7.4.$verc/pkgver=7.4.$verl/g" PKGBUILD
       osc ci -m "Updating to version 7.4.$verl"
     popd
     pushd $PKG/gvim
       sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
-      rm *.gz *.xz
+      rm *.*z
       updpkgsums
       makepkg -si --noconfirm --needed
       push "[gvim] Bumping to 7.4.$verl"
     popd
     pushd $OBS/gvim
       sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
-      rm *.gz *.xz
+      rm *.*z
       updpkgsums
       osc ci -m "Bumping to 7.4.$verl"
     popd
