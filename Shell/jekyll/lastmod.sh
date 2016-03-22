@@ -11,6 +11,6 @@ function lastmod {
 }
 
 function lproj {
-  lmod pages/project.md
+  lmod $FGI/pages/projects.md
   push "[project] Expanding"
 }
