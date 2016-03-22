@@ -9,3 +9,8 @@ function lastmod {
   lastmod=$(date -r $1 +'%Y-%m-%d %H:%M:%S %z')
   echo $lastmod | xclip -sel clip
 }
+
+function lproj {
+  lmod pages/project.md
+  push "[project] Expanding"
+}

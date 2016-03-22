@@ -13,13 +13,6 @@ function edat {
 	atom ~/.atom
 }
 
-# Blog
-function edblog {
-	atom ~/GitHub/fusion809.github.io
-}
-
-alias edfgi=edblog
-
 # Menus
 function edmen {
 	sudo atom /etc/xdg/menus && sudo atom /usr/share/desktop-directories
