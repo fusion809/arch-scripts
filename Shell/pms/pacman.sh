@@ -30,3 +30,23 @@ function pacloc {
 		sudo pacman -U *.pkg.tar.xz --noconfirm
 	fi
 }
+
+function pacrlib {
+	unset OUTPUT
+	unset FILES
+	unset BASE
+	OUTPUT=$(sudo pacman -S git --noconfirm --force)
+	FILES=$(echo $OUTPUT | sed -n -e 's/^.*File //p' | sed -n -e 's/ is empty, not checked.//p')
+	BASE=$(echo $FILES | sed -n -e 's/.so.*/.so/p')
+	for i in $BASE
+	do
+		L=$(sudo pacman -Qo $i)
+		sudo pacman -S $(echo $L | sed -n -e 's/^.*by //p' | sed -n -e 's/ .*//p') --noconfirm --force
+		unset L
+	done
+	unset OUTPUT
+	unset FILES
+	OUTPUT=$(sudo pacman -S git --noconfirm --force)
+	FILES=$(echo $OUTPUT | sed -n -e 's/^.*File //p' | sed -n -e 's/ is empty, not checked.//p')
+	sudo rm $FILES
+}
