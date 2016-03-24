@@ -66,6 +66,10 @@ function cdg {
 	cd ~/GitHub
 }
 
+function cdai {
+	cd ~/GitHub/archiso
+}
+
 function cdab {
 	cd ~/GitHub/arch-builder
 }
