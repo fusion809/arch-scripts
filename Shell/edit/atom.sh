@@ -52,6 +52,10 @@ function edobsa {
 
 alias edoba=edobsa
 
+function edobsp {
+	atom ~/OBS/home:fusion809:arch_extra:python
+}
+
 function edpka {
 	atom ~/GitHub/packer-arch
 }

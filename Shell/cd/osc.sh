@@ -5,3 +5,7 @@ function cdobs {
 function cdobsa {
 	cd ~/OBS/home:fusion809:arch_extra
 }
+
+function cdobsp {
+	cd ~/OBS/home:fusion809:arch_extra:python
+}
