@@ -35,7 +35,7 @@ function update {
 	if hash apm 2>/dev/null; then
 		apmup
 	fi
-  vimup
+	vimup
 }
 
 alias yaup=update
