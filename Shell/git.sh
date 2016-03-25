@@ -89,7 +89,7 @@ alias gits=gitsw
 
 # Push changes
 function pushat {
-	git add *.cson LICENSE && git commit -m "$1" && git push origin master
+	git add *.cson LICENSE.md && git commit -m "$1" && git push origin master
 }
 
 function push {
