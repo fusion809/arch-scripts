@@ -9,7 +9,7 @@ function apmrm {
 alias apmr=apmrm
 
 function apmu {
-	apm update --noconfirm
+	apm update --no-confirm
 }
 
 alias apmup=apmu
