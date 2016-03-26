@@ -11,6 +11,19 @@ function cpobs {
 	done
 }
 
+function cpobsp {
+	cd ~/OBS/home:fusion809:arch_extra:python
+	for i in "$@"
+	do
+		pbget $i
+		cp -a blockify/_service $i
+    osc add $i
+    cd $i
+  	osc ci -m "Initial commit"
+		cd ..
+	done
+}
+
 function cpobsm {
 	cd ~/OBS/home:fusion809:arch_extra_multilib
 	for i in "$@"
