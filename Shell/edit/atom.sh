@@ -56,6 +56,10 @@ function edobsp {
 	atom ~/OBS/home:fusion809:arch_extra:python
 }
 
+function edobsm {
+	atom ~/OBS/home:fusion809:arch_extra_multilib
+}
+
 function edpka {
 	atom ~/GitHub/packer-arch
 }
