@@ -47,3 +47,7 @@ function obsa {
 	osc add $PD
 	popd
 }
+
+function cppkm {
+	cp -a $PKG/${PWD##*/}/{PKGBUILD,*.xz} .
+}
