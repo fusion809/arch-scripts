@@ -12,3 +12,10 @@ function getaur {
 		wget -cqO- https://aur.archlinux.org/cgit/aur.git/snapshot/$i.tar.gz | tar -xz
 	done
 }
+
+function curlaur {
+	for i in "$@"
+	do
+		curl https://aur.archlinux.org/cgit/aur.git/snapshot/$i.tar.gz | tar -xz
+	done
+}
