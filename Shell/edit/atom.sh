@@ -42,24 +42,6 @@ function edau {
 	atom ~/AUR
 }
 
-function edobs {
-	atom ~/OBS/home:fusion809
-}
-
-function edobsa {
-	atom ~/OBS/home:fusion809:arch_extra
-}
-
-alias edoba=edobsa
-
-function edobsp {
-	atom ~/OBS/home:fusion809:arch_extra:python
-}
-
-function edobsm {
-	atom ~/OBS/home:fusion809:arch_extra:multilib
-}
-
 function edpka {
 	atom ~/GitHub/packer-arch
 }
