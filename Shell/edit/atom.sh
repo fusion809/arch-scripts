@@ -57,7 +57,7 @@ function edobsp {
 }
 
 function edobsm {
-	atom ~/OBS/home:fusion809:arch_extra_multilib
+	atom ~/OBS/home:fusion809:arch_extra:multilib
 }
 
 function edpka {

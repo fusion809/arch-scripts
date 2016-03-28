@@ -11,5 +11,5 @@ function cdobsp {
 }
 
 function cdobsm {
-	cd ~/OBS/home:fusion809:arch_extra_multilib
+	cd ~/OBS/home:fusion809:arch_extra:multilib
 }
