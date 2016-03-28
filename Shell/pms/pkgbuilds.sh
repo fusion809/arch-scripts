@@ -55,3 +55,7 @@ function vimupo {
     makepkg -si --noconfirm --needed
   cd -
 }
+
+function mksrcinfo {
+  makepkg --printsrcinfo > .SRCINFO
+}
