@@ -38,7 +38,20 @@ function cpobsp {
 }
 
 function cpobsm {
-	cd ~/OBS/home:fusion809:arch_extra_multilib
+	cd ~/OBS/home:fusion809:arch_extra:multilib
+	for i in "$@"
+	do
+		pbget $i
+		cp -a ../home:fusion809:arch_extra/package-query/_service $i
+		osc add $i
+		cd $i
+		osc ci -m "Initial commit"
+		cd ..
+	done
+}
+
+function cpobsc {
+	cd ~/OBS/home:fusion809:arch_extra:community
 	for i in "$@"
 	do
 		pbget $i
