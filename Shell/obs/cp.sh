@@ -2,7 +2,20 @@ function cpobs {
 	cd ~/OBS/home:fusion809:arch_extra
 	for i in "$@"
 	do
-		pbget --aur $i
+		pbget $i
+		cp -a package-query/_service $i
+    osc add $i
+    cd $i
+  	osc ci -m "Initial commit"
+		cd ..
+	done
+}
+
+function cpobsa {
+	cd ~/OBS/home:fusion809:arch_extra
+	for i in "$@"
+	do
+		curlaur $i
 		cp -a package-query/_service $i
     osc add $i
     cd $i
@@ -16,7 +29,7 @@ function cpobsp {
 	for i in "$@"
 	do
 		pbget $i
-		cp -a blockify/_service $i
+		cp -a urlgrabber/_service $i
     osc add $i
     cd $i
   	osc ci -m "Initial commit"
@@ -50,4 +63,8 @@ function obsa {
 
 function cppkm {
 	cp -a $PKG/${PWD##*/}/{PKGBUILD,*.xz} .
+}
+
+function cppkmp {
+	cp -a $PKG/${PWD##*/}/PKGBUILD .
 }
