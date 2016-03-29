@@ -19,3 +19,7 @@ function edobsm {
 function edobsc {
   atom "$OBS":community
 }
+
+function edobse {
+	atom $OBSE
+}
