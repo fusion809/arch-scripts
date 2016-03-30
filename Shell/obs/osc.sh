@@ -33,6 +33,12 @@ function vimup {
       updpkgsums
       osc ci -m "Bumping to 7.4.$verl"
     popd
+    pushd $OBSE/gvim-gtk3
+      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
+      rm *.*z
+      updpkgsums
+      osc ci -m "Bumping to 7.4.$verl"
+    popd
   fi
 }
 
