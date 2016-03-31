@@ -1,13 +1,15 @@
 ## Update local arch-scripts repo
 function cps {
+  rm -rf $ARS/Shell/*
+  sudo rm -rf $ARS/root/Shell/*
   sudo chmod +x ~/Shell/{*,*/*.sh}
-  cp -a ~/Shell/* ~/GitHub/arch-scripts/Shell
-  cp -a ~/{.bashrc,.zshrc} ~/GitHub/arch-scripts/
-  sudo cp -a /root/{Shell,.bashrc,.zshrc} ~/GitHub/arch-scripts/root/
+  cp -a ~/Shell/* $ARS/Shell
+  cp -a ~/{.bashrc,.zshrc} $ARS/
+  sudo cp -a /root/{Shell,.bashrc,.zshrc} $ARS/root/
 }
 
 function cdas {
-cd ~/GitHub/arch-scripts
+cd $ARS
 }
 
 ## Update sabayon-scripts GitHub repo
