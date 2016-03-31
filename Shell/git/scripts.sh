@@ -1,5 +1,6 @@
 ## Update local arch-scripts repo
 function cps {
+  sudo chmod +x ~/Shell/{*,*/*.sh}
   cp -a ~/Shell/* ~/GitHub/arch-scripts/Shell
   cp -a ~/{.bashrc,.zshrc} ~/GitHub/arch-scripts/
   sudo cp -a /root/{Shell,.bashrc,.zshrc} ~/GitHub/arch-scripts/root/
