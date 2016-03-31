@@ -16,3 +16,7 @@ function cdas {
 function shup {
   cps && cdas && push "$1" && cd -
 }
+
+function sudoers {
+	sudo cp -a /home/fusion809/GitHub/arch-scripts/etc/sudoers /etc/sudoers
+}
