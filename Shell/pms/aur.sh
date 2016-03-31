@@ -19,3 +19,32 @@ function curlaur {
 		curl https://aur.archlinux.org/cgit/aur.git/snapshot/$i.tar.gz | tar -xz
 	done
 }
+
+# git tools
+function gita {
+	for i in "$@"
+	do
+		git clone https://aur.archlinux.org/$i.git /home/fusion809/AUR/$i
+	done
+}
+
+function gitaur {
+	for i in "$@"
+	do
+		git clone ssh://aur@aur.archlinux.org/$i.git ~/AUR/$i
+	done
+}
+
+function pushaur {
+	if [[ -n $1 ]]; then
+		mksrcinfo
+		git add PKGBUILD .SRCINFO *.install
+		git commit -m "$1"
+		git push origin master
+	else
+		mksrcinfo
+		git add PKGBUILD .SRCINFO *.install
+		git commit -m 'Initial import'
+		git push origin master
+	fi
+}
