@@ -9,7 +9,7 @@ function cps {
 }
 
 function cdas {
-cd $ARS
+  cd $ARS
 }
 
 ## Update sabayon-scripts GitHub repo
