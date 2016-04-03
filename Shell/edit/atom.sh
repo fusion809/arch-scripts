@@ -45,3 +45,7 @@ function edau {
 function edpka {
 	atom ~/GitHub/packer-arch
 }
+
+function edzsh {
+	atom ~/.oh-my-zsh/themes/
+}
