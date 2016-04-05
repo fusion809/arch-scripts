@@ -1,11 +1,11 @@
 function jekex {
   cd $FGI
-	bundle exec jekyll serve -I --future $@
+	bundle exec jekyll serve -ID --future $@
 }
 
 function jekexc {
   cd $FGI
-  bundle exec jekyll serve --future
+  bundle exec jekyll serve --future -D
 }
 
 function jekset {

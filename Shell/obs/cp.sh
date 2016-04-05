@@ -87,6 +87,19 @@ function obsa {
 	popd
 }
 
+function cpobsn {
+	for i in "$@"
+	do
+		cdobsa
+		mkdir nodejs-$i
+		cd nodejs-$i
+		npm2PKGBUILD $i > PKGBUILD
+		cpserv
+		obsa
+		atom PKGBUILD
+	done
+}
+
 function cppkm {
 	cp -a $PKG/${PWD##*/}/{PKGBUILD,*.xz} .
 }
