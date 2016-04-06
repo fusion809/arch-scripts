@@ -18,6 +18,14 @@ function edai {
 	atom ~/GitHub/archiso
 }
 
+# bin
+function edbin {
+	atom ~/bin
+}
+
+alias edin=edbin
+alias ebin=edbin
+
 # Menus
 function edmen {
 	sudo atom /etc/xdg/menus && sudo atom /usr/share/desktop-directories

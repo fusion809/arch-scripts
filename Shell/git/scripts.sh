@@ -20,3 +20,14 @@ function shup {
 function sudoers {
 	sudo cp -a /home/fusion809/GitHub/arch-scripts/etc/sudoers /etc/sudoers
 }
+
+## Update bin repo
+function bup {
+  cd $HOME/bin
+  if [[ -n "$1" ]]; then
+    push "$1"
+  else
+    push "Updating"
+  fi
+  cd -
+}

@@ -11,6 +11,10 @@ function cda {
 	cd ~/AUR
 }
 
+function cdbin {
+	cd ~/bin
+}
+
 function cdch {
 	cd ~/chroot
 }
