@@ -57,3 +57,8 @@ function edpka {
 function edzsh {
 	atom ~/.oh-my-zsh/themes/
 }
+
+# NPM
+function ednpm {
+	atom $GHUB/npm2archOBS
+}
