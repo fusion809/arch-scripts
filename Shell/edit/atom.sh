@@ -66,3 +66,7 @@ function edzt {
 function ednpm {
 	atom $GHUB/npm2archOBS
 }
+
+function edhp {
+	atom $GHUB/hubpress.io
+}
