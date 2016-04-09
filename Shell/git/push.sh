@@ -10,3 +10,7 @@ function pushp {
 function pushss {
   push "$1" && gitsh && gitsize
 }
+
+function pushhp {
+  git add --all && git commit -m "$1" && git push origin gh-pages
+}
