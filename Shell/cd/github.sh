@@ -17,3 +17,7 @@ function cdpy {
 function cdpka {
 	cd ~/GitHub/packer-arch
 }
+
+function cdhp {
+	cd ~/GitHub/hubpress.io
+}

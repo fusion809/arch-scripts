@@ -54,7 +54,11 @@ function edpka {
 	atom ~/GitHub/packer-arch
 }
 
-function edzsh {
+function edzp {
+	atom ~/.oh-my-zsh/plugins
+}
+
+function edzt {
 	atom ~/.oh-my-zsh/themes/
 }
 
