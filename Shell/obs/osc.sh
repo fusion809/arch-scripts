@@ -24,9 +24,13 @@ function vimup {
       sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
       rm *.*z
       updpkgsums
-      makepkg -si --noconfirm --needed
-      push "[gvim] Bumping to 7.4.$verl"
     popd
+    pushd $PKG/gvim-gtk3
+      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
+      rm *.*z
+      updpkgsums
+      makepkg -si --noconfirm --needed
+      push "[gvim/gvim-gtk3] Bumping to 7.4.$verl"
     pushd $OBSE/gvim
       sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
       rm *.*z
