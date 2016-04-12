@@ -12,6 +12,14 @@ function cdmen {
 }
 
 #	- .local/share
+function cdpd {
+	cd $PD
+}
+
+function cdpq {
+	cd $PQ
+}
+
 # -- applications
 function cdap {
 	cd ~/.local/share/applications

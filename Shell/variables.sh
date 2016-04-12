@@ -5,6 +5,11 @@ export CHROOT=$HOME/chroot
 export ABS=$HOME/abs
 export AUR=$HOME/AUR
 export EDITOR=vim
+export LS=$HOME/.local/share/
+export AP=$LS/applications
+export DD=$LS/desktop-directories
+export PD=$LS/plasma/desktoptheme
+export PQ=$LS/QtCurve
 
 # PATH
 unset PATH
