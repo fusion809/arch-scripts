@@ -1,6 +1,6 @@
 ## Update local arch-scripts repo
 function cps {
-  rm $ARS/Shell/{*,}/*.sh
+  rm $ARS/Shell/{*/,}*.sh
   sudo rm -rf $ARS/root/Shell/*
   sudo chmod +x {$HOME,/root}/Shell/{*,*/*.sh}
   cp -a ~/Shell/* $ARS/Shell
