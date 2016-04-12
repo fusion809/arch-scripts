@@ -16,4 +16,3 @@ function nx {
 function nzsh {
   nano ~/.zshrc
 }
-

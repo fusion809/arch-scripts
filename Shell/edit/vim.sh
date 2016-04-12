@@ -26,6 +26,10 @@ function vvim {
 	vim ~/.vimrc
 }
 
+function vx {
+	vim ~/.xinitrc
+}
+
 function vzsh {
 	vim ~/.zshrc
 }
