@@ -70,3 +70,7 @@ function ednpm {
 function edhp {
 	atom $GHUB/hubpress.io
 }
+
+function edjs {
+	atom $GHUB/JScripts
+}
