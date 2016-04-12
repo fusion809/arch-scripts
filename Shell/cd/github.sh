@@ -21,3 +21,7 @@ function cdpka {
 function cdhp {
 	cd ~/GitHub/hubpress.io
 }
+
+function cdjs {
+	cd ~/GitHub/JScripts
+}
