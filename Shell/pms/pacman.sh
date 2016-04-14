@@ -11,10 +11,6 @@ function pacin {
 	sudo pacman -S $@ --noconfirm --force --needed
 }
 
-function pacrin {
-	sudo pacman -S home_fusion809_Arch_Extra/$1 --noconfirm --force --needed
-}
-
 function pacrm {
 	sudo pacman -Rs $@ --noconfirm
 }
@@ -49,4 +45,12 @@ function pacrlib {
 	OUTPUT=$(sudo pacman -S git --noconfirm --force)
 	FILES=$(echo $OUTPUT | sed -n -e 's/^.*File //p' | sed -n -e 's/ is empty, not checked.//p')
 	sudo rm $FILES
+}
+
+# pacman reinstall all packages
+function pacrin {
+	for i in $(pacman -Q | cut -d' ' -f1)
+	do
+		sudo pacman -S $i --noconfirm --force
+	done
 }

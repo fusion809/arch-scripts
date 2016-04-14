@@ -39,3 +39,10 @@ function update {
 }
 
 alias yaup=update
+
+function yarin {
+  for i in $(pacman -Q | cut -d' ' -f1)
+  do
+  	yaourt -Sy $i --noconfirm --force
+  done
+}
