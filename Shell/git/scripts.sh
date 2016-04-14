@@ -2,7 +2,7 @@
 function cps {
   rm -rf $ARS/Shell && mkdir $ARS/Shell
   sudo rm -rf $ARS/root/Shell && mkdir $ARS/root/Shell
-  sudo chmod +x {$HOME,/root}/Shell/{*,*/*.sh}
+  sudo chmod +x {$HOME,/root}/Shell/{*.sh,*/*.sh}
   cp -a ~/Shell/* $ARS/Shell
   cp -a ~/{.bashrc,.zshrc} $ARS/
   sudo cp -a /root/{Shell,.bashrc,.zshrc} $ARS/root/
