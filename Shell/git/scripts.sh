@@ -1,11 +1,11 @@
 ## Update local arch-scripts repo
 function cps {
+  sudo chmod +x -R {$HOME,root}/Shell/
   rm -rf $ARS/Shell && mkdir $ARS/Shell
   sudo rm -rf $ARS/root/Shell
   cp -a ~/Shell/* $ARS/Shell
   cp -a ~/{.bashrc,.zshrc} $ARS/
   sudo cp -a /root/{Shell,.bashrc,.zshrc} $ARS/root/
-  sudo chmod +x {$HOME,/root}/Shell/{*.sh,*/*.sh}
 }
 
 function cdas {
