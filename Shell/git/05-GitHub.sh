@@ -7,3 +7,7 @@ function gitc {
 		popd
 	done
 }
+
+function ginit {
+	git init && git add --all && gitsw
+}
