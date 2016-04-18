@@ -1,3 +1,3 @@
 function cde {
-	cd ~/.emacs.d2
+	cd $HOME/.emacs.d2
 }

@@ -1,17 +1,15 @@
 function cdpk {
-	cd ~/GitHub/PKGBUILDs
+	cd $PKG
 }
 
-# --- Atom
 function cdatp {
-	cd ~/GitHub/PKGBUILDs/atom-editor
+	cd $PKG/atom-editor
 }
 
 function cdatpb {
-	cd ~/GitHub/PKGBUILDs/atom-editor-beta
+	cd $PKG/atom-editor-beta
 }
 
-# --- gVim
-function cdgv {
-    cd ~/GitHub/PKGBUILDs/gvim-git
+function cdgg {
+  cd $PKG/gvim-git
 }

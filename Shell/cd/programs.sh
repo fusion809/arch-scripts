@@ -1,7 +1,7 @@
 function cdp {
-	cd ~/Programs
+	cd $PRG
 }
 
 function cdpa {
-	cd ~/Programs/atom
+	cd $PRG/atom
 }

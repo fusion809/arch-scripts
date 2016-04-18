@@ -1,11 +1,11 @@
 function cdv {
-	cd ~/"VirtualBox VMs"
+	cd $VBX
 }
 
 function cdvi {
-	cd ~/"VirtualBox VMs/ISOs"
+	cd $VBX/ISOs
 }
 
 function cdvdi {
-	cd ~/"VirtualBox VMs"/VDIs
+	cd $VBX/VDIs
 }

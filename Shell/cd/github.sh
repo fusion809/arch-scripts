@@ -1,27 +1,31 @@
 function cdg {
-	cd ~/GitHub
+	cd $GHUB
 }
 
 function cdab {
-	cd ~/GitHub/arch-builder
+	cd $GHUB/arch-builder
 }
 
 function cdarch {
-	cd ~/GitHub/arch-scripts
+	cd $GHUB/arch-scripts
 }
 
-function cdpy {
-	cd ~/GitHub/python-scripts
-}
-
-function cdpka {
-	cd ~/GitHub/packer-arch
+function cdhs {
+	cd $GHUB/hexo-site
 }
 
 function cdhp {
-	cd ~/GitHub/hubpress.io
+	cd $GHUB/hubpress.io
 }
 
 function cdjs {
-	cd ~/GitHub/JScripts
+	cd $GHUB/JScripts
+}
+
+function cdpka {
+	cd $GHUB/packer-arch
+}
+
+function cdpy {
+	cd $GHUB/python-scripts
 }
