@@ -1,6 +1,16 @@
 # atom
 function abash {
-	atom ~/.bashrc ~/Shell
+	atom ~/.bashrc $SHL
+}
+
+# emacs
+function ebash {
+	emacs ~/.bashrc $SHL
+}
+
+# gVim
+function ebash {
+	gvim ~/.bashrc $SHL
 }
 
 # nano
