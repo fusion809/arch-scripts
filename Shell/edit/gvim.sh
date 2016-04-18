@@ -1,4 +1,4 @@
-function gvbash {
+function gbash {
 	gvim ~/.bashrc
 }
 
@@ -20,4 +20,8 @@ function gvsh {
 
 function gvzsh {
 	gvim ~/.zshrc
+}
+
+function gzsh {
+  gvim ~/.zshrc $SHL
 }
