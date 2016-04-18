@@ -1,11 +1,11 @@
 # bash
 function abash {
-	atom ~/.bashrc ~/Shell
+	atom ~/.bashrc $SHL
 }
 
 # zsh
 function azsh {
-  atom ~/.bashrc ~/Shell
+  atom ~/.bashrc $SHL
 }
 
 # atom
@@ -15,7 +15,7 @@ function edat {
 
 # archiso
 function edai {
-	atom ~/GitHub/archiso
+	atom $GHUB/archiso
 }
 
 # bin
@@ -33,17 +33,17 @@ function edmen {
 
 # PKGBUILDs
 function edpk {
-	atom ~/GitHub/PKGBUILDs
+	atom $GHUB/PKGBUILDs
 }
 
 # Python scripts
 function edpy {
-	atom ~/GitHub/python-scripts
+	atom $GHUB/python-scripts
 }
 
 # Shell scripts
 function edsh {
-	atom ~/Shell
+	atom $SHL
 }
 
 function edau {
@@ -51,7 +51,7 @@ function edau {
 }
 
 function edpka {
-	atom ~/GitHub/packer-arch
+	atom $GHUB/packer-arch
 }
 
 function edzp {
@@ -65,6 +65,10 @@ function edzt {
 # NPM
 function ednpm {
 	atom $GHUB/npm2archOBS
+}
+
+function edhs {
+	atom $GHUB/hexo-site
 }
 
 function edhp {
