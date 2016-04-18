@@ -10,10 +10,6 @@ function cdarch {
 	cd $GHUB/arch-scripts
 }
 
-function cdhs {
-	cd $GHUB/hexo-site
-}
-
 function cdhp {
 	cd $GHUB/hubpress.io
 }
