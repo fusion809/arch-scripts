@@ -17,7 +17,7 @@ function atomup {
   verls=$(git tag | tail -n "10" | grep -v beta | sed 's/v//g' | sort -nr | head -n1)
   verlb=$(git tag | tail -n "5" | grep beta | sed 's/v//g' | sort -nr | head -n1)
   cd -
-  cd ~/GitHub/PKGBUILDs/atom-editor
+  cd $GHUBM/PKGBUILDs/atom-editor
   vercs=$(sed -n 's/pkgver=//p' PKGBUILD)
   if [[ $vercs == $verls ]]; then
 			echo "Atom is up-to-date"
@@ -28,7 +28,7 @@ function atomup {
     push "[atom-editor] Bumping to $verls"
   fi
   cd -
-  cd ~/GitHub/PKGBUILDs/atom-editor-beta
+  cd $GHUBM/PKGBUILDs/atom-editor-beta
   vercbb=$(sed -n 's/_pkgver=//p' PKGBUILD)
   vercbr=$(sed -n 's/_pkgrel=//p' PKGBUILD)
   vercb=$vercbb.$vercbr

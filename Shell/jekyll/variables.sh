@@ -1,1 +1,1 @@
-export FGI=$GHUB/fusion809.github.io
+export FGI=$GHUBM/fusion809.github.io

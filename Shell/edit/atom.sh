@@ -15,7 +15,7 @@ function edat {
 
 # archiso
 function edai {
-	atom $GHUB/archiso
+	atom $GHUBM/archiso
 }
 
 # bin
@@ -33,12 +33,12 @@ function edmen {
 
 # PKGBUILDs
 function edpk {
-	atom $GHUB/PKGBUILDs
+	atom $GHUBM/PKGBUILDs
 }
 
 # Python scripts
 function edpy {
-	atom $GHUB/python-scripts
+	atom $GHUBM/python-scripts
 }
 
 # Shell scripts
@@ -51,7 +51,7 @@ function edau {
 }
 
 function edpka {
-	atom $GHUB/packer-arch
+	atom $GHUBM/packer-arch
 }
 
 function edzp {
@@ -64,17 +64,17 @@ function edzt {
 
 # NPM
 function ednpm {
-	atom $GHUB/npm2archOBS
+	atom $GHUBM/npm2archOBS
 }
 
 function edhs {
-	atom $GHUB/hexo-site
+	atom $GHUBM/hexo-site
 }
 
 function edhp {
-	atom $GHUB/hubpress.io
+	atom $GHUBM/hubpress.io
 }
 
 function edjs {
-	atom $GHUB/JScripts
+	atom $GHUBM/JScripts
 }

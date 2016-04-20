@@ -3,7 +3,7 @@ function vimup {
   unset verl
   unset VIMDIR
   ORPWD=$PWD
-  pushd ~/GitHub/vim-src # change into my local Vim git repo copy
+  pushd $GHUBO/vim-src # change into my local Vim git repo copy
   git checkout master
   git fetch -p
   git pull origin master # Update local repo

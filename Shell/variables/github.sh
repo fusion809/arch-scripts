@@ -1,3 +1,5 @@
 export GHUB=$HOME/GitHub
-export ARS=$GHUB/arch-scripts
-export PKG=$GHUB/PKGBUILDs
+export GHUBM=$GHUB/mine
+export GHUBO=$GHUB/others
+export ARS=$GHUBM/arch-scripts
+export PKG=$GHUBM/PKGBUILDs

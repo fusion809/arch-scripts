@@ -2,26 +2,30 @@ function cdg {
 	cd $GHUB
 }
 
+function cdgm {
+	cd $GHUBM
+}
+
 function cdab {
-	cd $GHUB/arch-builder
+	cd $GHUBM/arch-builder
 }
 
 function cdarch {
-	cd $GHUB/arch-scripts
+	cd $GHUBM/arch-scripts
 }
 
 function cdhp {
-	cd $GHUB/hubpress.io
+	cd $GHUBM/hubpress.io
 }
 
 function cdjs {
-	cd $GHUB/JScripts
+	cd $GHUBM/JScripts
 }
 
 function cdpka {
-	cd $GHUB/packer-arch
+	cd $GHUBM/packer-arch
 }
 
 function cdpy {
-	cd $GHUB/python-scripts
+	cd $GHUBM/python-scripts
 }
