@@ -6,6 +6,10 @@ function cdgm {
 	cd $GHUBM
 }
 
+function cdgo {
+	cd $GHUBO
+}
+
 function cdab {
 	cd $GHUBM/arch-builder
 }
