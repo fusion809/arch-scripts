@@ -8,6 +8,11 @@ function gitc {
 	done
 }
 
+function gitc {
+	git clone https://github.com/$1/$2 $GHUBO/$2
+}
+
+
 function ginit {
 	git init && git add --all && gitsw
 }

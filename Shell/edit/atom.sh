@@ -67,10 +67,6 @@ function ednpm {
 	atom $GHUBM/npm2archOBS
 }
 
-function edhs {
-	atom $GHUBM/hexo-site
-}
-
 function edhp {
 	atom $GHUBM/hubpress.io
 }
