@@ -8,7 +8,7 @@ function gitc {
 	done
 }
 
-function gitc {
+function gitco {
 	git clone https://github.com/$1/$2 $GHUBO/$2
 }
 
