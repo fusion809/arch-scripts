@@ -24,7 +24,9 @@ PS1='\
 \[\e[0m\]\
  '
 
-for i in ~/Shell/*.sh
-do
-    . "$i"
-done
+ . $HOME/Shell/01-variable.sh
+
+ for i in $HOME/Shell/{02,03,04,05,06,07,08,09,10}*.sh
+ do
+   . "$i"
+ done
