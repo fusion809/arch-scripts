@@ -15,7 +15,7 @@ function cdab {
 }
 
 function cdarch {
-	cd $GHUBM/arch-scripts
+	cd $ARS
 }
 
 function cdhp {

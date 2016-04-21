@@ -102,7 +102,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-for i in ~/Shell/*.sh
+. $HOME/Shell/01-variable.sh
+
+for i in $HOME/Shell/{02,03,04,05,06,07,08,09,10}*.sh
 do
   . "$i"
 done
