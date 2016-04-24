@@ -2,8 +2,11 @@ function hexgd {
   if [[ $PWD == "$GHUBM/hexo-site" ]]; then
     hexo generate --deploy
   else
-    pushd $GHUBM/hexo-site
+    cd $GHUBM/hexo-site
     hexo generate --deploy
-    popd
   fi
+}
+
+function hexup {
+  hexgd && push "Updating"
 }
