@@ -47,3 +47,7 @@ function cdsh {
 function cdvim {
 	cd ~/vim
 }
+
+function cdt {
+	cd ~/Textbooks
+}
