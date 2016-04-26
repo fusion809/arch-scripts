@@ -74,3 +74,7 @@ function edhp {
 function edjs {
 	atom $GHUBM/JScripts
 }
+
+function edatin {
+	atom $GHUBM/atom-installer
+}

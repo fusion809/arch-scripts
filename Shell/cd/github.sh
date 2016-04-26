@@ -33,3 +33,7 @@ function cdpka {
 function cdpy {
 	cd $GHUBM/python-scripts
 }
+
+function cdatin {
+	cd $GHUBM/atom-installer
+}
