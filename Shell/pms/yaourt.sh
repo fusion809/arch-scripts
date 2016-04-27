@@ -39,7 +39,10 @@ function update {
   blockup
 }
 
-alias yaup=update
+function yaup {
+  yaourt -Syua --noconfirm --needed
+  apmup
+}
 
 function yarin {
   for i in $(pacman -Q | cut -d' ' -f1)
