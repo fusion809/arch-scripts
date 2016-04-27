@@ -35,7 +35,12 @@ function update {
 	if hash apm 2>/dev/null; then
 		apmup
 	fi
-	vimup
+  LD=$(lsb_release -si)
+  if [[ $LD == "ManjaroLinux" ]]; then
+	  vimups
+  else
+    vimup
+  fi
   blockup
 }
 
