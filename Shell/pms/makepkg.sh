@@ -36,3 +36,7 @@ function mkatb {
   vim PKGBUILD
   makepkg -si --noconfirm
 }
+
+function upmak {
+  updpkgsums && makepkg -si --noconfirm
+}
