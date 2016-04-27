@@ -38,5 +38,5 @@ function mkatb {
 }
 
 function upmak {
-  updpkgsums && makepkg -si --noconfirm
+  updpkgsums && makepkg -sif --noconfirm
 }
