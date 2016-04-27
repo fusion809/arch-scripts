@@ -59,3 +59,21 @@ function vimupo {
 function mksrcinfo {
   makepkg --printsrcinfo > .SRCINFO
 }
+
+function blockup {
+  unset verc
+  unset verl
+  unset OPWD
+  export OPWD=$PWD
+  cd $GHUBO/blockify
+  git pull origin master
+  verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
+  cd $PKG/blockify
+  verc=$(sed -n 's/pkgver=//p' PKGBUILD)
+  if ! [[ $verl == $verc ]]; then
+    sed -i -e "s/pkgver=$verc/pkgver=$verl/g" PKGBUILD
+    upmak
+    push "Updating"
+  fi
+  cd $OPWD
+}
