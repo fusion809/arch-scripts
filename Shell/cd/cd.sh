@@ -24,6 +24,10 @@ function cdd {
 	cd ~/Desktop
 }
 
+function cdds {
+	cd ~/"Discovery Studio"
+}
+
 # - Downloads
 function cddo {
 	cd ~/Downloads
