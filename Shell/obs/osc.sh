@@ -58,7 +58,7 @@ function vimups {
   # verc is the current patch version of Vim in vim.spec
   # verl is the latest patch version of Vim.
 
-  verc=$(sed -n 's/pkgver=7.4.*//p' $PKG/gvim/PKGBUILD)
+  verc=$(sed -n 's/pkgver=7.4.//p' $PKG/gvim/PKGBUILD)
   verl=$(git describe --abbrev=0 --tags | sed 's/v7.4.//g')
   popd
   if [[ $verc == $verl ]]; then
