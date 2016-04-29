@@ -31,3 +31,9 @@ function bup {
   fi
   cd -
 }
+
+function shupat {
+  cd ~/.atom
+  pushat "Updating"
+  cd -
+}

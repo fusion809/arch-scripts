@@ -22,6 +22,10 @@ function yainw {
   yain $(yaourt -Ssq $@)
 }
 
+function yas {
+  yaourt -Ss $@
+}
+
 function yasw {
   yaourt -Ssq $@
 }
