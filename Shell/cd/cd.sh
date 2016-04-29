@@ -11,6 +11,10 @@ function cda {
 	cd ~/AUR
 }
 
+function cdbd {
+	cd ~/BIOVIA/DiscoveryStudio2016
+}
+
 function cdbin {
 	cd ~/bin
 }
