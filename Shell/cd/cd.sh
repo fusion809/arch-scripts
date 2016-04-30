@@ -29,7 +29,7 @@ function cdd {
 }
 
 function cdds {
-	cd ~/"Discovery Studio"
+	cd ~/"DiscoveryStudio"
 }
 
 # - Downloads

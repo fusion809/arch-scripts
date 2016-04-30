@@ -37,3 +37,7 @@ function cdpy {
 function cdatin {
 	cd $GHUBM/atom-installer
 }
+
+function cdal {
+	cd $GHUBM/archiso
+}
