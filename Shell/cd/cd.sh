@@ -59,3 +59,7 @@ function cdvim {
 function cdt {
 	cd ~/Textbooks
 }
+
+function cdvl {
+	cd ~/Videos/Lectures
+}
