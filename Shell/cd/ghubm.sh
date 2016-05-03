@@ -8,6 +8,11 @@ function cdab {
 	cd $GHUBM/arch-builder
 }
 
+# Arch setup repo
+function cdast {
+	cd $GHUBM/arch-setup
+}
+
 # My Arch ISO repo
 function cdal {
 	cd $GHUBM/archiso

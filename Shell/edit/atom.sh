@@ -18,6 +18,11 @@ function edai {
 	atom $GHUBM/archiso
 }
 
+# arch-setup
+function edast {
+	atom $GHUBM/arch-setup
+}
+
 # bin
 function edbin {
 	atom ~/bin
