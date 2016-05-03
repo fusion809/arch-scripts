@@ -37,3 +37,10 @@ function shupat {
   pushat "Updating"
   cd -
 }
+
+function aset {
+  gitc arch-scripts arch-setup archiso \
+    atom atom-installer \
+    centos-scripts debian-scripts fedora-scripts freebsd-scripts gentoo-scripts mageia-scripts opensuse-scripts \
+    arch-builder gentoo-packer
+}
