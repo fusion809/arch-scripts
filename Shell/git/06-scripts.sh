@@ -113,8 +113,12 @@ function aset {
       gitc DiscoveryStudio GNU_Octave
     fi
 
+    printf "Do you want to clone my packaging GitHub repos? [y/n] "
+    read yn9
+    if [[ $yn9 == 'y' ]]; then
+      gitc PKGBUILDs rpmbuild sabayon-tools
+    fi
     # Clone all programming repos
-    gitc hexo-tag-markdown \
-      PKGBUILDs rpmbuild sabayon-tools
+    gitc hexo-tag-markdown
   fi
 }
