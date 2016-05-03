@@ -1,6 +1,9 @@
 function gitc {
 	for i in "$@"
 	do
+		if ! [[ -d $GHUBM ]]; then
+			mkdir -p $GHUBM
+		fi
 		if ! [[ -d $GHUBM/$i ]]; then
 			git clone https://github.com/fusion809/$i.git $GHUBM/$i
 		fi

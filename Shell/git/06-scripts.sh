@@ -39,8 +39,12 @@ function shupat {
 }
 
 function aset {
-  gitc arch-scripts arch-setup archiso \
+  gitc arch-setup archiso \
     atom atom-installer \
-    centos-scripts debian-scripts fedora-scripts freebsd-scripts gentoo-scripts mageia-scripts opensuse-scripts \
-    arch-builder gentoo-packer
+    arch-scripts centos-scripts debian-scripts fedora-scripts freebsd-scripts gentoo-scripts Linux-scripts mageia-scripts opensuse-scripts sabayon-scripts \
+    arch-builder gentoo-packer sabayon-packer \
+    fusion809.github.io hexo-site hexo-tag-markdown hubpress.io pelican-site \
+    bin JScripts npm2archOBS python-scripts \
+    DiscoveryStudio GNU_Octave \
+    spacemacs xdg-menus vim
 }
