@@ -3,10 +3,6 @@ function ebash {
 	emacs ~/.bashrc $SHL
 }
 
-function efgi {
-	emacs $FGI
-}
-
 function eobs {
 	emacs ~/OBS/home:fusion809
 }
