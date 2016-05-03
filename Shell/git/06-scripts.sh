@@ -39,12 +39,82 @@ function shupat {
 }
 
 function aset {
-  gitc arch-setup archiso \
-    atom atom-installer \
-    arch-scripts centos-scripts debian-scripts fedora-scripts freebsd-scripts gentoo-scripts Linux-scripts mageia-scripts opensuse-scripts sabayon-scripts \
-    arch-builder gentoo-packer sabayon-packer \
-    fusion809.github.io hexo-site hexo-tag-markdown hubpress.io pelican-site \
-    bin JScripts npm2archOBS python-scripts \
-    DiscoveryStudio GNU_Octave \
-    spacemacs xdg-menus vim
+  printf "Do you want to clone all my GitHub repos? [y/n] "
+  read yn
+  if [[ $yn == 'y' ]]; then
+    gitc archiso fedora-ISO \
+      arch-scripts centos-scripts debian-scripts fedora-scripts freebsd-scripts gentoo-scripts Linux-scripts mageia-scripts opensuse-scripts sabayon-scripts
+      atom atom-installer \
+      arch-builder arch-setup gentoo-packer sabayon-packer \
+      fusion809.github.io hexo-site hexo-tag-markdown hubpress.io pelican-site \
+      bin JScripts npm2archOBS python-scripts \
+      DiscoveryStudio GNU_Octave \
+      spacemacs xdg-menus vim zsh-theme \
+      PKGBUILDs rpmbuild sabayon-tools
+    else
+      printf "Do you want to clone both ISO repos? [y/n] "
+      read yn1
+      if [[ $yn1 == 'y' ]]; then
+        gitc archiso fedora-ISO
+      else
+        printf "Do you want to clone the archiso repo? [y/n] "
+        read yn2
+        if [[ $yn2 == 'y' ]]; then
+          gitc archiso
+        fi
+      fi
+
+      # Clone all OS shell script repos
+      printf "Do you want to clone all the OS shell script repos? [y/n] "
+      read yn3
+      if [[ $yn3 == 'y' ]]; then
+        gitc arch-scripts centos-scripts debian-scripts fedora-scripts freebsd-scripts gentoo-scripts Linux-scripts mageia-scripts opensuse-scripts sabayon-scripts
+      fi
+
+      # Clone all config repos
+      printf "Do you want to clone all configuration (e.g., for the Atom text editor) repos? [y/n] "
+      read yn4
+      if [[ $yn4 == 'y' ]]; then
+        gitc atom spacemacs vim xdg-menus
+      fi
+
+      # Clone all installer repos
+      printf "Do you want to clone all installer repos? [y/n] "
+      read yn5
+      if [[ $yn5 == 'y' ]]; then
+        gitc arch-builder atom-installer arch-setup gentoo-packer sabayon-packer
+      fi
+
+      # Clone all theme repos
+      printf "Do you want to clone all theme repos? [y/n] "
+      read yn6
+      if [[ $yn6 == 'y' ]]; then
+        gitc sabayon-gitsta zsh-theme
+      fi
+
+      # Clone all repos feeding The Hornery
+      printf "Do you want to clone all repos that feed The Hornery (A) or would you rather just clone fusion809.github.io (B)? "
+      read TH
+      if [[ $TH == 'A' ]]; then
+        gitc fusion809.github.io hexo-site hubpress.io pelican-site
+      elif
+        gitc fusion809.github.io
+      fi
+
+      printf "Do you want to clone all my programming GitHub repos? [y/n] "
+      read yn7
+      if [[ $yn7 == 'y' ]]; then
+        gitc bin JScripts npm2archOBS python-scripts
+      fi
+
+      printf "Do you want to clone all program files? [y/n] "
+      read yn8
+      if [[ $yn8 == 'y' ]]; then
+        gitc DiscoveryStudio GNU_Octave
+      fi
+
+      # Clone all programming repos
+      gitc hexo-tag-markdown \
+        PKGBUILDs rpmbuild sabayon-tools
+    fi
 }
