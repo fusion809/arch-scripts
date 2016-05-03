@@ -11,8 +11,8 @@ function gitc {
 			cd ~/.atom
 			gitsw
 			git pull origin master
-		fi
-		if ! [[ -d $GHUBM/$i ]]; then
+			cd -
+		elif ! [[ -d $GHUBM/$i ]]; then
 			git clone https://github.com/fusion809/$i.git $GHUBM/$i
 		fi
 		pushd $GHUBM/$i
