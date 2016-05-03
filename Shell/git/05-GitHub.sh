@@ -4,6 +4,14 @@ function gitc {
 		if ! [[ -d $GHUBM ]]; then
 			mkdir -p $GHUBM
 		fi
+		if [[ $i == 'atom' ]]; then
+			if ! [[ -d $HOME/.atom ]]; then
+				mkdir $HOME/.atom
+			fi
+			cd ~/.atom
+			gitsw
+			git pull origin master
+		fi
 		if ! [[ -d $GHUBM/$i ]]; then
 			git clone https://github.com/fusion809/$i.git $GHUBM/$i
 		fi
