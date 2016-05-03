@@ -52,6 +52,7 @@ function aset {
       spacemacs xdg-menus vim zsh-theme \
       PKGBUILDs rpmbuild sabayon-tools
   else
+    # Clone ISO repos
     printf "Do you want to clone both ISO repos? [y/n] "
     read yn1
     if [[ $yn1 == 'y' ]]; then
@@ -115,6 +116,7 @@ function aset {
       gitc DiscoveryStudio GNU_Octave
     fi
 
+    # Clone packaging repos
     printf "Do you want to clone my packaging GitHub repos (A) or would you rather just clone the PKGBUILDs repo (B)? "
     read PKR
     if [[ $PKR == 'A' ]]; then
@@ -123,6 +125,7 @@ function aset {
       gitc PKGBUILDs
     fi
 
+    # Clone hexo-tag-markdown repo
     printf "Do you want to clone the hexo-tag-markdown repo? [y/n] "
     read yn9
     if [[ $yn9 == 'y' ]]; then
