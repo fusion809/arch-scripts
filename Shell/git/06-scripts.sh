@@ -43,7 +43,7 @@ function aset {
   read yn
   if [[ $yn == 'y' ]]; then
     gitc archiso fedora-ISO \
-      arch-scripts centos-scripts debian-scripts fedora-scripts freebsd-scripts gentoo-scripts Linux-scripts mageia-scripts opensuse-scripts sabayon-scripts
+      arch-scripts centos-scripts debian-scripts fedora-scripts freebsd-scripts gentoo-scripts Linux-scripts mageia-scripts opensuse-scripts sabayon-scripts \
       atom atom-installer \
       arch-builder arch-setup gentoo-packer sabayon-packer \
       fusion809.github.io hexo-site hexo-tag-markdown hubpress.io pelican-site \
@@ -101,24 +101,32 @@ function aset {
       gitc fusion809.github.io
     fi
 
+    # Clone all programming repos
     printf "Do you want to clone all my programming GitHub repos? [y/n] "
     read yn7
     if [[ $yn7 == 'y' ]]; then
       gitc bin JScripts npm2archOBS python-scripts
     fi
 
-    printf "Do you want to clone all program files? [y/n] "
+    # Clone all science program repos
+    printf "Do you want to clone all my science program repos? [y/n] "
     read yn8
     if [[ $yn8 == 'y' ]]; then
       gitc DiscoveryStudio GNU_Octave
     fi
 
-    printf "Do you want to clone my packaging GitHub repos? [y/n] "
+    printf "Do you want to clone my packaging GitHub repos (A) or would you rather just clone the PKGBUILDs repo (B)? "
+    read PKR
+    if [[ $PKR == 'A' ]]; then
+      gitc PKGBUILDs rpmbuild sabayon-tools
+    elif [[ $PKR == 'B' ]]; then
+      gitc PKGBUILDs
+    fi
+
+    printf "Do you want to clone the hexo-tag-markdown repo? [y/n] "
     read yn9
     if [[ $yn9 == 'y' ]]; then
-      gitc PKGBUILDs rpmbuild sabayon-tools
+      gitc hexo-tag-markdown
     fi
-    # Clone all programming repos
-    gitc hexo-tag-markdown
   fi
 }
