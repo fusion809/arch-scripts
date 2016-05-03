@@ -37,6 +37,10 @@ function cddo {
 	cd ~/Downloads
 }
 
+function cdg {
+	cd $GHUB
+}
+
 # - GNU_Octave
 function cdoct {
 	cd ~/GNU_Octave
