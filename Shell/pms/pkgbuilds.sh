@@ -60,6 +60,24 @@ function mksrcinfo {
   makepkg --printsrcinfo > .SRCINFO
 }
 
+function linup {
+  unset verc
+  unset verl
+  unset OPWD
+  export OPWD=$PWD
+  cd $HOME/AUR/linux-ck
+  git pull origin master
+  verl=$(sed -n 's/pkgver=//p' PKGBUILD)
+  cd $PKG/linux-ck
+  verc=$(sed -n 's/pkgver=//p' PKGBUILD)
+  if ! [[ $verc == $verl ]]; then
+    sed -i -e "s/pkgver=$verc/pkgver=$verl/g" PKGBUILD
+    upmakin
+    push "Updating"
+  fi
+  cd $OPWD
+}
+
 function blockup {
   unset verc
   unset verl
@@ -72,7 +90,7 @@ function blockup {
   verc=$(sed -n 's/pkgver=//p' PKGBUILD)
   if ! [[ $verl == $verc ]]; then
     sed -i -e "s/pkgver=$verc/pkgver=$verl/g" PKGBUILD
-    upmak
+    upmakin
     push "Updating"
   fi
   cd $OPWD

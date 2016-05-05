@@ -35,12 +35,13 @@ function yarm {
 }
 
 function update {
+  linup
+  vimups
+  blockup
 	yaourt -Syua --noconfirm --needed
 	if hash apm 2>/dev/null; then
 		apmup
 	fi
-  vimups
-  blockup
 }
 
 function yaup {
