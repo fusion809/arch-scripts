@@ -130,8 +130,8 @@ function vimupo {
 if ! `comc mksrcinfo`; then
   echo "mksrcinfo unset; defining"
   
+  # Set mksrcinfo
   function mksrcinfo {
-    # mksrcinfo
     makepkg --printsrcinfo > .SRCINFO
   }
 fi
