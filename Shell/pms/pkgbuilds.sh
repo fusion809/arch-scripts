@@ -121,15 +121,20 @@ function atomup {
 }
 
 function vimupo {
-  OPWD=$PWD
+  # Make the latest version of Vim using the gvim-git package
   cd $PKG/gvim-git
     makepkg -si --noconfirm --needed
   cd -
 }
 
-function mksrcinfo {
-  makepkg --printsrcinfo > .SRCINFO
-}
+if ! `comc mksrcinfo`; then
+  echo "mksrcinfo unset; defining"
+  
+  function mksrcinfo {
+    # mksrcinfo
+    makepkg --printsrcinfo > .SRCINFO
+  }
+fi
 
 function linup {
   unset verc
