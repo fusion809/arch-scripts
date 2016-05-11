@@ -60,6 +60,10 @@ function edau {
 	atom ~/AUR
 }
 
+function edfu {
+	atom $GHUBM/fusion-ui
+}
+
 function edpka {
 	atom $GHUBM/packer-arch
 }

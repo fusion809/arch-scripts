@@ -42,3 +42,7 @@ function vspy {
 function vssh {
   vscode $SHL
 }
+
+function vsfu {
+	vscode $GHUBM/fusion-ui
+}
