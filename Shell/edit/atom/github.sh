@@ -40,24 +40,9 @@ function edhp {
 	atom $GHUBM/hubpress.io
 }
 
-# JScripts
-function edjs {
-	atom $GHUBM/JScripts
-}
-
-# npm2archOBS
-function ednpm {
-	atom $GHUBM/npm2archOBS
-}
-
 # PKGBUILDs
 function edpk {
 	atom $GHUBM/PKGBUILDs
-}
-
-# packer-arch
-function edpka {
-	atom $GHUBM/packer-arch
 }
 
 # Python scripts
