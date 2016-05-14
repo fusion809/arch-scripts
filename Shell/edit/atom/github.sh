@@ -13,17 +13,13 @@ function edat {
 	atom $HOME/.atom
 }
 
-function edatin {
-	atom $GHUBM/atom-installer
-}
-
 # bin
-function edbin {
+function edb {
 	atom $HOME/bin
 }
 
-alias edin=edbin
-alias ebin=edbin
+alias edin=edb
+alias ebin=edb
 
 # Discovery Studio
 function edds {
