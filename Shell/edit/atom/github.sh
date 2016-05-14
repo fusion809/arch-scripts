@@ -30,11 +30,6 @@ function edds {
 	atom $HOME/"DiscoveryStudio"
 }
 
-# fusion-ui theme
-function edfu {
-	atom $GHUBM/fusion-ui
-}
-
 # hubpress.io
 function edhp {
 	atom $GHUBM/hubpress.io

@@ -1,3 +1,8 @@
+# fusion-ui theme
+function edfu {
+	atom $GHUBM/fusion-ui
+}
+
 # JScripts
 function edjs {
 	atom $GHUBM/JScripts
