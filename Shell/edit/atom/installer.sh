@@ -1,24 +1,15 @@
-# General form
-function edin {
-  atom $GHUBM/$1-installer
-}
-
-# Atom
 function edatin {
-	edin atom
+	atom $GHUBM/atom-installer
 }
 
-# Brackets
 function edbin {
-  edin brackets
+  atom $GHUBM/brackets-installer
 }
 
-# LightTable
 function edltin {
-  edin lighttable
+  atom $GHUBM/lighttable-installer
 }
 
-# Visual Studio Code
 function edvsin {
   atom $GHUBM/VScode-installer
 }

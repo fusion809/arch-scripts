@@ -13,13 +13,6 @@ function edat {
 	atom $HOME/.atom
 }
 
-# bin
-function edb {
-	atom $HOME/bin
-}
-
-alias ebin=edb
-
 # Discovery Studio
 function edds {
 	atom $HOME/"DiscoveryStudio"
