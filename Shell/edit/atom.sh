@@ -1,39 +1,6 @@
-# bash
-function abash {
-	atom ~/.bashrc $SHL
-}
-
-# zsh
-function azsh {
-  atom ~/.bashrc $SHL
-}
-
-# atom
-function edat {
-	atom ~/.atom
-}
-
-# archiso
-function edai {
-	atom $GHUBM/archiso
-}
-
-# arch-setup
-function edast {
-	atom $GHUBM/arch-setup
-}
-
-# bin
-function edbin {
-	atom ~/bin
-}
-
-alias edin=edbin
-alias ebin=edbin
-
-# Discovery Studio
-function edds {
-	atom ~/"DiscoveryStudio"
+# Arch User Repository
+function edau {
+	atom ~/AUR
 }
 
 # Menus
@@ -41,54 +8,12 @@ function edmen {
 	sudo atom /etc/xdg/menus && sudo atom /usr/share/desktop-directories
 }
 
-# PKGBUILDs
-function edpk {
-	atom $GHUBM/PKGBUILDs
-}
-
-# Python scripts
-function edpy {
-	atom $GHUBM/python-scripts
-}
-
-# Shell scripts
-function edsh {
-	atom $SHL
-}
-
-function edau {
-	atom ~/AUR
-}
-
-function edfu {
-	atom $GHUBM/fusion-ui
-}
-
-function edpka {
-	atom $GHUBM/packer-arch
-}
-
+# Oh My Zsh plugins
 function edzp {
 	atom ~/.oh-my-zsh/plugins
 }
 
+# Oh My Zsh themes
 function edzt {
 	atom ~/.oh-my-zsh/themes/
-}
-
-# NPM
-function ednpm {
-	atom $GHUBM/npm2archOBS
-}
-
-function edhp {
-	atom $GHUBM/hubpress.io
-}
-
-function edjs {
-	atom $GHUBM/JScripts
-}
-
-function edatin {
-	atom $GHUBM/atom-installer
 }
