@@ -18,7 +18,6 @@ function edb {
 	atom $HOME/bin
 }
 
-alias edin=edb
 alias ebin=edb
 
 # Discovery Studio
