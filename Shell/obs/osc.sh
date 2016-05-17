@@ -20,12 +20,12 @@ function vimup {
       sed -i -e "s/%define patchlevel  $verc/%define patchlevel  $verl/g" vim.spec
       osc ci -m "Updating to version 7.4.$verl"
     popd
-    pushd $PKG/gvim
+    pushd $PKG/gvim/gtk2
       sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
       rm *.*z
       updpkgsums
     popd
-    pushd $PKG/gvim-gtk3
+    pushd $PKG/gvim/gtk3
       sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
       rm *.*z
       updpkgsums
@@ -58,18 +58,18 @@ function vimups {
   # verc is the current patch version of Vim in vim.spec
   # verl is the latest patch version of Vim.
 
-  verc=$(sed -n 's/pkgver=7.4.//p' $PKG/gvim/PKGBUILD)
+  verc=$(sed -n 's/pkgver=7.4.//p' $PKG/gvim/gtk2/PKGBUILD)
   verl=$(git describe --abbrev=0 --tags | sed 's/v7.4.//g')
   popd
   if [[ $verc == $verl ]]; then
     echo "Vim is up-to-date"
   else
-    pushd $PKG/gvim
+    pushd $PKG/gvim/gtk2
       sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
       rm *.*z
       updpkgsums
     popd
-    pushd $PKG/gvim-gtk3
+    pushd $PKG/gvim/gtk3
       sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
       rm *.*z
       updpkgsums
