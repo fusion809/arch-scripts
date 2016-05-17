@@ -13,3 +13,11 @@ function cdatpb {
 function cdgg {
   cd $PKG/gvim/git
 }
+
+function cdvs {
+	cd $PKG/vscode/oss
+}
+
+function cdvsg {
+	cd $PKG/vscode/git
+}
