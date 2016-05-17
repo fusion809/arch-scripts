@@ -34,7 +34,7 @@ function atomup {
   popd # change back out
 
   # Change into the atom-editor PKGBUILD folder
-  pushd $PKG/atom-editor/stable
+  pushd $PKG/atom-editor
 
     # Determine the stable version of Atom mentioned in this PKGBUILD
     vercs=$(sed -n 's/pkgver=//p' PKGBUILD)
@@ -122,7 +122,7 @@ function atomup {
 
 function vimupo {
   # Make the latest version of Vim using the gvim-git package
-  cd $PKG/gvim/git
+  cd $PKG/gvim-git
     makepkg -si --noconfirm --needed
   cd -
 }
