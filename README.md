@@ -4,5 +4,5 @@ Where I keep scripts for automating some processes under Arch Linux. Run the `cp
 Run the following to install this repo on your Arch machine:
 
 ```bash
-sh -c "$(wget -cqO- https://git.io/vaKlX)"
+/bin/bash -c "$(wget -cqO- https://git.io/vaKlX)"
 ```
