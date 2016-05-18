@@ -21,5 +21,5 @@ function edvsin {
 }
 
 function edin {
-	atom "$GHUBM/{atom,brackets,komodo,lighttable,vscode}-installer"
+	atom "$GHUBM/atom-installer" "$GHUBM/brackets-installer" "$GHUBM/komodo-installer" "$GHUBM/lighttable-installer" "$GHUBM/vscode-installer"
 }
