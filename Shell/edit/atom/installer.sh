@@ -19,3 +19,7 @@ function edltin {
 function edvsin {
   atom $GHUBM/vscode-installer
 }
+
+function edin {
+	atom "$GHUBM/*-installer"
+}
