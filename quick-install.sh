@@ -37,7 +37,7 @@ else
   cd -
 fi
 
-if ! [[ -d $HOME/GitHub/{,mine/}zsh-theme ]]; then
+if ! [[ -d $HOME/GitHub/zsh-theme ]] || ! [[ -d $HOME/GitHub/mine/zsh-theme ]]; then
 # Get my self-made zsh-themes
   git clone https://github.com/fusion809/zsh-theme $HOME/GitHub/mine/zsh-theme
   cp -a $HOME/GitHub/mine/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
