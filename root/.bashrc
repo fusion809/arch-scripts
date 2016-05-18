@@ -16,7 +16,7 @@ PS1='\
 \[\e[48;5;39m\] \
 \[\e[0m\]\
  '
-for i in $HOME/Shell/*.sh
+for i in ~/Shell/*.sh
 do
 	. "$i"
 done

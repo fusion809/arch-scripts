@@ -12,3 +12,8 @@ function azsh {
 function edsh {
 	atom $SHL
 }
+
+# Scripts
+function edss {
+	atom $GHUBM/{arch,centos,debian,fedora,gentoo,mageia,opensuse,sabayon}-scripts
+}

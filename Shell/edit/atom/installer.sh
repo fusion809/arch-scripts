@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function edatin {
 	atom $GHUBM/atom-installer
 }
