@@ -49,3 +49,7 @@ function cdpka {
 function cdpy {
 	cd $GHUBM/python-scripts
 }
+
+function cdvsi {
+	cd $GHUBM/vscode-installer
+}
