@@ -1,9 +1,9 @@
 # Source
 function sbash {
-	source ~/.bashrc
+	source $HOME/.bashrc
 }
 
 # zsh
 function szsh {
-  source ~/.zshrc
+  source $HOME/.zshrc
 }

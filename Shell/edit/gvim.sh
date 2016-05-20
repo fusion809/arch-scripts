@@ -1,5 +1,5 @@
 function gbash {
-	gvim ~/.bashrc
+	gvim $HOME/.bashrc
 }
 
 function gvfgi {
@@ -11,7 +11,7 @@ function gvpk {
 }
 
 function gvgvim {
-	gvim ~/.vimrc
+	gvim $HOME/.vimrc
 }
 
 function gvsh {
@@ -19,9 +19,9 @@ function gvsh {
 }
 
 function gvzsh {
-	gvim ~/.zshrc
+	gvim $HOME/.zshrc
 }
 
 function gzsh {
-  gvim ~/.zshrc $SHL
+  gvim $HOME/.zshrc $SHL
 }

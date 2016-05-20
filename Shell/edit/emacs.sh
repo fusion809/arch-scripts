@@ -1,10 +1,10 @@
 # emacs
 function ebash {
-	emacs ~/.bashrc $SHL
+	emacs $HOME/.bashrc $SHL
 }
 
 function eobs {
-	emacs ~/OBS/home:fusion809
+	emacs $HOME/OBS/home:fusion809
 }
 
 function epk {
@@ -12,9 +12,9 @@ function epk {
 }
 
 function esh {
-	emacs ~/Shell
+	emacs $HOME/Shell
 }
 
 function ezsh {
-  emacs ~/.bashrc $SHL
+  emacs $HOME/.bashrc $SHL
 }

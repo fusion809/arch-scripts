@@ -1,14 +1,14 @@
 # file system structure
-# ~/
+# $HOME/
 # - .atom
 function cdat {
 	echo "Use pushat for this repo"
-	cd ~/.atom
+	cd $HOME/.atom
 }
 
 # - .config/menus
 function cdmen {
-	cd ~/.config/menus/
+	cd $HOME/.config/menus/
 }
 
 #	- .local/share
@@ -22,26 +22,26 @@ function cdpq {
 
 # -- applications
 function cdap {
-	cd ~/.local/share/applications
+	cd $HOME/.local/share/applications
 }
 
 function cdapa {
-	cd ~/.local/share/applications/Atom
+	cd $HOME/.local/share/applications/Atom
 }
 
 function cdgap {
-	cd ~/.local/share/applications/gVim
+	cd $HOME/.local/share/applications/gVim
 }
 
 function cdvap {
-	cd ~/.local/share/applications/VirtualBox
+	cd $HOME/.local/share/applications/VirtualBox
 }
 
 ##########################
 function cddd {
-	cd ~/.local/share/desktop-directories
+	cd $HOME/.local/share/desktop-directories
 }
 
 function cdi {
-	cd ~/.local/share/icons
+	cd $HOME/.local/share/icons
 }

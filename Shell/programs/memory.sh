@@ -9,7 +9,7 @@ function ps_apl {
 
   re='^[0-9]+$'
   if ! [[ -n "$A" ]]; then
-    if [[ "$1" =~ "$re" ]]; then
+    if [[ "$1" =$HOME "$re" ]]; then
       I="$1"
     else
       A="$1"

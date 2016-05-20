@@ -3,8 +3,8 @@ function cps {
   sudo chmod +x -R {$HOME,/root}/Shell/
   rm -rf $ARS/Shell && mkdir $ARS/Shell
   sudo rm -rf $ARS/root/Shell
-  cp -a ~/Shell/* $ARS/Shell
-  cp -a ~/{.bashrc,.zshrc} $ARS/
+  cp -a $HOME/Shell/* $ARS/Shell
+  cp -a $HOME/{.bashrc,.zshrc} $ARS/
   sudo cp -a /root/{Shell,.bashrc,.zshrc} $ARS/root/
 }
 
@@ -33,7 +33,7 @@ function bup {
 }
 
 function shupat {
-  cd ~/.atom
+  cd $HOME/.atom
   pushat "Updating"
   cd -
 }

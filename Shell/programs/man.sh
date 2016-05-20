@@ -1,9 +1,9 @@
 function cpman {
-  sudo cp -a /usr/share/man/man$1/$2.$1 ~/Documents/Manpages
+  sudo cp -a /usr/share/man/man$1/$2.$1 $HOME/Documents/Manpages
 }
 
 function cpmang {
-  sudo cp -a /usr/share/man/man$1/$2.$1.gz ~/Documents/Manpages
+  sudo cp -a /usr/share/man/man$1/$2.$1.gz $HOME/Documents/Manpages
 }
 
 function manconv {

@@ -8,7 +8,7 @@ function gitc {
 			if ! [[ -d $HOME/.atom ]]; then
 				mkdir $HOME/.atom
 			fi
-			cd ~/.atom
+			cd $HOME/.atom
 			gitsw
 			git pull origin master
 			cd -

@@ -1,18 +1,18 @@
 # bashrc
 function nbash {
-	nano ~/.bashrc
+	nano $HOME/.bashrc
 }
 
 function nsp {
-	nano ~/.spacemacs
+	nano $HOME/.spacemacs
 }
 
 # xinitrc
 function nx {
-	nano ~/.xinitrc
+	nano $HOME/.xinitrc
 }
 
 # zshrc
 function nzsh {
-  nano ~/.zshrc
+  nano $HOME/.zshrc
 }

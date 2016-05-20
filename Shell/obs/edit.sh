@@ -1,5 +1,5 @@
 function edobs {
-	atom ~/OBS/home:fusion809
+	atom $HOME/OBS/home:fusion809
 }
 
 function edobsa {

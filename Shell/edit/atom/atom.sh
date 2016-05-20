@@ -1,6 +1,6 @@
 # Arch User Repository
 function edau {
-	atom ~/AUR
+	atom $HOME/AUR
 }
 
 # Menus
@@ -10,10 +10,10 @@ function edmen {
 
 # Oh My Zsh plugins
 function edzp {
-	atom ~/.oh-my-zsh/plugins
+	atom $HOME/.oh-my-zsh/plugins
 }
 
 # Oh My Zsh themes
 function edzt {
-	atom ~/.oh-my-zsh/themes/
+	atom $HOME/.oh-my-zsh/themes/
 }

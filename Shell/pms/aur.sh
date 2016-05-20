@@ -1,9 +1,9 @@
 function cppk {
-	cp -a $GHUBM/PKGBUILDs/${PWD##*/}/{PKGBUILD,*.install,*.patch,*.h} ~/AUR/${PWD##*/}
+	cp -a $GHUBM/PKGBUILDs/${PWD##*/}/{PKGBUILD,*.install,*.patch,*.h} $HOME/AUR/${PWD##*/}
 }
 
 function cpau {
-	cp -a ~/AUR/${PWD##*/}/{PKGBUILD,*.install} $GHUBM/PKGBUILDs/${PWD##*/}/
+	cp -a $HOME/AUR/${PWD##*/}/{PKGBUILD,*.install} $GHUBM/PKGBUILDs/${PWD##*/}/
 }
 
 function getaur {
@@ -31,7 +31,7 @@ function gita {
 function gitaur {
 	for i in "$@"
 	do
-		git clone ssh://aur@aur.archlinux.org/$i.git ~/AUR/$i
+		git clone ssh://aur@aur.archlinux.org/$i.git $HOME/AUR/$i
 	done
 }
 

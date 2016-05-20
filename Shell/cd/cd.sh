@@ -1,40 +1,40 @@
 # Non-hidden
 function cdabs {
-	cd ~/abs
+	cd $HOME/abs
 }
 
 function cdaps {
-	cd ~/Arch_Packages
+	cd $HOME/Arch_Packages
 }
 
 function cda {
-	cd ~/AUR
+	cd $HOME/AUR
 }
 
 function cdbd {
-	cd ~/BIOVIA/DiscoveryStudio2016
+	cd $HOME/BIOVIA/DiscoveryStudio2016
 }
 
 function cdbin {
-	cd ~/bin
+	cd $HOME/bin
 }
 
 function cdch {
-	cd ~/chroot
+	cd $HOME/chroot
 }
 
 # - Desktop
 function cdd {
-	cd ~/Desktop
+	cd $HOME/Desktop
 }
 
 function cdds {
-	cd ~/"DiscoveryStudio"
+	cd $HOME/"DiscoveryStudio"
 }
 
 # - Downloads
 function cddo {
-	cd ~/Downloads
+	cd $HOME/Downloads
 }
 
 function cdg {
@@ -43,27 +43,31 @@ function cdg {
 
 # - GNU_Octave
 function cdoct {
-	cd ~/GNU_Octave
+	cd $HOME/GNU_Octave
 }
 
 # - Music
 function cdm {
-	cd ~/Music
+	cd $HOME/Music
 }
 
 # - Shell
 function cdsh {
-	cd ~/Shell
+	cd $HOME/Shell
 }
 
 function cdvim {
-	cd ~/vim
+	cd $HOME/vim
 }
 
 function cdt {
-	cd ~/Textbooks
+	cd $HOME/Textbooks
+}
+
+function cdvid {
+	cd $HOME/Videos
 }
 
 function cdvl {
-	cd ~/Videos/Lectures
+	cd $HOME/Videos/Lectures
 }

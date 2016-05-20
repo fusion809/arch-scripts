@@ -1,13 +1,13 @@
 function avim {
-	atom ~/.vimrc
+	atom $HOME/.vimrc
 }
 
 function navim {
-	nano ~/.vimrc
+	nano $HOME/.vimrc
 }
 
 function vbash {
-	vim ~/.bashrc
+	vim $HOME/.bashrc
 }
 
 function vfgi {
@@ -23,13 +23,13 @@ function vsh {
 }
 
 function vvim {
-	vim ~/.vimrc
+	vim $HOME/.vimrc
 }
 
 function vx {
-	vim ~/.xinitrc
+	vim $HOME/.xinitrc
 }
 
 function vzsh {
-	vim ~/.zshrc
+	vim $HOME/.zshrc
 }

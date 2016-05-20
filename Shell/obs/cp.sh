@@ -1,5 +1,5 @@
 function cpobs {
-	cd ~/OBS/home:fusion809:arch_extra
+	cd $HOME/OBS/home:fusion809:arch_extra
 	for i in "$@"
 	do
 		pbget $i
@@ -12,7 +12,7 @@ function cpobs {
 }
 
 function cpobsa {
-	cd ~/OBS/home:fusion809:arch_extra
+	cd $HOME/OBS/home:fusion809:arch_extra
 	for i in "$@"
 	do
 		curlaur $i
@@ -25,7 +25,7 @@ function cpobsa {
 }
 
 function cpobsp {
-	cd ~/OBS/home:fusion809:arch_extra:python
+	cd $HOME/OBS/home:fusion809:arch_extra:python
 	for i in "$@"
 	do
 		pbget $i
@@ -38,7 +38,7 @@ function cpobsp {
 }
 
 function cpobsm {
-	cd ~/OBS/home:fusion809:arch_extra:multilib
+	cd $HOME/OBS/home:fusion809:arch_extra:multilib
 	for i in "$@"
 	do
 		pbget $i
@@ -51,7 +51,7 @@ function cpobsm {
 }
 
 function cpobsc {
-	cd ~/OBS/home:fusion809:arch_extra:community
+	cd $HOME/OBS/home:fusion809:arch_extra:community
 	for i in "$@"
 	do
 		pbget $i
@@ -64,7 +64,7 @@ function cpobsc {
 }
 
 function cpobse {
-	cd ~/OBS/home:fusion809:arch_extra:extra
+	cd $HOME/OBS/home:fusion809:arch_extra:extra
 	for i in "$@"
 	do
 		pbget $i

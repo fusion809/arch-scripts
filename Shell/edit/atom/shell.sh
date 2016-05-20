@@ -1,11 +1,11 @@
 # bash
 function abash {
-	atom ~/.bashrc $SHL
+	atom $HOME/.bashrc $SHL
 }
 
 # zsh
 function azsh {
-  atom ~/.bashrc $SHL
+  atom $HOME/.bashrc $SHL
 }
 
 # Shell scripts
