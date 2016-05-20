@@ -22,25 +22,13 @@ function gitsw {
   git remote rm origin
   git remote rm upstream
 	CWD=${PWD##*/}
-	if [[ "$CWD" =$HOME ^\. ]]; then
-		GWD="${CWD#.}"
-	  if [[ -n "$1" ]]
-	    then
-	      git remote add origin git@github.com:$1/$GWD.git
-	      git remote add upstream git@github.com:$1/$GWD.git
-	    else
-	      git remote add origin git@github.com:fusion809/$GWD.git
-	      git remote add upstream git@github.com:fusion809/$GWD.git
-	  fi
+	GWD="${CWD#.}"
+	if [[ -n "$1" ]]; then
+	  git remote add origin git@github.com:$1/$GWD.git
+	  git remote add upstream git@github.com:$1/$GWD.git
 	else
-		if [[ -n "$1" ]]
-			then
-				git remote add origin git@github.com:$1/$CWD.git
-				git remote add upstream git@github.com:$1/$CWD.git
-			else
-				git remote add origin git@github.com:fusion809/$CWD.git
-				git remote add upstream git@github.com:fusion809/$CWD.git
-		fi
+	  git remote add origin git@github.com:fusion809/$GWD.git
+	  git remote add upstream git@github.com:fusion809/$GWD.git
 	fi
 }
 
