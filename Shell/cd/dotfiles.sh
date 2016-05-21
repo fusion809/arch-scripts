@@ -45,3 +45,11 @@ function cddd {
 function cdi {
 	cd $HOME/.local/share/icons
 }
+
+function cdlt {
+	cd $HOME/.local/share/themes
+}
+
+function cdth {
+	cd $HOME/.themes
+}
