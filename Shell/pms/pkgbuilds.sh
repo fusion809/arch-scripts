@@ -47,7 +47,7 @@ function atomup {
       sed -i -e "s/pkgver=$vercs/pkgver=$verls/g" PKGBUILD
 
       # Also update the atom-editor-sync PKGBUILD
-      sed -i -e "s/pkgver=$vercs/pkgver=$verls/g" ../sync/PKGBUILD
+      sed -i -e "s/pkgver=$vercs/pkgver=$verls/g" ../atom-editor-sync/PKGBUILD
 
       # rm the source code tarball of Atom $vercs in the atom-editor PKGBUILD folder
       if [[ -f v$vercs.tar.gz ]]; then
@@ -73,7 +73,7 @@ function atomup {
   popd
 
   # Change into the atom-editor-beta PKGBUILD folder
-  pushd $GHUBM/PKGBUILDs/atom-editor/beta
+  pushd $PKG/atom-editor-beta
 
     # atom-editor-beta base version (e.g., 1.8.0)
     vercbb=$(sed -n 's/_pkgver=//p' PKGBUILD)
