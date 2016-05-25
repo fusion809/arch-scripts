@@ -1,4 +1,4 @@
-function vimup {
+function vimups {
   unset verc
   unset verl
   unset VIMDIR
@@ -46,7 +46,7 @@ function vimup {
   fi
 }
 
-function vimups {
+function vimup {
   unset verc
   unset verl
   unset VIMDIR
