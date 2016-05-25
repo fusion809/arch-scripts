@@ -36,7 +36,11 @@ function yarm {
 
 function update {
   linup
-  vimups
+  if $([[ -d $HOME/OBS/home:fusion809/vim ]] && [[ -d $HOME/OBS/home:fusion809:arch_extra:extra/gvim ]]); then
+    vimup
+  else
+    vimups
+  fi
   blockup
 	yaourt -Syua --noconfirm --needed
 	if hash apm 2>/dev/null; then
