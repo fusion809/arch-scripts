@@ -10,7 +10,7 @@ function jekexc {
 
 function jekset {
   if ! [[ -d $FGI ]]; then
-    gitc fusion809.github.io
+    git clone fusion809.github.io $FGI
   fi
   cd $FGI
   pacin rubygems

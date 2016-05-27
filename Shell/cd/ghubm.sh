@@ -9,12 +9,12 @@ function cdab {
 }
 
 function cdga {
-	cd $GHUBM/atom
+	cd $ATO
 }
 
 # Arch setup repo
 function cdast {
-	cd $GHUBM/scripts/arch-setup
+	cd $SCR/arch-setup
 }
 
 # My Arch ISO repo
@@ -26,27 +26,27 @@ alias cdai=cdal
 
 # My arch-scripts repo
 function cdarch {
-	cd $GHUBM/scripts/arch-scripts
+	cd $SCR/arch-scripts
 }
 
 # My Atom Installer repo
 function cdatin {
-	cd $GHUBM/installer/atom-installer
+	cd $INS/atom-installer
 }
 
 # - GNU_Octave
 function cdoct {
-	cd $GHUBM/scripts/GNU_Octave
+	cd $SCR/GNU_Octave
 }
 
 # My HubPress.io repo
 function cdhp {
-	cd $GHUBM/websites/hubpress.io
+	cd $WEB/hubpress.io
 }
 
 # My JavaScripts
 function cdjs {
-	cd $GHUBM/scripts/JScripts
+	cd $SCR/JScripts
 }
 
 # My Arch Packer repo
@@ -56,9 +56,9 @@ function cdpka {
 
 # My Python scripts repo
 function cdpy {
-	cd $GHUBM/scripts/python-scripts
+	cd $SCR/python-scripts
 }
 
 function cdvsi {
-	cd $GHUBM/installer/vscode-installer
+	cd $INS/vscode-installer
 }

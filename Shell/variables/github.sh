@@ -6,3 +6,4 @@ export ARS=$GHUBM/scripts/arch-scripts
 export PKG=$GHUBM/packaging/PKGBUILDs
 export SCR=$GHUBM/scripts
 export WEB=$GHUBM/websites
+export ATO=$GHUBM/atom
