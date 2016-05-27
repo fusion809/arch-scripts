@@ -20,6 +20,8 @@ function edvsin {
   atom $GHUBM/vscode-installer
 }
 
+alias edvsi=edvsin
+
 function edin {
 	atom "$GHUBM/atom-installer" "$GHUBM/brackets-installer" "$GHUBM/komodo-installer" "$GHUBM/lighttable-installer" "$GHUBM/vscode-installer"
 }

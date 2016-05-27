@@ -43,7 +43,7 @@ function cdg {
 
 # - GNU_Octave
 function cdoct {
-	cd $HOME/GNU_Octave
+	cd $GHUBM/GNU_Octave
 }
 
 # - Music
@@ -70,4 +70,8 @@ function cdvid {
 
 function cdvl {
 	cd $HOME/Videos/Lectures
+}
+
+function cdvy {
+	cd $HOME/Videos/YouTube
 }

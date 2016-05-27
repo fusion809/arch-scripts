@@ -8,6 +8,11 @@ function edast {
 	atom $GHUBM/arch-setup
 }
 
+# atom repos
+function edgoa {
+	atom $GHUBO/atom
+}
+
 # atom
 function edat {
 	atom $HOME/.atom
