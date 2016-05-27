@@ -5,12 +5,16 @@ function cdgm {
 
 # My arch-builder repo
 function cdab {
-	cd $GHUBM/arch-builder
+	cd $GHUBM/packer/arch-builder
+}
+
+function cdga {
+	cd $GHUBM/atom
 }
 
 # Arch setup repo
 function cdast {
-	cd $GHUBM/arch-setup
+	cd $GHUBM/scripts/arch-setup
 }
 
 # My Arch ISO repo
@@ -27,34 +31,34 @@ function cdarch {
 
 # My Atom Installer repo
 function cdatin {
-	cd $GHUBM/atom-installer
+	cd $GHUBM/installer/atom-installer
 }
 
 # - GNU_Octave
 function cdoct {
-	cd $GHUBM/GNU_Octave
+	cd $GHUBM/scripts/GNU_Octave
 }
 
 # My HubPress.io repo
 function cdhp {
-	cd $GHUBM/hubpress.io
+	cd $GHUBM/websites/hubpress.io
 }
 
 # My JavaScripts
 function cdjs {
-	cd $GHUBM/JScripts
+	cd $GHUBM/scripts/JScripts
 }
 
 # My Arch Packer repo
 function cdpka {
-	cd $GHUBM/packer-arch
+	cd $GHUBM/packer/packer-arch
 }
 
 # My Python scripts repo
 function cdpy {
-	cd $GHUBM/python-scripts
+	cd $GHUBM/scripts/python-scripts
 }
 
 function cdvsi {
-	cd $GHUBM/vscode-installer
+	cd $GHUBM/installer/vscode-installer
 }
