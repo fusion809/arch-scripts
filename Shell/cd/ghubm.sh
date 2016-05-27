@@ -22,12 +22,17 @@ alias cdai=cdal
 
 # My arch-scripts repo
 function cdarch {
-	cd $GHUBM/arch-scripts
+	cd $GHUBM/scripts/arch-scripts
 }
 
 # My Atom Installer repo
 function cdatin {
 	cd $GHUBM/atom-installer
+}
+
+# - GNU_Octave
+function cdoct {
+	cd $GHUBM/GNU_Octave
 }
 
 # My HubPress.io repo

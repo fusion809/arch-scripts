@@ -5,12 +5,17 @@ function edai {
 
 # arch-setup
 function edast {
-	atom $GHUBM/arch-setup
+	atom $GHUBM/scripts/arch-setup
 }
 
-# atom repos
+# other's atom repos
 function edgoa {
 	atom $GHUBO/atom
+}
+
+# my atom repos
+function edga {
+	atom $GHUBM/atom
 }
 
 # atom
@@ -25,15 +30,15 @@ function edds {
 
 # hubpress.io
 function edhp {
-	atom $GHUBM/hubpress.io
+	atom $GHUBM/websites/hubpress.io
 }
 
 # PKGBUILDs
 function edpk {
-	atom $GHUBM/PKGBUILDs
+	atom $GHUBM/packaging/PKGBUILDs
 }
 
 # Python scripts
 function edpy {
-	atom $GHUBM/python-scripts
+	atom $GHUBM/scripts/python-scripts
 }

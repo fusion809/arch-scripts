@@ -15,5 +15,5 @@ function edsh {
 
 # Scripts
 function edss {
-	atom $GHUBM/{arch,centos,debian,fedora,gentoo,mageia,opensuse,sabayon}-scripts
+	atom $GHUBM/scripts/{arch,centos,debian,fedora,gentoo,mageia,opensuse,sabayon}-scripts
 }

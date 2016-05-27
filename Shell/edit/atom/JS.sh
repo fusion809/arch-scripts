@@ -1,14 +1,14 @@
 # fusion-ui theme
 function edfu {
-	atom $GHUBM/fusion-ui
+	atom $GHUBM/atom/fusion-ui
 }
 
 # JScripts
 function edjs {
-	atom $GHUBM/JScripts
+	atom $GHUBM/scripts/JScripts
 }
 
 # npm2archOBS
 function ednpm {
-	atom $GHUBM/npm2archOBS
+	atom $GHUBM/scripts/npm2archOBS
 }

@@ -1,1 +1,1 @@
-export HS=$GHUBM/hexo-site
+export HS=$GHUBM/websites/hexo-site

@@ -1,27 +1,27 @@
 #!/bin/bash
 
 function edatin {
-	atom $GHUBM/atom-installer
+	atom $GHUBM/installer/atom-installer
 }
 
 function edbin {
-  atom $GHUBM/brackets-installer
+  atom $GHUBM/installer/brackets-installer
 }
 
 function edkmin {
-	atom $GHUBM/komodo-installer
+	atom $GHUBM/installer/komodo-installer
 }
 
 function edltin {
-  atom $GHUBM/lighttable-installer
+  atom $GHUBM/installer/lighttable-installer
 }
 
 function edvsin {
-  atom $GHUBM/vscode-installer
+  atom $GHUBM/installer/vscode-installer
 }
 
 alias edvsi=edvsin
 
 function edin {
-	atom "$GHUBM/atom-installer" "$GHUBM/brackets-installer" "$GHUBM/komodo-installer" "$GHUBM/lighttable-installer" "$GHUBM/vscode-installer"
+	atom "$GHUBM/installer/atom-installer" "$GHUBM/installer/brackets-installer" "$GHUBM/installer/komodo-installer" "$GHUBM/installer/lighttable-installer" "$GHUBM/installer/vscode-installer"
 }

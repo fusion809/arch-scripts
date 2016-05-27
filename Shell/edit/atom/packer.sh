@@ -1,4 +1,4 @@
 # packer-arch
 function edpka {
-	atom $GHUBM/packer-arch
+	atom $GHUBM/packer/packer-arch
 }

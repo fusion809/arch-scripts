@@ -18,7 +18,7 @@ function shup {
 }
 
 function sudoers {
-	sudo cp -a $GHUBM/arch-scripts/etc/sudoers /etc/sudoers
+	sudo cp -a $GHUBM/scripts/arch-scripts/etc/sudoers /etc/sudoers
 }
 
 ## Update bin repo

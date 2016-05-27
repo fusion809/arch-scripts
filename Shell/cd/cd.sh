@@ -41,11 +41,6 @@ function cdg {
 	cd $GHUB
 }
 
-# - GNU_Octave
-function cdoct {
-	cd $GHUBM/GNU_Octave
-}
-
 # - Music
 function cdm {
 	cd $HOME/Music
