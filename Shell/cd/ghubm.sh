@@ -34,6 +34,10 @@ function cdatin {
 	cd $INS/atom-installer
 }
 
+function cdins {
+	cd $INS
+}
+
 # - GNU_Octave
 function cdoct {
 	cd $SCR/GNU_Octave
