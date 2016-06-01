@@ -34,6 +34,11 @@ function cdatin {
 	cd $INS/atom-installer
 }
 
+# my atom-editor repo
+function edae {
+	cd $GHUBM/packaging/atom-editor
+}
+
 function cdins {
 	cd $INS
 }

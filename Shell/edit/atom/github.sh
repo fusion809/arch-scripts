@@ -38,6 +38,10 @@ function edpk {
 	atom $GHUBM/packaging/PKGBUILDs
 }
 
+function edae {
+	atom $GHUBM/packaging/atom-editor
+}
+
 # Python scripts
 function edpy {
 	atom $GHUBM/scripts/python-scripts
