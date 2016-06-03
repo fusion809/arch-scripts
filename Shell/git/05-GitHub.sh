@@ -21,6 +21,10 @@ function gitc {
 	done
 }
 
+function gitsub {
+	git submodule add https://github.com/fusion809/$1
+}
+
 function gitco {
 	git clone https://github.com/$1/$2 $GHUBO/$2
 }
