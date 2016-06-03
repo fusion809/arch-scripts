@@ -26,13 +26,16 @@ function gitsub {
 }
 
 function gitmv {
-	pushd $GHUBM/packaging
-	mv PKGBUILDs/$1 .
-	cd $1 && git init && gitsw && hub create
-	cp ../PKGBUILDs/.gitignore .
-	push "Initial commit"
-	cd ../PKGBUILDs && push "Moving $1 to own repo" && gitsub $1 && push "Adding $1 as submodule" && cd -
-	popd
+	for i in "$@"
+	do
+		pushd $GHUBM/packaging
+		mv PKGBUILDs/$1 .
+		cd $1 && git init && gitsw && hub create
+		cp ../PKGBUILDs/.gitignore .
+		push "Initial commit"
+		cd ../PKGBUILDs && push "Moving $1 to own repo" && gitsub $1 && push "Adding $1 as submodule" && cd -
+		popd
+	done
 }
 
 function gitco {
