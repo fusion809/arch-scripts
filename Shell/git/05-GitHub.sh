@@ -22,7 +22,7 @@ function gitc {
 }
 
 function gitsub {
-	git submodule add https://github.com/fusion809/$1
+	git submodule add git@github.com:fusion809/$1
 }
 
 function gitmv {
