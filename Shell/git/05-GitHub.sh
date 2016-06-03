@@ -26,7 +26,10 @@ function gitsub {
 }
 
 function gitmv {
-	push "Moving $1 to own repo" && gitsub $1 && push "Adding $1 as submodule"
+	cd $GHUBM/pckaging
+	mv PKGBUILDs/$1 .
+	hub create $1
+	cd PKGBUILDs && push "Moving $1 to own repo" && gitsub $1 && push "Adding $1 as submodule"
 }
 
 function gitco {
