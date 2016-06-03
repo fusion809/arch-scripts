@@ -35,8 +35,12 @@ function cdatin {
 }
 
 # my atom-editor repo
-function edae {
-	cd $GHUBM/packaging/atom-editor
+function cdae {
+	cd $GHUBM/packaging/atom-text-editor
+}
+
+function edpack {
+	cd $GHUBM/packaging
 }
 
 function cdins {
