@@ -72,6 +72,10 @@ function cdpy {
 	cd $SCR/python-scripts
 }
 
+function cdx {
+	cd $GHUBM/xdg-menus
+}
+
 function cdvsi {
 	cd $INS/vscode-installer
 }

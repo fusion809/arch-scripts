@@ -34,7 +34,7 @@ function atomup {
   popd # change back out
 
   # Change into the atom-editor PKGBUILD folder
-  pushd $PKG/atom-editor
+  pushd $PKG/../atom-editor
 
     # Determine the stable version of Atom mentioned in this PKGBUILD
     vercs=$(sed -n 's/pkgver=//p' PKGBUILD)
@@ -73,7 +73,7 @@ function atomup {
   popd
 
   # Change into the atom-editor-beta PKGBUILD folder
-  pushd $PKG/atom-editor-beta
+  pushd $PKG/../atom-editor-beta
 
     # atom-editor-beta base version (e.g., 1.8.0)
     vercbb=$(sed -n 's/_pkgver=//p' PKGBUILD)
@@ -122,7 +122,7 @@ function atomup {
 
 function vimupo {
   # Make the latest version of Vim using the gvim-git package
-  cd $PKG/gvim-git
+  cd $PKG/../gvim-git
     makepkg -si --noconfirm --needed
   cd -
 }
@@ -144,7 +144,7 @@ function linup {
   cd $HOME/AUR/linux-ck
   git pull origin master
   verl=$(sed -n 's/pkgver=//p' PKGBUILD)
-  cd $PKG/linux-ck
+  cd $PKG/../linux-ck
   verc=$(sed -n 's/pkgver=//p' PKGBUILD)
   if ! [[ $verc == $verl ]]; then
     sed -i -e "s/pkgver=$verc/pkgver=$verl/g" PKGBUILD
@@ -163,7 +163,7 @@ function blockup {
   git pull origin master
   git fetch -p
   verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
-  cd $PKG/blockify
+  cd $PKG/../blockify
   verc=$(sed -n 's/pkgver=//p' PKGBUILD)
   if ! [[ $verl == $verc ]]; then
     sed -i -e "s/pkgver=$verc/pkgver=$verl/g" PKGBUILD
