@@ -70,3 +70,7 @@ function cdvl {
 function cdvy {
 	cd $HOME/Videos/YouTube
 }
+
+function cdps {
+	cd $HOME/Pictures/Screenshots
+}
