@@ -39,9 +39,11 @@ function cdae {
 	cd $GHUBM/packaging/atom-text-editor
 }
 
-function edpack {
+function cdpck {
 	cd $GHUBM/packaging
 }
+
+alias cdpack=cdpck
 
 function cdins {
 	cd $INS

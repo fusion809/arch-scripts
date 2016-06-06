@@ -18,6 +18,10 @@ function edga {
 	atom $GHUBM/atom
 }
 
+function edatpk {
+	atom $GHUBM/packaging/atom-editor*
+}
+
 # atom
 function edat {
 	atom $HOME/.atom
