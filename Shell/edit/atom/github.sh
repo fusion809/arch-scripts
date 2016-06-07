@@ -15,11 +15,19 @@ function edgoa {
 
 # my atom repos
 function edga {
-	atom $GHUBM/atom
+	atom $ATO
 }
 
 function edatpk {
 	atom $GHUBM/packaging/atom-editor*
+}
+
+function edapk {
+	atom $ATO/about-arch $ATO/language-archlinux $ATO/language-ini-desktop $ATO/language-patch2 $ATO/language-shellscript
+}
+
+function edath {
+	atom $ATO/dark-bint-syntax $ATO/fusion-ui
 }
 
 # atom
