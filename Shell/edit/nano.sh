@@ -16,3 +16,7 @@ function nx {
 function nzsh {
   nano $HOME/.zshrc
 }
+
+function npk {
+	nano PKGBUILD
+}
