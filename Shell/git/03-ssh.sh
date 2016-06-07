@@ -18,24 +18,11 @@ fi
 # start the ssh-agent
 # Remember, for this to work you need your SSH keys setup
 # https://help.github.com/articles/generating-ssh-keys/
-function start_agent {
-    echo "Initializing new SSH agent..."
-    # spawn ssh-agent
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-    echo succeeded
-    chmod 600 "${SSH_ENV}"
-    . "${SSH_ENV}" > /dev/null
-    /usr/bin/ssh-add
-}
 
-if [[ -f "${SSH_ENV}" ]]; then
-     . "${SSH_ENV}" > /dev/null
-     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-      start_agent;
-    }
-else
-    start_agent;
+if ! `which keychain > /dev/null 2>&1`; then
+  sudo pacman -S keychain
 fi
 
-eval `keychain --eval aur`
+eval `keychain -q --eval id_rsa`
+eval `keychain -q --eval aur`
 #############################################################
