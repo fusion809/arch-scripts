@@ -2,7 +2,7 @@ function cdpk {
 	cd $PKG
 }
 
-function cdatp {
+function cdate {
 	cd $PKG/atom-editor
 }
 

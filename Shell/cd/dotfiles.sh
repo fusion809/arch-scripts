@@ -2,8 +2,11 @@
 # $HOME/
 # - .atom
 function cdat {
-	echo "Use pushat for this repo"
 	cd $HOME/.atom
+}
+
+function cdatp {
+	cd $HOME/.atom/packages
 }
 
 # - .config/menus
