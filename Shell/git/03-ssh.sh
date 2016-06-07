@@ -20,7 +20,7 @@ fi
 # https://help.github.com/articles/generating-ssh-keys/
 
 if ! `which keychain > /dev/null 2>&1`; then
-  sudo pacman -S keychain
+  sudo pacman -S keychain --noconfirm
 fi
 
 eval `keychain -q --eval id_rsa`
