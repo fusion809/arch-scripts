@@ -49,6 +49,9 @@ function cdins {
 	cd $INS
 }
 
+alias cdgi=cdins
+alias cdgmi=cdins
+
 # - GNU_Octave
 function cdoct {
 	cd $SCR/GNU_Octave
