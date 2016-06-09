@@ -5,6 +5,24 @@ containsElement () {
 }
 
 function gitc {
+  export _atom=('fusion-ui'
+                'language-archlinux'
+                'language-gfm2'
+                'language-ini-desktop'
+                'language-liquid'
+                'language-patch2'
+                'language-shellscript'
+                'terminal-fusion')
+
+  export _editors=('spacemacs'
+                   'vim')
+
+  export _installers=('atom-installer'
+                      'brackets-installer'
+                      'komodo-installer'
+                      'lighttable-installer'
+                      'vscode-installer')
+
 	export _packaging=('atom-editor'
 						         'atom-editor-arch'
         						 'atom-editor-beta'
@@ -38,14 +56,25 @@ function gitc {
         						 'visual-studio-code-git'
         						 'visual-studio-code-oss')
 
-  export _atom=('fusion-ui'
-                'language-archlinux'
-                'language-gfm2'
-                'language-ini-desktop'
-                'language-liquid'
-                'language-patch2'
-                'language-shellscript'
-                'terminal-fusion')
+  export _packer=('arch-builder'
+                  'gentoo-packer')
+
+  export _scripts=('arch-scripts'
+                   'arch-setup'
+                   'bin'
+                   'centos-scripts'
+                   'debian-scripts'
+                   'fedora-scripts'
+                   'gentoo-scripts'
+                   'GNU_Octave'
+                   'JScripts'
+                   'mageia-scripts'
+                   'npm2archOBS'
+                   'opensuse-scripts'
+                   'pclinuxos-scripts'
+                   'python-scripts'
+                   'sabayon-scripts'
+                   'zsh-themes')
 
 	for i in "$@"
 	do
@@ -97,10 +126,11 @@ function gitc {
         gitsw
         popd
       else
-        pushd $GHUBM/atom/$i
+        pushd $GHUBM/packaging/$i
         git pull origin master
         popd
       fi
+
 		elif ! [[ -d $GHUBM/$i ]]; then
 			git clone https://github.com/fusion809/$i.git $GHUBM/$i
       pushd $GHUBM/$i

@@ -1,7 +1,7 @@
 export GHUB=$HOME/GitHub
 export GHUBM=$GHUB/mine
 export GHUBO=$GHUB/others
-export INS=$GHUBM/installer
+export INS=$GHUBM/installers
 export ARS=$GHUBM/scripts/arch-scripts
 export PK=$GHUBM/packaging
 export PKG=$PK/PKGBUILDs
