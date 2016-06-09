@@ -34,14 +34,55 @@ function pacifb {
 }
 
 # Show package's installed size
-# Show installed files for a package
-function pacif {
+function pacis {
   for i in "$@"
   do
     if ! [[ ${i: -11} == ".pkg.tar.xz" ]]; then
       pacman -Qi $i | sed -n 's/Installed Size\s*:\s//p'
     else
       pacman -Qip $i | sed -n 's/Installed Size\s*:\s//p'
+    fi
+  done
+}
+
+# Name of package
+function paciname {
+  for i in "$@"
+  do
+    if ! [[ ${i: -11} == ".pkg.tar.xz" ]]; then
+      INFO=$(pacman -Qi $i)
+      NAME=$(printf $INFO | sed -n 's/Name\s*:\s//p')
+      VER=$(printf $INFO | sed -n 's/Version\s*:\s//p')
+      ARCH=$(printf $INFO | sed -n 's/Architecture\s*:\s//p')
+      printf "$NAME-$VER-$ARCH.pkg.tar.xz\n"
+    else
+      INFO=$(pacman -Qip $i)
+      NAME=$(printf $INFO | sed -n 's/Name\s*:\s//p')
+      VER=$(printf $INFO | sed -n 's/Version\s*:\s//p' )
+      ARCH=$(printf $INFO | sed -n 's/Architecture\s*:\s//p')
+      printf "$NAME-$VER-$ARCH.pkg.tar.xz\n"
+    fi
+  done
+}
+
+# Show package's installed size beside its name
+function pacisn {
+  for i in "$@"
+  do
+    if ! [[ ${i: -11} == ".pkg.tar.xz" ]]; then
+      INFO=$(pacman -Qi $i)
+      INS=$(printf $INFO | sed -n 's/Installed Size\s*:\s//p')
+      NAME=$(printf $INFO | sed -n 's/Name\s*:\s//p')
+      VER=$(printf $INFO | sed -n 's/Version\s*:\s//p')
+      ARCH=$(printf $INFO | sed -n 's/Architecture\s*:\s//p')
+      printf "$NAME-$VER-$ARCH.pkg.tar.xz has an installed size of $INS\n"
+    else
+      INFO=$(pacman -Qip $i)
+      INS=$(printf $INFO | sed -n 's/Installed Size\s*:\s//p')
+      NAME=$(printf $INFO | sed -n 's/Name\s*:\s//p')
+      VER=$(printf $INFO | sed -n 's/Version\s*:\s//p')
+      ARCH=$(printf $INFO | sed -n 's/Architecture\s*:\s//p')
+      printf "$NAME-$VER-$ARCH.pkg.tar.xz has an installed size of $INS\n"
     fi
   done
 }
