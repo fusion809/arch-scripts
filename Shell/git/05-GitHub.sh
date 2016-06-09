@@ -145,7 +145,7 @@ function gitc {
       fi
 
     elif `containsElement "$i" "${_packer[@]}"`; then
-      # editors repos
+      # packer repos
       if ! [[ -d $GHUBM/packer/$i ]]; then
         git clone https://github.com/fusion809/$i.git $GHUBM/packer/$i
         pushd $GHUBM/packer/$i
@@ -153,6 +153,32 @@ function gitc {
         popd
       else
         pushd $GHUBM/packer/$i
+        git pull origin master
+        popd
+      fi
+
+    elif `containsElement "$i" "${_scripts[@]}"`; then
+      # scripts repos
+      if ! [[ -d $GHUBM/scripts/$i ]]; then
+        git clone https://github.com/fusion809/$i.git $GHUBM/scripts/$i
+        pushd $GHUBM/scripts/$i
+        gitsw
+        popd
+      else
+        pushd $GHUBM/scripts/$i
+        git pull origin master
+        popd
+      fi
+
+    elif `containsElement "$i" "${_websites[@]}"`; then
+      # websites repos
+      if ! [[ -d $GHUBM/websites/$i ]]; then
+        git clone https://github.com/fusion809/$i.git $GHUBM/websites/$i
+        pushd $GHUBM/websites/$i
+        gitsw
+        popd
+      else
+        pushd $GHUBM/websites/$i
         git pull origin master
         popd
       fi
