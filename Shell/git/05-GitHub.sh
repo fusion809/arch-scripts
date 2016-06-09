@@ -118,6 +118,19 @@ function gitc {
         popd
       fi
 
+    elif `containsElement "$i" "${_editors[@]}"`; then
+      # editors repos
+      if ! [[ -d $GHUBM/editors/$i ]]; then
+        git clone https://github.com/fusion809/$i.git $GHUBM/editors/$i
+        pushd $GHUBM/editors/$i
+        gitsw
+        popd
+      else
+        pushd $GHUBM/editors/$i
+        git pull origin master
+        popd
+      fi
+
 		elif `containsElement "$i" "${_packaging[@]}"`; then
       # Packaging repos
       if ! [[ -d $GHUBM/packaging/$i ]]; then
@@ -127,6 +140,19 @@ function gitc {
         popd
       else
         pushd $GHUBM/packaging/$i
+        git pull origin master
+        popd
+      fi
+
+    elif `containsElement "$i" "${_packer[@]}"`; then
+      # editors repos
+      if ! [[ -d $GHUBM/packer/$i ]]; then
+        git clone https://github.com/fusion809/$i.git $GHUBM/packer/$i
+        pushd $GHUBM/packer/$i
+        gitsw
+        popd
+      else
+        pushd $GHUBM/packer/$i
         git pull origin master
         popd
       fi
