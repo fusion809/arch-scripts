@@ -76,6 +76,11 @@ function gitc {
                    'sabayon-scripts'
                    'zsh-themes')
 
+  export _websites=('fusion809.github.io'
+                    'hexo-site'
+                    'hubpress.io'
+                    'pelican-site')
+
 	for i in "$@"
 	do
     # mkdir $GHUBM
