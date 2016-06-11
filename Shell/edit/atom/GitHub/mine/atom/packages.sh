@@ -1,7 +1,3 @@
-function edapk {
-	atom $ATO/about-arch $ATO/language-archlinux $ATO/language-ini-desktop $ATO/language-patch2 $ATO/language-shellscript
-}
-
 function edapn {
   atom $ATO/$1
 }
@@ -9,4 +5,8 @@ function edapn {
 function edapl {
   LIST=$(for i in "$@"; do $ATO/$i \; done)
   atom $LIST
+}
+
+function edapk {
+	edapl about-arch browser-plus-fix language-archlinux language-gfm2 language-ini-desktop language-patch2 language-shellscript language-solus terminal-fusion
 }
