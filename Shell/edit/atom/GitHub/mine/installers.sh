@@ -4,15 +4,34 @@ function edgin {
   atom $INS/$1-installer
 }
 
-alias edatin=`edgin atom`
-alias edbin=`edgin brackets`
-alias edkin=`edgin komodo`
-alias edltin=`edgin lighttable`
-alias edvsin=`edgin vscode`
+function edatin {
+  edgin atom
+}
+
+function edbin {
+  edgin brackets
+}
+
+function edkin {
+  edgin komodo
+}
+
+function edltin {
+  edgin lighttable
+}
+
+function edvsin {
+  edgin vscode
+}
+
 alias edvsi=edvsin
 
 function edglin {
-  LIST=$(for i in "$@"; do $INS/$i-installer \; done)
+  unset LIST
+  for i in "$@"
+  do
+    LIST+=("$INS/$i-installer")
+  done
   atom $LIST
 }
 
