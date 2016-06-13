@@ -1,5 +1,5 @@
 function push {
-  git add --all && git commit -m "$1" && git push origin master
+  git add --all && git commit -m "$1" && git push origin $(git rev-parse --abbrev-ref HEAD)
 }
 
 # Push GitHub pages changes
