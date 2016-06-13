@@ -1,4 +1,4 @@
 # Menus
 function edmen {
-	sudo atom /etc/xdg/menus && sudo atom /usr/share/desktop-directories
+	atom ~/.config/menus ~/.local/share/desktop-directories ~/.local/share/applications
 }
