@@ -1,6 +1,6 @@
 # Non-hidden
 function cdabs {
-	cd $HOME/abs
+	cd $HOME/abs/$1
 }
 
 function cdaps {
@@ -8,7 +8,7 @@ function cdaps {
 }
 
 function cda {
-	cd $HOME/AUR
+	cd $HOME/AUR/$1
 }
 
 function cdbd {
@@ -38,7 +38,7 @@ function cddo {
 }
 
 function cdg {
-	cd $GHUB
+	cd $GHUB/$1
 }
 
 # - Music
@@ -48,19 +48,15 @@ function cdm {
 
 # - Shell
 function cdsh {
-	cd $HOME/Shell
-}
-
-function cdvim {
-	cd $HOME/vim
+	cd $HOME/Shell/$1
 }
 
 function cdt {
-	cd $HOME/Textbooks
+	cd $HOME/Textbooks/$1
 }
 
 function cdvid {
-	cd $HOME/Videos
+	cd $HOME/Videos/$1
 }
 
 function cdvl {
