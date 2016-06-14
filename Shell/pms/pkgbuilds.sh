@@ -144,7 +144,7 @@ function linup {
   cd $HOME/AUR/linux-ck
   git pull origin master
   verl=$(sed -n 's/pkgver=//p' PKGBUILD)
-  cd $PKG/../linux-ck
+  cd $PK/linux-ck
   verc=$(sed -n 's/pkgver=//p' PKGBUILD)
   if ! [[ $verc == $verl ]]; then
     sed -i -e "s/pkgver=$verc/pkgver=$verl/g" PKGBUILD
