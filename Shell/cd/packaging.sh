@@ -4,7 +4,7 @@ function cdae {
 }
 
 function cdpck {
-	cd $PK
+	cd $PK/$1
 }
 
 alias cdpack=cdpck

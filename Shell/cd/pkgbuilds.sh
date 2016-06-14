@@ -1,5 +1,5 @@
 function cdpk {
-	cd $PKG
+	cd $PKG/$1
 }
 
 function cdate {
