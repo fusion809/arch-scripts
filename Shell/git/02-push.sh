@@ -4,6 +4,13 @@ function push {
   git push origin $(git rev-parse --abbrev-ref HEAD)   # Push to the current branch
 }
 
+function pusha {
+  mksrcinfo
+  git add --all
+  git commit -m "$1"
+  git push origin $(git rev-parse --abbrev-ref HEAD)
+}
+
 # Push GitHub pages changes
 function pushp {
   git add --all
