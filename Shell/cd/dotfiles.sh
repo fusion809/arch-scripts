@@ -2,11 +2,11 @@
 # $HOME/
 # - .atom
 function cdat {
-	cd $HOME/.atom
+	cd $HOME/.atom/$1
 }
 
 function cdatp {
-	cd $HOME/.atom/packages
+	cd $HOME/.atom/packages/$1
 }
 
 # - .config/menus
@@ -15,6 +15,16 @@ function cdmen {
 }
 
 #	- .local/share
+function cdls {
+	cd $LS/$1
+}
+
+# -- applications
+function cdap {
+	cd $AP/$1
+}
+
+# -- plasma/desktoptheme
 function cdpd {
 	cd $PD
 }
@@ -23,36 +33,27 @@ function cdpq {
 	cd $PQ
 }
 
-# -- applications
-function cdap {
-	cd $HOME/.local/share/applications
-}
-
 function cdapa {
-	cd $HOME/.local/share/applications/Atom
-}
-
-function cdgap {
-	cd $HOME/.local/share/applications/gVim
+	cdap atom
 }
 
 function cdvap {
-	cd $HOME/.local/share/applications/VirtualBox
+	cdap virtualbox
 }
 
 ##########################
 function cddd {
-	cd $HOME/.local/share/desktop-directories
+	cd $DD
 }
 
 function cdi {
-	cd $HOME/.local/share/icons
+	cd $LS/icons/$1
 }
 
 function cdlt {
-	cd $HOME/.local/share/themes
+	cd $LS/themes/$1
 }
 
 function cdth {
-	cd $HOME/.themes
+	cd $TH/$1
 }

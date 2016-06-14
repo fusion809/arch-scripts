@@ -34,7 +34,7 @@ function cdds {
 
 # - Downloads
 function cddo {
-	cd $HOME/Downloads
+	cd $HOME/Downloads/$1
 }
 
 function cdg {
@@ -44,6 +44,10 @@ function cdg {
 # - Music
 function cdm {
 	cd $HOME/Music
+}
+
+function cdps {
+	cd $HOME/Pictures/Screenshots
 }
 
 # - Shell
@@ -65,8 +69,4 @@ function cdvl {
 
 function cdvy {
 	cd $HOME/Videos/YouTube
-}
-
-function cdps {
-	cd $HOME/Pictures/Screenshots
 }
