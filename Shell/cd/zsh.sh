@@ -1,5 +1,5 @@
 function cdz {
-	cd $HOME/.oh-my-zsh
+	cd $HOME/.oh-my-zsh/$1
 }
 
 function cdzt {

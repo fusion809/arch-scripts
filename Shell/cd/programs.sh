@@ -1,5 +1,5 @@
 function cdp {
-	cd $PRG
+	cd $PRG/$1
 }
 
 function cdpa {

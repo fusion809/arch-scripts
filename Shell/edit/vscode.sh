@@ -16,11 +16,11 @@ function vsai {
 }
 
 function vsatin {
-  vscode $GHUBM/atom-installer
+  vscode $INS/atom-installer
 }
 
 function vsau {
-  vscode $HOME/AUR
+  vscode $HOME/AUR/$1
 }
 
 function vsds {
@@ -28,15 +28,15 @@ function vsds {
 }
 
 function vsjs {
-  vscode $HOME/JScripts
+  vscode $SCR/JScripts
 }
 
 function vspk {
-  vscode $PKG
+  vscode $PKG/$1
 }
 
 function vspy {
-  vscode $GHUBM/python-scripts
+  vscode $SCR/python-scripts
 }
 
 function vssh {

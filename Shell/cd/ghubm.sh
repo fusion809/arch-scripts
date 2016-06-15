@@ -1,10 +1,10 @@
 # My GitHub Repos
 function cdgm {
-	cd $GHUBM
+	cd $GHUBM/$1
 }
 
 function cdga {
-	cd $ATO
+	cd $ATO/$1
 }
 
 # My Arch ISO repo

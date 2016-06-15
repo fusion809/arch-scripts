@@ -3,21 +3,21 @@ function cdpk {
 }
 
 function cdate {
-	cd $PKG/atom-editor
+	cdpk atom-editor
 }
 
 function cdatpb {
-	cd $PKG/atom-editor-beta
+	cdpk atom-editor-beta
 }
 
 function cdgg {
-  cd $PKG/gvim-git
+  cdpk gvim-git
 }
 
 function cdvs {
-	cd $PKG/visual-studio-code-oss
+	cdpk visual-studio-code-oss
 }
 
 function cdvsg {
-	cd $PKG/visual-studio-code-git
+	cdpk visual-studio-code-git
 }

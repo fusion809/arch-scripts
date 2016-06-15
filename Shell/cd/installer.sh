@@ -1,15 +1,16 @@
-# My Atom Installer repo
-function cdatin {
-	cd $INS/atom-installer
-}
-
+# Installers
 function cdins {
-	cd $INS
+	cd $INS/$1
 }
 
 alias cdgi=cdins
 alias cdgmi=cdins
 
+# My Atom Installer repo
+function cdatin {
+	cdins atom-installer
+}
+
 function cdvsi {
-	cd $INS/vscode-installer
+	cdins vscode-installer
 }

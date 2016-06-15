@@ -1,7 +1,7 @@
 function cdgo {
-	cd $GHUBO
+	cd $GHUBO/$1
 }
 
 function cdgoa {
-	cd $GHUBO/atom
+	cd $GHUBO/atom/$1
 }

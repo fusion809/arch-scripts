@@ -1,5 +1,5 @@
 function cdv {
-	cd $VBX
+	cd $VBX/$1
 }
 
 function cdvi {
