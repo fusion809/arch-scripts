@@ -22,14 +22,17 @@ function yainw {
   yain $(yaourt -Ssq $@)
 }
 
+# Search for keyword in the name or description of a package
 function yas {
   yaourt -Ss $@
 }
 
+# Search for a package (wildcard character *, supported)
 function yasw {
   yaourt -Ssq $@
 }
 
+# Remove a package
 function yarm {
 	yaourt -Rsc $@ --noconfirm
 }
@@ -38,17 +41,19 @@ function update {
   vimup
   blockup
 	yaourt -Syua --noconfirm
-  
+
 	if hash apm 2>/dev/null; then
 		apmup
 	fi
 }
 
+# Upgrade all Yaourt packages and Atom packages
 function yaup {
   yaourt -Syua --noconfirm --needed
   apmup
 }
 
+# Reinstall all packages using Yaourt
 function yarin {
   for i in $(pacman -Q | cut -d' ' -f1)
   do
