@@ -46,6 +46,10 @@ function cdm {
 	cd $HOME/Music
 }
 
+function cdpi {
+	cd $HOME/Pictures/$1
+}
+
 function cdps {
 	cd $HOME/Pictures/Screenshots
 }
