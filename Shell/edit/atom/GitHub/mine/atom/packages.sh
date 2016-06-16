@@ -26,3 +26,7 @@ function edarpk {
 function edarsh {
   edapn language-shellscript
 }
+
+function edartf {
+  edapn terminal-fusion
+}
