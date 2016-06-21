@@ -43,20 +43,20 @@ function cdg {
 
 # - Music
 function cdm {
-	cd $HOME/Music
+	cd $HOME/Music/$1
 }
 
 function cdpi {
-	cd $HOME/Pictures/$1
+	cd $PS/$1
 }
 
 function cdps {
-	cd $HOME/Pictures/Screenshots
+	cd $PS/Screenshots/$1
 }
 
 # - Shell
 function cdsh {
-	cd $HOME/Shell/$1
+	cd $SHL/$1
 }
 
 function cdt {
@@ -64,13 +64,13 @@ function cdt {
 }
 
 function cdvid {
-	cd $HOME/Videos/$1
+	cd $VI/$1
 }
 
 function cdvl {
-	cd $HOME/Videos/Lectures
+	cd $VI/Lectures/$1
 }
 
 function cdvy {
-	cd $HOME/Videos/YouTube
+	cd $VI/YouTube/$1
 }

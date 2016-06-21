@@ -1,3 +1,4 @@
+# $GHUBM/packaging/PKGBUILDs repo
 function cdpk {
 	cd $PKG/$1
 }

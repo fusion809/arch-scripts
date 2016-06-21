@@ -64,14 +64,14 @@ function vimup {
   if [[ $verc == $verl ]]; then
     echo "Vim is up-to-date"
   else
-    pushd $PKG/../gvim
+    pushd $PK/gvim
       sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
-      rm *.*z
+      rm *.*z ../gvim-gtk3/*.*z
       updpkgsums
+      cp v7.4.$verl.tar.gz ../gvim-gtk3
     popd
-    pushd $PKG/../gvim-gtk3
+    pushd $PK/gvim-gtk3
       sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
-      rm *.*z
       updpkgsums
       makepkg -si --noconfirm --needed
       push "[gvim/gvim-gtk3] Bumping to 7.4.$verl"
