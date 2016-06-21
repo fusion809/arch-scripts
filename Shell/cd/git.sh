@@ -10,3 +10,7 @@ function cdbin {
 function cdds {
 	cd $HOME/"DiscoveryStudio"
 }
+
+function cdsn {
+  cd $HOME/snapcraft/$1
+}
