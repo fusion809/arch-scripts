@@ -7,16 +7,8 @@ function cdaps {
 	cd $HOME/Arch_Packages
 }
 
-function cda {
-	cd $HOME/AUR/$1
-}
-
 function cdbd {
 	cd $HOME/BIOVIA/DiscoveryStudio2016
-}
-
-function cdbin {
-	cd $HOME/bin
 }
 
 function cdch {
@@ -28,17 +20,9 @@ function cdd {
 	cd $HOME/Desktop
 }
 
-function cdds {
-	cd $HOME/"DiscoveryStudio"
-}
-
 # - Downloads
 function cddo {
 	cd $HOME/Downloads/$1
-}
-
-function cdg {
-	cd $GHUB/$1
 }
 
 # - Music
