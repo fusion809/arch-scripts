@@ -40,8 +40,7 @@ function yarm {
 function update {
   vimup
   blockup
-	yaourt -Syua --noconfirm
-
+	yaourt -Syua --noconfirm --needed
 	if hash apm 2>/dev/null; then
 		apmup
 	fi
@@ -50,7 +49,6 @@ function update {
 # Upgrade all Yaourt packages and Atom packages
 function yaup {
   yaourt -Syua --noconfirm --needed
-  apmup
 }
 
 # Reinstall all packages using Yaourt
