@@ -222,3 +222,19 @@ function gitco {
 function ginit {
 	git init && git add --all && gitsw
 }
+
+function gcreate {
+  git init && gitsw && hub create
+}
+
+function gcpush {
+  gcreate && push "$1"
+}
+
+function pull {
+  git pull origin $(git rev-parse --abbrev-ref HEAD)
+}
+
+function pullu {
+  git pull upstream $(git rev-parse --abbrev-ref HEAD)
+}
