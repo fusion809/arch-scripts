@@ -7,6 +7,10 @@ function cdga {
 	cd $ATO/$1
 }
 
+function cdga1 {
+	cd $GHUBM/atom-1
+}
+
 # My Arch ISO repo
 function cdal {
 	cd $GHUBM/archiso
