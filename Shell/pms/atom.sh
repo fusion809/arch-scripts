@@ -1,23 +1,28 @@
-# Install package
+# Install package(s)
 function apmi {
-	apm install $@
+	apm install "$@" --no-confirm || (printf "Package installation failed" && exit)
 }
 
-# Remove package
+# List package(s)
+function apml {
+	apm list "$@"
+}
+
+# Remove package(s)
 function apmrm {
-	apm remove $@
+	apm remove "$@" --no-confirm || (printf "Package removal failed" && exit)
 }
 
 alias apmr=apmrm
 
-# Search packages
+# Search package
 function apms {
-	apm search $@
+	apm search "$@"
 }
 
 # Update packages
 function apmu {
-	apm update --no-confirm
+	apm update --no-confirm "$@"
 }
 
 alias apmup=apmu
