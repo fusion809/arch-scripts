@@ -48,3 +48,42 @@ function pushaur {
 		git push origin master
 	fi
 }
+
+function testaur {
+	_L=('artwork-maia'
+	'atom-editor-arch'
+	'atom-editor-beta'
+	'atom-editor-git'
+	'foobnix'
+	'maia-gtk-theme'
+	'moksha'
+	'moksha-detour-theme-git'
+	'moksha-forum-theme-git'
+	'moksha-kl4k-theme-git'
+	'moksha-module-cpu-git'
+	'moksha-module-deskshow-git'
+	'moksha-module-diskio-git'
+	'moksha-module-emprint-git'
+	'moksha-module-mem-git'
+	'moksha-module-net-git'
+	'moksha-modules-extra-git'
+	'moksha-radiance-theme-git'
+	'moksha-seven-theme-git'
+	'moksha-vision-theme-git'
+	'nyaovim'
+	'python-interruptingcow'
+	'python2-interruptingcow'
+	'shadow-icon-theme-git'
+	'yosembiance-git')
+	for i in "${_L[@]}"
+	do
+		if ! [[ -d $HOME/AUR/$i ]]; then
+			git clone ssh+git://aur@aur.archlinux.org/"$i".git "$HOME/AUR/$i"
+		fi
+		cd $HOME/AUR/$i
+		makepkg -sf --noconfirm || (printf "Making $i failed; exitting" && exit)
+		namcap *.xz > namcap-pkg.log
+		namcap PKGBUILD > namcap-pkgbuild.log
+		cd -
+	done
+}
