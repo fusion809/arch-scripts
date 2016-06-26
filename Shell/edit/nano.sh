@@ -20,3 +20,7 @@ function nzsh {
 function npk {
 	nano PKGBUILD
 }
+
+function ngit {
+	nano .gitignore
+}
