@@ -30,3 +30,7 @@ function edarsh {
 function edartf {
   edapn terminal-fusion
 }
+
+function edara {
+  edapn about
+}

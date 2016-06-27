@@ -3,10 +3,6 @@ function cdgm {
 	cd $GHUBM/$1
 }
 
-function cdga {
-	cd $ATO/$1
-}
-
 function cdga1 {
 	cd $GHUBM/atom-1
 }
