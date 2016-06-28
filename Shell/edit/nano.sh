@@ -34,6 +34,17 @@ function nx {
 	nano $HOME/.xinitrc
 }
 
+# vimrc - navim is what it should be called it nvim is installed
+if ! [[ -f /usr/bin/nvim ]]; then
+	function nvim {
+		nano $HOME/.vimrc
+	}
+else
+	function navim {
+		nano $HOME/.vimrc
+	}
+fi
+
 # zshrc
 function nzsh {
   nano $HOME/.zshrc

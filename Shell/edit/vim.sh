@@ -1,7 +1,3 @@
-function navim {
-	nano $HOME/.vimrc
-}
-
 function vbash {
 	vim $HOME/.bashrc
 }
