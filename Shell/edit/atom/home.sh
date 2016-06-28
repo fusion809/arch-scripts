@@ -4,5 +4,5 @@ function edau {
 }
 
 function edsn {
-	atom $HOME/snapcraft
+	atom $HOME/snapcraft/$1
 }

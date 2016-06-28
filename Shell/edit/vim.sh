@@ -1,7 +1,3 @@
-function avim {
-	atom $HOME/.vimrc
-}
-
 function navim {
 	nano $HOME/.vimrc
 }
