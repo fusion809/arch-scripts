@@ -1,8 +1,11 @@
 export CHROOT=$HOME/chroot
 export ABS=$HOME/abs
 export AUR=$HOME/AUR
+export DE=$HOME/Desktop
+export DC=$HOME/Documents
+export DO=$HOME/Downloads
+export PS=$HOME/Pictures
 export PRG=$HOME/Programs
 export SHL=$HOME/Shell
-export VBX=$HOME/"VirtualBox VMs"
-export PS=$HOME/Pictures
 export VI=$HOME/Videos
+export VBX=$HOME/"VirtualBox VMs"

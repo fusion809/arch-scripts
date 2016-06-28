@@ -1,3 +1,4 @@
+# GitHub-related environment variables
 export GHUB=$HOME/GitHub
 export GHUBM=$GHUB/mine
 export GHUBO=$GHUB/others
