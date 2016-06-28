@@ -5,8 +5,14 @@ function cdat {
 	cd $HOME/.atom/$1
 }
 
+# - .atom/packages
 function cdatp {
 	cd $HOME/.atom/packages/$1
+}
+
+# - .config
+function cdc {
+	cd $HOME/.config/$1
 }
 
 # - .config/menus
