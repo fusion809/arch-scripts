@@ -56,9 +56,9 @@ function cdvid {
 }
 
 function cdvl {
-	cd $VI/Lectures/$1
+	cdvid Lectures/$1
 }
 
 function cdvy {
-	cd $VI/YouTube/$1
+	cdvid YouTube/$1
 }
