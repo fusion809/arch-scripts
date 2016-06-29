@@ -1,37 +1,41 @@
+function cdh {
+	cd $HOME/$1
+}
+
 # Non-hidden
 function cdabs {
-	cd $HOME/abs/$1
+	cdh "abs/$1"
 }
 
 function cdaps {
-	cd $HOME/Arch_Packages
+	cdh "Arch_Packages"
 }
 
 function cdaa {
-	cd $HOME/atom/atom
+	cdh "atom/atom"
 }
 
 function cdbd {
-	cd $HOME/BIOVIA/DiscoveryStudio2016
+	cdh "BIOVIA/DiscoveryStudio2016"
 }
 
 function cdch {
-	cd $HOME/chroot
+	cdh "chroot"
 }
 
 # - Desktop
 function cdd {
-	cd $HOME/Desktop
+	cdh "Desktop"
 }
 
 # - Downloads
 function cddo {
-	cd $HOME/Downloads/$1
+	cdh "Downloads/$1"
 }
 
 # - Music
 function cdm {
-	cd $HOME/Music/$1
+	cdh "Music/$1"
 }
 
 function cdpi {
@@ -39,7 +43,7 @@ function cdpi {
 }
 
 function cdps {
-	cd $PS/Screenshots/$1
+	cdpi "Screenshots/$1"
 }
 
 # - Shell
@@ -56,9 +60,9 @@ function cdvid {
 }
 
 function cdvl {
-	cdvid Lectures/$1
+	cdvid "Lectures/$1"
 }
 
 function cdvy {
-	cdvid YouTube/$1
+	cdvid "YouTube/$1"
 }
