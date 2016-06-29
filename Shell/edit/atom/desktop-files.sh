@@ -1,4 +1,4 @@
 # Menus
 function edmen {
-	atom $HOME/.config/menus $HOME/.local/share/desktop-directories $HOME/.local/share/applications
+	atom $HOME/.config/menus $LS/desktop-directories $LS/applications
 }

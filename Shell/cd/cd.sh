@@ -7,6 +7,10 @@ function cdaps {
 	cd $HOME/Arch_Packages
 }
 
+function cdaa {
+	cd $HOME/atom/atom
+}
+
 function cdbd {
 	cd $HOME/BIOVIA/DiscoveryStudio2016
 }
