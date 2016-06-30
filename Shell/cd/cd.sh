@@ -38,6 +38,10 @@ function cddo {
 	cdh "Downloads/$1"
 }
 
+function cdgol {
+	cdh "go/$1"
+}
+
 # - Music
 function cdm {
 	cdh "Music/$1"
