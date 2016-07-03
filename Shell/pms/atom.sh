@@ -26,3 +26,17 @@ function apmu {
 }
 
 alias apmup=apmu
+
+function apmbup {
+	apm-bleeding update --no-confirm "$@"
+}
+
+alias apmbu=apmbup
+
+function apmbin {
+	apm-bleeding install "$@" --no-confirm
+}
+
+function apmbrm {
+	apm-bleeding remove "$@" --no-confirm
+}

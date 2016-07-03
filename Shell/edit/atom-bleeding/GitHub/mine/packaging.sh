@@ -11,3 +11,7 @@ function edatpkb {
 function edpkb {
 	atom-bleeding $GHUBM/packaging/PKGBUILDs
 }
+
+function edgaab {
+	atom-bleeding $GHUBM/packaging/arch-atom
+}
