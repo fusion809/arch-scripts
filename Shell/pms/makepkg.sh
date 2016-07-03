@@ -13,6 +13,10 @@ function makin {
   makepkg -sif --noconfirm
 }
 
+function makinc {
+  makepkg -sifC --noconfirm
+}
+
 alias mkpkg=makin
 alias pkg=makin
 
@@ -42,5 +46,9 @@ function upmakin {
 }
 
 function upmak {
-  updpkgsums && makepkg -si --noconfirm
+  updpkgsums && makepkg -sf --noconfirm
+}
+
+function upmakinc {
+  updpkgsums && makepkg -sifC --noconfirm
 }
