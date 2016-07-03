@@ -11,3 +11,7 @@ function edatpk {
 function edpk {
 	atom $GHUBM/packaging/PKGBUILDs
 }
+
+function edgaa {
+	atom $GHUBM/packaging/arch-atom
+}

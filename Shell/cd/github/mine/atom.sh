@@ -17,3 +17,7 @@ function cdara {
 function cdartf {
   cdga terminal-fusion
 }
+
+function cdgaa {
+	cdpck arch-atom
+}
