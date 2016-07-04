@@ -4,6 +4,12 @@ function cdpck {
 
 alias cdpack=cdpck
 
+function cdgaa {
+	cdpck arch-atom/$1
+}
+
+alias cdpaa=cdgaa
+
 # my atom-editor repo
 function cdae {
 	cdpck atom-text-editor

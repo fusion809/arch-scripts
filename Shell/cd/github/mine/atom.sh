@@ -3,21 +3,17 @@ function cdga {
 }
 
 function cdarpk {
-  cdga language-archlinux
+  cdga language-archlinux/$1
 }
 
 function cdarsh {
-  cdga language-shellscript
+  cdga language-unix-shell/$1
 }
 
 function cdara {
-  cdga about
+  cdga about-arch/$1
 }
 
 function cdartf {
-  cdga terminal-fusion
-}
-
-function cdgaa {
-	cdpck arch-atom/$1
+  cdga terminal-fusion/$1
 }
