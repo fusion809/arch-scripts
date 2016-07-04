@@ -19,5 +19,5 @@ function cdartf {
 }
 
 function cdgaa {
-	cdpck arch-atom
+	cdpck arch-atom/$1
 }
