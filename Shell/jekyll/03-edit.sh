@@ -5,6 +5,10 @@ function edblog {
 
 alias edfgi=edblog
 
+function edblogb {
+	atom-bleeding $FGI
+}
+
 function vsblog {
 	vscode $FGI
 }
