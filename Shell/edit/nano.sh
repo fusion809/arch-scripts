@@ -13,6 +13,10 @@ function ngit {
 	nano .gitignore
 }
 
+function npc {
+	sudo nano /etc/pacman.conf
+}
+
 # PKGBUILD/package.json
 function npk {
 	if [[ -f PKGBUILD ]]; then
