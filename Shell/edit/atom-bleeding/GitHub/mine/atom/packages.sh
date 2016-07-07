@@ -12,7 +12,7 @@ function edaplb {
 }
 
 function edapkb {
-	edapl about browser-plus-fix language-archlinux language-gfm2 language-ini-desktop language-patch2 language-shellscript language-solus terminal-fusion
+	edapl about-arch browser-plus-fix language-archlinux language-gfm2 language-ini-desktop language-patch2 language-unix-shell language-solus terminal-fusion
 }
 
 function edargmb {
@@ -24,7 +24,7 @@ function edarpkb {
 }
 
 function edarshb {
-  edapn language-shellscript
+  edapn language-unix-shell
 }
 
 function edartfb {
@@ -32,5 +32,5 @@ function edartfb {
 }
 
 function edarab {
-  edapn about
+  edapn about-arch
 }
