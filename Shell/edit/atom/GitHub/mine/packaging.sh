@@ -15,3 +15,7 @@ function edpk {
 function edgaa {
 	atom $GHUBM/packaging/arch-atom
 }
+
+function edpck {
+	atom $GHUBM/packaging/$1
+}
