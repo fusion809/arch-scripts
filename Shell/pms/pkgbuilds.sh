@@ -138,18 +138,52 @@ function vimup {
   if [[ $verc == $verl ]]; then
     echo "Vim is up-to-date"
   else
+    printf "Removing pkgbuild-current database files.==>\n"
+    rm $PKG/pkgbuild-current/pkgbuild-current*
+
+    printf "Removing gvim binaries.==>\n"
+    rm $PKG/pkgbuild-current/gvim*.xz
+
     pushd $PK/gvim
-      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
+
+      printf "Updating [gvim/gvim-gtk3] PKGBUILD.==>\n"
+      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD ../gvim-gtk3/PKGBUILD
+
+      printf "Removing old [gvim/gvim-gtk3] binaries and source archives.==>\n"
       rm *.*z ../gvim-gtk3/*.*z
+
+      printf "Downloading new source archive and updating checksums for [gvim].==>\n"
       updpkgsums
+
+      printf "Copying new source archive to [gvim-gtk3].==>\n"
       cp v7.4.$verl.tar.gz ../gvim-gtk3
+
+      printf "Building binary package for [gvim].==>\n"
+      makepkg -s --noconfirm
+
+      printf "Copying [gvim] binary to [pkgbuild-current].==>\n"
+      cp *.pkg.tar.xz $PKG/pkgbuild-current
+
+      printf "Updating [gvim] GitHub repository.==>\n"
+      push "[gvim] Bumping to 7.4.$verl"
+
     popd
+
     pushd $PK/gvim-gtk3
-      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD
+
+      printf "Generating new checksums for [gvim-gtk3].==>\n"
       updpkgsums
+
+      printf "Building binary package for [gvim-gtk3].==>\n"
       makepkg -si --noconfirm --needed
-      push "[gvim/gvim-gtk3] Bumping to 7.4.$verl"
+
+      printf "Copying [gvim-gtk3] binary package to [pkgbuild-current].==>\n"
+      cp *.pkg.tar.xz $PKG/pkgbuild-current
+
+      printf "Updating [gvim-gtk3] GitHub repository.==>\n"
+      push "[gvim-gtk3] Bumping to 7.4.$verl"
     popd
+    repo-add pkgbuild-current.db.tar.gz *.pkg.tar.xz
   fi
 }
 
