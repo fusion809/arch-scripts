@@ -22,3 +22,7 @@ function cdvs {
 function cdvsg {
 	cdpk visual-studio-code-git
 }
+
+function cdpc {
+	cdpk pkgbuild-current
+}

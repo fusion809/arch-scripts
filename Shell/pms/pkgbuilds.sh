@@ -182,7 +182,9 @@ function vimup {
 
       printf "Updating [gvim-gtk3] GitHub repository.==>\n"
       push "[gvim-gtk3] Bumping to 7.4.$verl"
+      
     popd
+
     repo-add pkgbuild-current.db.tar.gz *.pkg.tar.xz
   fi
 }
