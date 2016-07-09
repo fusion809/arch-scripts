@@ -17,7 +17,7 @@ function repup {
 
 function grup {
   if [[ -n "$1" ]]; then
-    github-release upload -t current -n "$1" -f "$1"
+    github-release upload -t current -n "$@" -f "$@"
   else
     printf "You must provide an input!\n If you would like to upload all .pkg.tar.xz files in $PWD, run:\n grup *.pkg.tar.xz.\n"
   fi
