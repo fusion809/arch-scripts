@@ -3,7 +3,19 @@ function pacup {
 }
 
 function pacin {
-	sudo pacman -S $@ --noconfirm --force --needed
+	sudo pacman -S $@ --noconfirm --needed
+}
+
+function pacinf {
+	sudo pacman -S $@ --noconfirm --needed --force
+}
+
+function pacinr {
+	sudo pacman -S $@ --noconfirm
+}
+
+function pacinrf {
+	sudo pacman -S $@ --noconfirm --force
 }
 
 function pacs {
