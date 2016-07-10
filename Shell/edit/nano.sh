@@ -17,6 +17,10 @@ function npc {
 	sudo nano /etc/pacman.conf
 }
 
+function nps {
+	sudo nano /etc/sddm.conf
+}
+
 # PKGBUILD/package.json
 function npk {
 	if [[ -f PKGBUILD ]]; then
