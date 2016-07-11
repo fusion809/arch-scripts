@@ -185,6 +185,7 @@ function vimup {
 
     popd
 
+    msg2 "Adding database files.==>\n"
     cd $PKG/pkgbuild-current
     repo-add pkgbuild-current.db.tar.gz *.pkg.tar.xz
     cd -
