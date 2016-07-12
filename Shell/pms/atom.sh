@@ -3,6 +3,8 @@ function apmi {
 	apm install "$@" --no-confirm || (printf "Package installation failed" && exit)
 }
 
+alias apmin=apmi
+
 # List package(s)
 function apml {
 	apm list "$@"
@@ -27,16 +29,21 @@ function apmu {
 
 alias apmup=apmu
 
+#--- Bleeding ---#
 function apmbup {
 	apm-bleeding update --no-confirm "$@"
 }
 
 alias apmbu=apmbup
 
-function apmbin {
+function apmbi {
 	apm-bleeding install "$@" --no-confirm
 }
+
+alias apmbin=apmbi
 
 function apmbrm {
 	apm-bleeding remove "$@" --no-confirm
 }
+
+alias apmbr=apmbrm
