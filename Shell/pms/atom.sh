@@ -47,3 +47,7 @@ function apmbrm {
 }
 
 alias apmbr=apmbrm
+
+function apmbs {
+	apm-bleeding search "$@"
+}
