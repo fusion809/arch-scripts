@@ -75,3 +75,7 @@ function cdvl {
 function cdvy {
 	cdvid "YouTube/$1"
 }
+
+function cdcfe {
+	cddc CodeLite/firstExample/$1
+}
