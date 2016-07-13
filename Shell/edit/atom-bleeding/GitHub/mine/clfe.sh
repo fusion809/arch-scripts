@@ -1,4 +1,4 @@
 # CodeLite/firstExample
 function edcfeb {
-  atom-bleeding $HOME/Documents/CodeLite/firstExample/$1
+  atom-bleeding $HOME/Documents/CodeLite/CPP-Math-Projects/$1
 }

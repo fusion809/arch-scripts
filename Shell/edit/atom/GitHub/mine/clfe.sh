@@ -1,4 +1,4 @@
 # CodeLite/firstExample
 function edcfe {
-  atom $HOME/Documents/CodeLite/firstExample/$1
+  atom $HOME/Documents/CodeLite/CPP-Math-Projects/$1
 }
