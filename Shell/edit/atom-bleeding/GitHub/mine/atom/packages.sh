@@ -20,17 +20,17 @@ function edargmb {
 }
 
 function edarpkb {
-  edapn language-archlinux
+  edapnb language-archlinux
 }
 
 function edarshb {
-  edapn language-unix-shell
+  edapnb language-unix-shell
 }
 
 function edartfb {
-  edapn terminal-fusion
+  edapnb terminal-fusion
 }
 
 function edarab {
-  edapn about-arch
+  edapnb about-arch
 }
