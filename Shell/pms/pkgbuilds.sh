@@ -193,6 +193,7 @@ function vimup {
 
     cd $PKG/pkgbuild-current
     repo-add pkgbuild-current.db.tar.gz *.pkg.tar.xz
+    gruppc
     cd -
   fi
 }
