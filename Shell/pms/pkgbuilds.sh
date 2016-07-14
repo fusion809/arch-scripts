@@ -161,6 +161,9 @@ function vimup {
       printf "Building binary package for [gvim].==>\n"
       makepkg -s --noconfirm
 
+      printf "Uploading binary to GitHub.==>\n"
+      gothub upload -t current -n "gvim-7.4.$verl-1-x86_64.pkg.tar.xz" -f "gvim-7.4.$verl-1-x86_64.pkg.tar.xz"
+
       printf "Copying [gvim] binary to [pkgbuild-current].==>\n"
       cp *.pkg.tar.xz $PKG/pkgbuild-current
 
@@ -176,6 +179,9 @@ function vimup {
 
       printf "Building binary package for [gvim-gtk3].==>\n"
       makepkg -si --noconfirm --needed
+
+      printf "Uploading binary to GitHub.==>\n"
+      gothub upload -t current -n "gvim-gtk3-7.4.$verl-1-x86_64.pkg.tar.xz" -f "gvim-gtk3-7.4.$verl-1-x86_64.pkg.tar.xz"
 
       printf "Copying [gvim-gtk3] binary package to [pkgbuild-current].==>\n"
       cp *.pkg.tar.xz $PKG/pkgbuild-current
