@@ -155,9 +155,6 @@ function vimup {
       printf "Downloading new source archive and updating checksums for [gvim].==>\n"
       updpkgsums
 
-      printf "Copying new source archive to [gvim-gtk3].==>\n"
-      cp v7.4.$verl.tar.gz ../gvim-gtk3
-
       printf "Building binary package for [gvim].==>\n"
       makepkg -s --noconfirm
 
