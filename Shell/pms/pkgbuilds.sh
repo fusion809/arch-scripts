@@ -212,7 +212,7 @@ function vimup {
   popd
   if ! [[ $verc == $verl ]]; then
     cd $PK/gvim-gtk3
-    makepkg -sif --noconfirm
+    makepkg -sif --noconfirm --needed
     push "Bumping to 7.4.$verl"
     cd -
   fi
