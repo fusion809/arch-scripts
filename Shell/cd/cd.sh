@@ -80,6 +80,8 @@ function cdcfe {
 	cddc CodeLite/CPP-Math-Projects/$1
 }
 
+alias cdcpp=cdcfe
+
 function compfe {
 	/usr/bin/g++ -Wall -fPIC -o "$HOME/Documents/CodeLite/firstExample/example" "$HOME/Documents/CodeLite/firstExample/example.cpp" -I/usr/include/qt -I/usr/include/qt/QtCore -I/usr/include/qt/QtGui -I/usr/include/qt/QtWidgets
 }
