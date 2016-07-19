@@ -217,8 +217,8 @@ function vimup {
     push "Bumping to 7.4.$verl"
     cd ../gvim
     rm *.xz
-    makepkg -si --noconfirm --needed
-    push "BUmping to 7.4.$verl"
+    makepkg -s --noconfirm --needed
+    push "Bumping to 7.4.$verl"
     cd -
   fi
 }
