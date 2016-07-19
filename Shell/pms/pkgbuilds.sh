@@ -213,11 +213,9 @@ function vimup {
   if ! [[ $verc == $verl ]]; then
     cd $PK/gvim-gtk3
     rm *.xz
-    makepkg -si --noconfirm --needed
+    makepkg -sifC --noconfirm --needed
     push "Bumping to 7.4.$verl"
     cd ../gvim
-    rm *.xz
-    makepkg -s --noconfirm --needed
     push "Bumping to 7.4.$verl"
     cd -
   fi
