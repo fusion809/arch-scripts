@@ -216,6 +216,7 @@ function vimup {
     makepkg -sifC --noconfirm --needed
     push "Bumping to 7.4.$verl"
     cd ../gvim
+    sed -i -e "s/$verc/$verl/g" PKGBUILD
     push "Bumping to 7.4.$verl"
     cd -
   fi
