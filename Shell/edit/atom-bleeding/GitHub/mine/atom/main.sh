@@ -1,4 +1,4 @@
 # my atom-bleeding repos
 function edgab {
-	atom-bleeding $ATO
+	atom-bleeding $ATO/$1
 }

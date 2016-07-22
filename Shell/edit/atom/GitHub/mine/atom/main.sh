@@ -1,4 +1,4 @@
 # my atom repos
 function edga {
-	atom $ATO
+	atom $ATO/$1
 }
