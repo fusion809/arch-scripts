@@ -218,9 +218,15 @@ function vimup {
     cd ../gvim
     sed -i -e "s/$verc/$verl/g" PKGBUILD
     push "Bumping to 7.4.$verl"
-    cd -
+    cdpk gvim-gtk3
+    git pull origin master
+    cdpk gvim
+    git pull origin master
+    cd ..
+    push "Bumping gvim submodules to 7.4.$verl"
   fi
 }
+
 function vimupo {
   # Make the latest version of Vim using the gvim-git package
   cd $PKG/../gvim-git
