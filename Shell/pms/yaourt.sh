@@ -41,9 +41,9 @@ function yarm {
 function update {
   vimup
   blockup
-	yaourt -Syua --noconfirm --needed
+	pacaup
 	if hash apm 2>/dev/null; then
-		apmup
+		apmbup
 	fi
 }
 
