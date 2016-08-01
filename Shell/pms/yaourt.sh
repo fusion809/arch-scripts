@@ -24,7 +24,8 @@ function yainw {
 
 # Search for keyword in the name or description of a package
 function yas {
-  yaourt -Ss $@
+  printf "This function is no longer recommended as it does not search the AUR for the regex provided. If you want to search the AUR and enabled package repositories use the pacas function!\n"
+  yaourt -Ss "$@"
 }
 
 # Search for a package (wildcard character *, supported)

@@ -13,9 +13,3 @@ function cpsh {
   sudo cp -a $ARS/root/Shell /root/Shell
   sudo cp -a $ARS/root/{.bashrc,.zshrc} /root
 }
-
-function fzsh {
-  mv .zsh_history .zsh_history_bad
-  strings .zsh_history_bad > .zsh_history
-  fc -R .zsh_history
-}
