@@ -1,7 +1,7 @@
 # pacaur commands
 # install package
 function pacain {
-  pacaur -S "$@" --noconfirm --needed
+  pacaur -S "$@" --noconfirm --needed --noedit
 }
 
 # remove package and reverse-dependencies
@@ -16,4 +16,16 @@ function pacas {
   else
     pacaur -Ss "$@"
   fi
+}
+
+function pacasa {
+  if [[ "$@" == "-h" ]] || [[ "$@" == "--help" ]] || [[ "$@" == "-help" ]]; then
+    printf "This function searches the AUR for the provided regex using pacaur.\n"
+  else
+    pacaur -Ssa "$@"
+  fi
+}
+
+function pacaup {
+  pacaur -Syu --noconfirm --noedit
 }
