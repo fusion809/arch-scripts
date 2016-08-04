@@ -224,6 +224,11 @@ function vimup {
     git pull origin master
     cd ..
     push "Bumping gvim submodules to 7.4.$verl"
+    cda gvim-gtk3
+    sed -i -e "s/$verc/$verl/g" PKGBUILD
+    updpkgsums
+    push "Bumping pkgver to 7.4.$verl"
+    cd ..
   fi
 }
 

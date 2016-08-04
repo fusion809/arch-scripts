@@ -10,4 +10,5 @@ export SCR=$GHUBM/scripts
 export WEB=$GHUBM/websites
 
 export PKG=$PK/PKGBUILDs
+export PC=$PKG/pkgbuild-current
 export ARS=$SCR/arch-scripts
