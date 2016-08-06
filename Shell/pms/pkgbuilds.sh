@@ -216,6 +216,7 @@ function vimup {
     sed -i -e "s/$verc/$verl/g" PKGBUILD
     push "Bumping to 7.4.$verl"
     cd ../gvim
+    rm *.gz *.xz
     sed -i -e "s/$verc/$verl/g" PKGBUILD
     makepkg -sifC --noconfirm
     push "Bumping to 7.4.$verl"
@@ -226,6 +227,7 @@ function vimup {
     cd ..
     push "Bumping gvim submodules to 7.4.$verl"
     cda gvim-gtk3
+    rm *.gz *.xz
     sed -i -e "s/$verc/$verl/g" PKGBUILD
     updpkgsums
     push "Bumping pkgver to 7.4.$verl"
