@@ -4,7 +4,7 @@ export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin
 export JVM_HOME=/usr/lib/jvm
-export JAVA_HOME=$JVM_HOME/default/bin:$JVM_HOME/java-7-openjdk/bin/:$JVM_HOME/java-7-openjdk/lib/
+export JAVA_HOME=$JVM_HOME/default/bin:$JVM_HOME/java-7-openjdk/bin/:$JVM_HOME/java-7-openjdk/lib/:$JVM_HOME/java-8-openjdk/bin
 export PERL_PATH=$HOME/perl5/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 export PATH=$HOME/perl5/bin:/usr/local/bin:/usr/lib/hardening-wrapper/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$GOPATH/bin:$GOROOT/bin:$GEMPATH:$PERL_PATH:$JAVA_HOME:$HOME/.cargo/bin/:/home/fusion809/perl5/bin:
 #$HOME/Programs/runescape-launcher/pkg/runescape-launcher/usr/bin
