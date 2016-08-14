@@ -7,7 +7,7 @@
 if [[ -a $HOME/.ssh/environment ]]
 then
   SSH_ENV=$HOME/.ssh/environment
-elif [[ $USER == fusion809 ]]
+elif [[ $USER == fusion809 ]] && ! [[ -f ~/.ssh/id_rsa.pub ]]
 then
   ssh-keygen -t rsa -b 4096 -C "brentonhorne77@gmail.com"
   SSH_ENV=$HOME/.ssh/environment
