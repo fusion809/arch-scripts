@@ -7,7 +7,3 @@ export JVM_HOME=/usr/lib/jvm
 export JAVA_HOME=$JVM_HOME/default/bin:$JVM_HOME/java-8-openjdk/bin
 export PERL_PATH=/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 export PATH=/usr/local/bin:/usr/lib/hardening-wrapper/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$GOPATH/bin:$GOROOT/bin:$GEMPATH:$PERL_PATH:$JAVA_HOME
-PERL5LIB="/home/fusion809/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/fusion809/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/fusion809/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/fusion809/perl5"; export PERL_MM_OPT;
