@@ -4,11 +4,9 @@ export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin
 export JVM_HOME=/usr/lib/jvm
-export JAVA_HOME=$JVM_HOME/default/bin:$JVM_HOME/java-7-openjdk/bin/:$JVM_HOME/java-7-openjdk/lib/:$JVM_HOME/java-8-openjdk/bin
-export PERL_PATH=$HOME/perl5/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
-export PATH=/usr/local/bin:/usr/lib/hardening-wrapper/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$GOPATH/bin:$GOROOT/bin:$GEMPATH:$PERL_PATH:$JAVA_HOME:$HOME/.cargo/bin/:/home/fusion809/perl5/bin:
-#$HOME/Programs/runescape-launcher/pkg/runescape-launcher/usr/bin
-#:$HOME/bin
+export JAVA_HOME=$JVM_HOME/default/bin:$JVM_HOME/java-8-openjdk/bin
+export PERL_PATH=/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+export PATH=/usr/local/bin:/usr/lib/hardening-wrapper/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$GOPATH/bin:$GOROOT/bin:$GEMPATH:$PERL_PATH:$JAVA_HOME
 PERL5LIB="/home/fusion809/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/fusion809/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/fusion809/perl5\""; export PERL_MB_OPT;
