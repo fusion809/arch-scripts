@@ -19,3 +19,7 @@ function edgaa {
 function edpck {
 	atom $GHUBM/packaging/$1
 }
+
+function edapi {
+	atom $GHUBM/packaging/AppImages/$1
+}
