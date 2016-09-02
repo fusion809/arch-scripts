@@ -12,5 +12,9 @@ alias cdpaa=cdgaa
 
 # my atom-editor repo
 function cdae {
-	cdpck atom-text-editor
+	cdpck atom-text-editor/$1
+}
+
+function cdapi {
+	cdpck AppImages/$1
 }
