@@ -12,3 +12,4 @@ export WEB=$GHUBM/websites
 export PKG=$PK/PKGBUILDs
 export PC=$PKG/pkgbuild-current
 export ARS=$SCR/arch-scripts
+export PY=$SCR/python-scripts
