@@ -2,13 +2,8 @@
 
 ###########################################################
 # define vscode command
-if which code >/dev/null 2>&1; then
-  alias vscode=code
-elif which code-oss >/dev/null 2>&1; then
-  alias vscode=code-oss
-fi
+alias vscode=code-oss
 
-export vscode
 ###########################################################
 
 function vsai {
