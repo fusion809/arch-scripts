@@ -28,7 +28,7 @@ function vsds {
 }
 
 function vsjs {
-  vscode $SCR/JScripts
+  vscode $JS
 }
 
 function vspk {
@@ -36,7 +36,7 @@ function vspk {
 }
 
 function vspy {
-  vscode $SCR/python-scripts
+  vscode $PY/$1
 }
 
 function vssh {
@@ -44,5 +44,5 @@ function vssh {
 }
 
 function vsfu {
-	vscode $GHUBM/fusion-ui
+	vscode $ATO/fusion-ui
 }
