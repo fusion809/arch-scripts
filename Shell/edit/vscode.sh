@@ -2,10 +2,10 @@
 
 ###########################################################
 # define vscode command
-if which visual-studio-code >/dev/null 2>&1; then
-  alias vscode=visual-studio-code
-elif which visual-studio-code-oss >/dev/null 2>&1; then
-  alias vscode=visual-studio-code-oss
+if which code >/dev/null 2>&1; then
+  alias vscode=code
+elif which code-oss >/dev/null 2>&1; then
+  alias vscode=code-oss
 fi
 
 export vscode
