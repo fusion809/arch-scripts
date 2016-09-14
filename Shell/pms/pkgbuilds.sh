@@ -286,3 +286,11 @@ function blockup {
   fi
   cd $OPWD
 }
+
+function pacv {
+  _L=$(pacman -Slq pkgbuild-current)
+  for i in "${_L[@]}"
+  do
+    pacas "$i" | grep aur
+  done
+}
