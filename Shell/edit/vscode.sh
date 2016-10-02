@@ -7,11 +7,11 @@ alias vscode=code-oss
 ###########################################################
 
 function vsai {
-  vscode $GHUBM/archiso
+  vscode $GHUBM/archiso/$1
 }
 
 function vsatin {
-  vscode $INS/atom-installer
+  vscode $INS/atom-installer/$1
 }
 
 function vsau {
@@ -19,11 +19,11 @@ function vsau {
 }
 
 function vsds {
-  vscode $HOME/DiscoveryStudio
+  vscode $HOME/DiscoveryStudio/$1
 }
 
 function vsjs {
-  vscode $JS
+  vscode $JS/$1
 }
 
 function vspk {
@@ -35,9 +35,9 @@ function vspy {
 }
 
 function vssh {
-  vscode $SHL
+  vscode $SHL/$1
 }
 
 function vsfu {
-	vscode $ATO/fusion-ui
+  vscode $ATO/fusion-ui/$1
 }
