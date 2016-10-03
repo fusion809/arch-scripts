@@ -9,3 +9,7 @@ function update {
 function pacain {
 	su - fusion809 -c "pacaur -S $@ --noconfirm --force --needed --noedit"
 }
+
+function pacas {
+	su - fusion809 -c "pacaur -Ss $@"
+}
