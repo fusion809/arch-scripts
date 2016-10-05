@@ -15,3 +15,7 @@ function pacrm {
 function pacq {
 	pacman -Qlq $1 | grep $2
 }
+
+function pacs {
+	pacman -Ss "$@"
+}
