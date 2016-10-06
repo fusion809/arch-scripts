@@ -214,14 +214,14 @@ function vimup {
     cd $PK/gvim-gtk3
     sed -i -e "s/$verc/$verl/g" PKGBUILD
     push "Bumping to 8.0.$verl"
-    cd ../gvim
+    cd ../gvim-gtk2
     rm *.*z
     sed -i -e "s/$verc/$verl/g" PKGBUILD
     makepkg -sifC --noconfirm
     push "Bumping to 8.0.$verl"
     cdpk gvim-gtk3
     git pull origin master
-    cdpk gvim
+    cdpk gvim-gtk2
     git pull origin master
     cd ..
     push "Bumping gvim submodules to 8.0.$verl"
