@@ -207,29 +207,38 @@ function vimup {
   # verc is the current patch version of Vim in vim.spec
   # verl is the latest patch version of Vim.
 
-  verc=$(sed -n 's/pkgver=8.0.//p' $PKG/../gvim/PKGBUILD)
-  verl=$(git describe --abbrev=0 --tags | sed 's/v8.0.//g')
+  verc=$(sed -n 's/pkgver=//p' $PKG/../gvim/PKGBUILD)
+  verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
   popd
   if ! [[ $verc == $verl ]]; then
     cd $PK/gvim-gtk3
     sed -i -e "s/$verc/$verl/g" PKGBUILD
-    push "Bumping to 8.0.$verl"
+    if [[ -f sed* ]]; then
+      rm sed*
+    fi
+    push "Bumping to $verl"
     cd ../gvim-gtk2
     rm *.*z
     sed -i -e "s/$verc/$verl/g" PKGBUILD
     makepkg -sifC --noconfirm
-    push "Bumping to 8.0.$verl"
+    if [[ -f sed* ]]; then
+      rm sed*
+    fi
+    push "Bumping to $verl"
     cdpk gvim-gtk3
     git pull origin master
     cdpk gvim-gtk2
     git pull origin master
     cd ..
-    push "Bumping gvim submodules to 8.0.$verl"
+    push "Bumping gvim submodules to $verl"
     cda gvim-gtk2
     rm *.*z
     sed -i -e "s/$verc/$verl/g" PKGBUILD
+    if [[ -f sed* ]]; then
+      rm sed*
+    fi
     updpkgsums
-    push "Bumping pkgver to 8.0.$verl"
+    push "Bumping pkgver to $verl"
     cd ..
   fi
 }
