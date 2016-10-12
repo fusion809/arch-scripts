@@ -207,7 +207,7 @@ function vimup {
   # verc is the current patch version of Vim in vim.spec
   # verl is the latest patch version of Vim.
 
-  verc=$(sed -n 's/pkgver=//p' $PKG/../gvim/PKGBUILD)
+  verc=$(sed -n 's/pkgver=//p' $PK/gvim/PKGBUILD)
   verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
   popd
   if ! [[ $verc == $verl ]]; then
