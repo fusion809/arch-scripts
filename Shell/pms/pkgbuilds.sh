@@ -132,7 +132,7 @@ function atomup {
   # verc is the current patch version of Vim in vim.spec
   # verl is the latest patch version of Vim.
 
-#  verc=$(sed -n 's/pkgver=7.4.//p' $PKG/..|gvim/PKGBUILD)
+#  verc=$(sed -n 's/pkgver=7.4.//p' $PKG/../gvim/PKGBUILD)
 #  verl=$(git describe --abbrev=0 --tags | sed 's/v7.4./|g')
 #  popd
 #  if [[ $verc == $verl ]]; then
@@ -142,15 +142,15 @@ function atomup {
 #    rm $PKG/pkgbuild-current/pkgbuild-current*
 
 #    printf "Removing gvim binaries.==>\n"
-#    rm $PKG/pkgbuild-current|gvim*.xz
+#    rm $PKG/pkgbuild-current/gvim*.xz
 
-#    pushd $PK|gvim
+#    pushd $PK/gvim
 #
-#      printf "Updating [gvim|gvim-gtk3] PKGBUILD.==>\n"
-#      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl|g" PKGBUILD ..|gvim-gtk3/PKGBUILD
+#      printf "Updating [gvim/gvim-gtk3] PKGBUILD.==>\n"
+#      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl|g" PKGBUILD ../gvim-gtk3/PKGBUILD
 
-#      printf "Removing old [gvim|gvim-gtk3] binaries and source archives.==>\n"
-#      rm *.*z ..|gvim-gtk3/*.*z
+#      printf "Removing old [gvim/gvim-gtk3] binaries and source archives.==>\n"
+#      rm *.*z ../gvim-gtk3/*.*z
 
 #      printf "Downloading new source archive and updating checksums for [gvim].==>\n"
 #      updpkgsums
@@ -169,7 +169,7 @@ function atomup {
 
 #    popd
 
-#    pushd $PK|gvim-gtk3
+#    pushd $PK/gvim-gtk3
 #
 #      printf "Generating new checksums for [gvim-gtk3].==>\n"
 #      updpkgsums
@@ -211,13 +211,13 @@ function vimup {
   verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
   popd
   if ! [[ $verc == $verl ]]; then
-    cd $PK|gvim-gtk3
+    cd $PK/gvim-gtk3
     sed -i -e "s|$verc|$verl|g" PKGBUILD
     if [[ -f sed* ]]; then
       rm sed*
     fi
     push "Bumping to $verl"
-    cd ..|gvim-gtk2
+    cd ../gvim-gtk2
     rm *.*z
     sed -i -e "s|$verc|$verl|g" PKGBUILD
     makepkg -sifC --noconfirm
@@ -245,7 +245,7 @@ function vimup {
 
 function vimupo {
   # Make the latest version of Vim using the gvim-git package
-  cd $PKG/..|gvim-git
+  cd $PKG/../gvim-git
     makepkg -si --noconfirm --needed
   cd -
 }
