@@ -16,7 +16,7 @@ function atomup {
 
   # Get Atom GitHub repo, if not already present at $HOME/Programs/atom
   if ! [[ -d $HOME/Programs/atom ]]; then
-    git clone https://github.com/atom/atom $HOME/Programs/atom
+    git clone https:/|github.com/atom/atom $HOME/Programs/atom
   fi
 
   # Change into repo
@@ -28,8 +28,8 @@ function atomup {
     git checkout master
 
     # Determine the latest stable ($verls) and latest beta ($verlb) release from this repo
-    verls=$(git tag | tail -n "10" | grep -v beta | sed 's/v//g' | sort -nr | head -n1)
-    verlb=$(git tag | tail -n "5" | grep beta | sed 's/v//g' | sort -nr | head -n1)
+    verls=$(git tag | tail -n "10" | grep -v beta | sed 's/v/|g' | sort -nr | head -n1)
+    verlb=$(git tag | tail -n "5" | grep beta | sed 's/v/|g' | sort -nr | head -n1)
 
   popd # change back out
 
@@ -44,10 +44,10 @@ function atomup {
         echo "Atom is up-to-date"
     else
       # Update the atom-editor PKGBUILD
-      sed -i -e "s/pkgver=$vercs/pkgver=$verls/g" PKGBUILD
+      sed -i -e "s/pkgver=$vercs/pkgver=$verls|g" PKGBUILD
 
       # Also update the atom-editor-sync PKGBUILD
-      sed -i -e "s/pkgver=$vercs/pkgver=$verls/g" ../atom-editor-sync/PKGBUILD
+      sed -i -e "s/pkgver=$vercs/pkgver=$verls|g" ../atom-editor-sync/PKGBUILD
 
       # rm the source code tarball of Atom $vercs in the atom-editor PKGBUILD folder
       if [[ -f v$vercs.tar.gz ]]; then
@@ -101,8 +101,8 @@ function atomup {
       verlbd=$verlbb-beta$verlbr
 
       # Update PKGBUILD version
-      sed -i -e "s/_pkgver=$vercbb/_pkgver=$verlbb/g" \
-            -e "s/_pkgrel=$vercbr/_pkgrel=$verlbr/g" PKGBUILD
+      sed -i -e "s/_pkgver=$vercbb/_pkgver=$verlbb|g" \
+            -e "s/_pkgrel=$vercbr/_pkgrel=$verlbr|g" PKGBUILD
 
       # Remove existing source code tarball for version of atom-editor-beta previously in the PKGBUILD
       if [[ -f v$vercd.tar.gz ]]; then
@@ -132,8 +132,8 @@ function atomup {
   # verc is the current patch version of Vim in vim.spec
   # verl is the latest patch version of Vim.
 
-#  verc=$(sed -n 's/pkgver=7.4.//p' $PKG/../gvim/PKGBUILD)
-#  verl=$(git describe --abbrev=0 --tags | sed 's/v7.4.//g')
+#  verc=$(sed -n 's/pkgver=7.4.//p' $PKG/..|gvim/PKGBUILD)
+#  verl=$(git describe --abbrev=0 --tags | sed 's/v7.4./|g')
 #  popd
 #  if [[ $verc == $verl ]]; then
 #    echo "Vim is up-to-date"
@@ -142,15 +142,15 @@ function atomup {
 #    rm $PKG/pkgbuild-current/pkgbuild-current*
 
 #    printf "Removing gvim binaries.==>\n"
-#    rm $PKG/pkgbuild-current/gvim*.xz
+#    rm $PKG/pkgbuild-current|gvim*.xz
 
-#    pushd $PK/gvim
+#    pushd $PK|gvim
 #
-#      printf "Updating [gvim/gvim-gtk3] PKGBUILD.==>\n"
-#      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl/g" PKGBUILD ../gvim-gtk3/PKGBUILD
+#      printf "Updating [gvim|gvim-gtk3] PKGBUILD.==>\n"
+#      sed -i -e "s/pkgver=7.4.*/pkgver=7.4.$verl|g" PKGBUILD ..|gvim-gtk3/PKGBUILD
 
-#      printf "Removing old [gvim/gvim-gtk3] binaries and source archives.==>\n"
-#      rm *.*z ../gvim-gtk3/*.*z
+#      printf "Removing old [gvim|gvim-gtk3] binaries and source archives.==>\n"
+#      rm *.*z ..|gvim-gtk3/*.*z
 
 #      printf "Downloading new source archive and updating checksums for [gvim].==>\n"
 #      updpkgsums
@@ -169,7 +169,7 @@ function atomup {
 
 #    popd
 
-#    pushd $PK/gvim-gtk3
+#    pushd $PK|gvim-gtk3
 #
 #      printf "Generating new checksums for [gvim-gtk3].==>\n"
 #      updpkgsums
@@ -207,19 +207,19 @@ function vimup {
   # verc is the current patch version of Vim in vim.spec
   # verl is the latest patch version of Vim.
 
-  verc=$(sed -n 's/pkgver=//p' $PK/gvim/PKGBUILD)
-  verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
+  verc=$(sed -n 's/pkgver=//p' $PK|gvim/PKGBUILD)
+  verl=$(git describe --abbrev=0 --tags | sed 's/v/|g')
   popd
   if ! [[ $verc == $verl ]]; then
-    cd $PK/gvim-gtk3
-    sed -i -e "s/$verc/$verl/g" PKGBUILD
+    cd $PK|gvim-gtk3
+    sed -i -e "s|$verc|$verl|g" PKGBUILD
     if [[ -f sed* ]]; then
       rm sed*
     fi
     push "Bumping to $verl"
-    cd ../gvim-gtk2
+    cd ..|gvim-gtk2
     rm *.*z
-    sed -i -e "s/$verc/$verl/g" PKGBUILD
+    sed -i -e "s|$verc|$verl|g" PKGBUILD
     makepkg -sifC --noconfirm
     if [[ -f sed* ]]; then
       rm sed*
@@ -233,7 +233,7 @@ function vimup {
     push "Bumping gvim submodules to $verl"
     cda gvim-gtk2
     rm *.*z
-    sed -i -e "s/$verc/$verl/g" PKGBUILD
+    sed -i -e "s|$verc|$verl|g" PKGBUILD
     if [[ -f sed* ]]; then
       rm sed*
     fi
@@ -245,7 +245,7 @@ function vimup {
 
 function vimupo {
   # Make the latest version of Vim using the gvim-git package
-  cd $PKG/../gvim-git
+  cd $PKG/..|gvim-git
     makepkg -si --noconfirm --needed
   cd -
 }
@@ -270,7 +270,7 @@ function linup {
   cd $PK/linux-ck
   verc=$(sed -n 's/pkgver=//p' PKGBUILD)
   if ! [[ $verc == $verl ]]; then
-    sed -i -e "s/pkgver=$verc/pkgver=$verl/g" PKGBUILD
+    sed -i -e "s/pkgver=$verc/pkgver=$verl|g" PKGBUILD
     upmakin
     push "Updating"
   fi
@@ -285,11 +285,11 @@ function blockup {
   cd $GHUBO/blockify
   git pull origin master
   git fetch -p
-  verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
+  verl=$(git describe --abbrev=0 --tags | sed 's/v/|g')
   cd $PKG/../blockify
   verc=$(sed -n 's/pkgver=//p' PKGBUILD)
   if ! [[ $verl == $verc ]]; then
-    sed -i -e "s/pkgver=$verc/pkgver=$verl/g" PKGBUILD
+    sed -i -e "s/pkgver=$verc/pkgver=$verl|g" PKGBUILD
     upmakin
     push "Updating"
   fi
