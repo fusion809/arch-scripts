@@ -221,7 +221,6 @@ function vimup {
     rm *.*z
     sed -i -e "s|$verc|$verl|g" PKGBUILD
     updpkgsums
-    cp *.gz $HOME/AUR/gvim-gtk2
     makepkg -sifC --noconfirm
     if [[ -f sed* ]]; then
       rm sed*
@@ -234,6 +233,7 @@ function vimup {
     cd ..
     push "Bumping gvim submodules to $verl"
     cda gvim-gtk2
+    cp $PK/gvim-gtk2/*.gz .
     rm *.*z
     sed -i -e "s|$verc|$verl|g" PKGBUILD
     if [[ -f sed* ]]; then
