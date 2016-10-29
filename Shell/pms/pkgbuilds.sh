@@ -220,6 +220,8 @@ function vimup {
     cd ../gvim-gtk2
     rm *.*z
     sed -i -e "s|$verc|$verl|g" PKGBUILD
+    updpkgsums
+    cp *.gz $HOME/AUR/gvim-gtk2
     makepkg -sifC --noconfirm
     if [[ -f sed* ]]; then
       rm sed*
