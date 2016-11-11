@@ -4,7 +4,7 @@ if ! [[ -d $HOME/GitHub ]]; then
 fi
 
 # Get openssh, if not pre-installed and Zsh
-sudo pacman -S --noconfirm --needed openssh zsh
+sudo pacman -S --noconfirm --needed openssh zsh python git
 
 # Clone arch-scripts repo
 if ! [[ -d $HOME/GitHub/mine/scripts/arch-scripts ]]; then
@@ -48,6 +48,10 @@ fi
 
 if ! [[ -d $HOME/.oh-my-zsh/plugins/zsh-history-substring-search ]]; then
   git clone https://github.com/zsh-users/zsh-history-substring-search $HOME/.oh-my-zsh/plugins/zsh-history-substring-search
+fi
+
+if ! [[ -d $HOME/.oh-my-zsh/custom/zsh-completion-generator ]]; then
+  git clone https://github.com/RobSis/zsh-completion-generator $HOME/.oh-my-zsh/custom/zsh-completion-generator
 fi
 
 # Change default login shell to Zsh
