@@ -7,7 +7,7 @@ function vfgi {
 }
 
 function vpk {
-	vim -c ":call PKG()"
+	vim PKGBUILD
 }
 
 function vsh {
