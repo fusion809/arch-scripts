@@ -1,5 +1,9 @@
 function cdobs {
-	cd $HOME/OBS/home:fusion809/$1
+	cd $HOME/OBS/$1
+}
+
+function cdobsh {
+	cdobs "home:fusion809/$1"
 }
 
 function cdobsa {
