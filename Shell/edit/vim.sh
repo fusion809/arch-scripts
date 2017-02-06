@@ -1,27 +1,10 @@
-function vbash {
-	vim $HOME/.bashrc
-}
-
 function vfgi {
-	vim -c ":call FGI()"
+	pushd $FGI
+	vim
+	popd
 }
 
-function vpk {
-	vim PKGBUILD
-}
-
-function vsh {
-	vim -c ":call SH()"
-}
-
-function vvim {
-	vim $HOME/.vimrc
-}
-
-function vx {
-	vim $HOME/.xinitrc
-}
-
-function vzsh {
-	vim $HOME/.zshrc
-}
+for i in $HOME/Shell/edit/vim/*.sh
+do
+	. "$i"
+done
