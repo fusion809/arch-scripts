@@ -76,6 +76,10 @@ function cdvy {
 	cdvid "YouTube/$1"
 }
 
+function cdvs {
+	cdvid "SO/$1"
+}
+
 function cdcfe {
 	cddc CodeLite/CPP-Math-Projects/$1
 }

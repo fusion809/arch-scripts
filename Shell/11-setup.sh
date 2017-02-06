@@ -17,3 +17,8 @@ fi
 if ! [[ -f /usr/bin/xclip ]]; then
 	pacin xclip
 fi
+
+# Install youtube-dl if missing
+if ! [[ -f /usr/bin/youtube-dl ]]; then
+	pacin youtube-dl
+fi

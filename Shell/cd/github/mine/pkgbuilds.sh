@@ -15,14 +15,6 @@ function cdgg {
   cdpk gvim-git
 }
 
-function cdvs {
-	cdpk visual-studio-code-oss
-}
-
-function cdvsg {
-	cdpk visual-studio-code-git
-}
-
 function cdpc {
 	cdpk pkgbuild-current
 }
