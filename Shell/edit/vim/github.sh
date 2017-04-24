@@ -5,3 +5,9 @@ function vfgi {
 }
 
 alias vblog=vfgi
+
+function gvfgi {
+	gvim $FGI
+}
+
+gvblog=gvfgi
