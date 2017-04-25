@@ -1,3 +1,3 @@
 function cdfgi {
-	cd $FGI
+    cd "$FGI/$1"
 }
