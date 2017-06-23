@@ -13,3 +13,5 @@ function cdes {
 function cdev {
   cded "vim/$1"
 }
+
+alias cdvm=cdev
