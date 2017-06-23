@@ -11,11 +11,11 @@ function vd {
 }
 
 function gvsh {
-    gvd $HOME/Shell
+    gvd "$HOME/Shell"
 }
 
 function vbash {
-    vim $HOME/.bashrc
+    vim "$HOME/.bashrc"
 }
 
 function vsh {
@@ -23,9 +23,9 @@ function vsh {
 }
 
 function vvim {
-    vim $HOME/.vimrc
+    vim "$HOME/.vimrc"
 }
 
 function vzsh {
-    vim $HOME/.zshrc
+    vim "$HOME/.zshrc"
 }
