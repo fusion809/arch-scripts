@@ -1,19 +1,31 @@
+function gvd {
+    pushd "$1"
+    gvim
+    popd
+}
+
+function vd {
+    pushd "$1"
+    vim
+    popd
+}
+
 function gvsh {
-	gvim -c ":call RSH()"
+    gvd $HOME/Shell
 }
 
 function vbash {
-	vim ~/.bashrc
+    vim $HOME/.bashrc
 }
 
 function vsh {
-	vim -c ":call RSH()"
+    vd "$HOME/Shell"
 }
 
 function vvim {
-	vim ~/.vimrc
+    vim $HOME/.vimrc
 }
 
 function vzsh {
-	vim ~/.zshrc
+    vim $HOME/.zshrc
 }
