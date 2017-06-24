@@ -8,6 +8,6 @@ function cpi3 {
 }
 
 function i3up {
-    cpi3 && cdci3 && push "$1" && cd -
+    cdci3 && git checkout archlinux && cpi3 && push "$1" && cd -
 }
 
