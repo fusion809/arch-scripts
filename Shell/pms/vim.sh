@@ -1,3 +1,5 @@
+export BASE_URL="https://raw.githubusercontent.com/fusion809"
+
 function vimaup {
      printf '\e[1;34m%-0s\e[m' "Running vimaup."
      printf "\n"
