@@ -5,3 +5,7 @@ function cdp {
 function cdpa {
 	cd $PRG/atom
 }
+
+function cdpe {
+	cd $PRG/exe
+}
