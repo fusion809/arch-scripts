@@ -1,3 +1,9 @@
+function vimaup {
+     printf '\e[1;34m%-0s\e[m' "Running vimaup."
+     printf "\n"
+     bash <(curl -s $BASE_URL/GVim.AppImage/master/trigger.sh)
+}
+
 function ovimup {
     cdobsh $1
     pkgver=$(wget -q https://github.com/vim/vim/releases -O - | grep "tar\.gz" | head -n 1 | cut -d '/' -f 5 | cut -d '"' -f 1 | sed 's/v//g' | sed 's/\.tar\.gz//g')
