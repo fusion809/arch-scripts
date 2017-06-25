@@ -15,7 +15,7 @@ function ovimup {
          if [[ "$1" == "vim" ]]; then
 
               sed -i -e "s|$vim_baseversion|$baseversion|g" $HOME/AUR/gvim-gtk2/PKGBUILD
-              sed -i -e "s|$vim_baseversion|$baseversion|g" $PKG/PKGBUILDs/gvim-{gtk2,gtk3}/PKGBUILD
+              sed -i -e "s|$vim_baseversion|$baseversion|g" $PKG/gvim-{gtk2,gtk3}/PKGBUILD
 
          fi
 
@@ -32,7 +32,7 @@ function ovimup {
 
          if [[ "$1" == "vim" ]]; then
 
-              sed -i -e "s|$vim_patchversion|$patchversion|g" {$HOME/OBS/home:fusion809/gvim-gtk2,$HOME/AUR/gvim-gtk2,$PKG/PKGBUILDs/gvim-gtk2,$PKG/PKGBUILDs/gvim-gtk3}/PKGBUILD
+              sed -i -e "s|$vim_patchversion|$patchversion|g" {$HOME/OBS/home:fusion809/gvim-gtk2,$HOME/AUR/gvim-gtk2,$PKG/gvim-gtk2,$PKG/gvim-gtk3}/PKGBUILD
 
               sed -i -e "s|$vim_baseversion.$vim_patchversion|$pkgver|g" $HOME/OBS/home:fusion809/vim-debian/{debian.dsc,_service}
 
@@ -43,15 +43,15 @@ function ovimup {
               push "Bumping to $pkgver"
               cd -
 
-              cd $PKG/PKGBUILDs/gvim-gtk2
+              cd $PKG/gvim-gtk2
               push "Bumping to $pkgver"
               cd -
 
-              cd $PKG/PKGBUILDs/gvim-gtk3
+              cd $PKG/gvim-gtk3
               push "Bumping to $pkgver"
               cd -
 
-              cd $PKG/PKGBUILDs
+              cd $PKG
               push "Bumping gvim submodules to $pkgver"
               cd -
 
