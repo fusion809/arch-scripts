@@ -6,6 +6,10 @@ function vpk {
 	vim PKGBUILD
 }
 
+function vsp {
+	vim *.spec
+}
+
 function vvim {
 	vim $HOME/.vimrc
 }
