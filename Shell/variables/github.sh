@@ -4,6 +4,8 @@ export GHUBM=$GHUB/mine
 export GHUBO=$GHUB/others
 
 export ATO=$GHUBM/atom
+export CFG=$GHUBM/config
+export ED=$GHUBM/editors
 export INS=$GHUBM/installers
 export PK=$GHUBM/packaging
 export SCR=$GHUBM/scripts
