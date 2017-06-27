@@ -3,9 +3,9 @@ function cdcf {
 }
 
 function cdci3 {
-    cd $CFG/i3-configs
+    cdcf "i3-configs/$1"
 }
 
 function cdcsw {
-    cd $CFG/sway-configs
+    cdcf "sway-config/$1"
 }

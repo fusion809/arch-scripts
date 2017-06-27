@@ -11,3 +11,10 @@ function i3up {
     cdci3 && git checkout archlinux && cpi3 && push "$1" && cd -
 }
 
+function cpsw {
+    cp $HOME/.config/sway/config $CFG/sway-config
+}
+
+function swup {
+    cdcsw && cpsw && push "$1" && cd -
+}
