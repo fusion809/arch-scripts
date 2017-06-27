@@ -17,5 +17,5 @@ function cpsw {
 }
 
 function swup {
-    cdcsw && cpsw && push "$1" && cd -
+    cdcsw && git checkout archlinux && cpsw && push "$1" && cd -
 }
