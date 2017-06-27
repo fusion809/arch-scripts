@@ -12,7 +12,7 @@ function i3up {
 }
 
 function cpsw {
-    cp /usr/local/bin/swimport $CFG/usr/local/bin
+    cp /usr/local/bin/swimport $CFG/sway-config/usr/local/bin
     cp $HOME/.config/sway/config $CFG/sway-config
 }
 
