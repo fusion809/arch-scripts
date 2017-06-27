@@ -20,6 +20,11 @@ function cdmen {
 	cd $HOME/.config/menus/
 }
 
+# - .config/sway
+function cdsw {
+    cdc "sway/$1"
+}
+
 #	- .local/share
 function cdls {
 	cd $LS/$1
