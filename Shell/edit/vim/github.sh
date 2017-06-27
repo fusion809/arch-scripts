@@ -4,10 +4,4 @@ function vfgi {
 	popd
 }
 
-alias vblog=vfgi
-
-function gvfgi {
-	gvim $FGI
-}
-
-gvblog=gvfgi
+vblog=vfgi

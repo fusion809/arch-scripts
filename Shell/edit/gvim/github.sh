@@ -1,7 +1,7 @@
-function vfgi {
-	pushd $FGI
-	gvim
-	popd
+function gvfgi {
+    pushd $FGI
+    gvim
+    popd
 }
 
-alias vblog=vfgi
+alias gvblog=gvfgi
