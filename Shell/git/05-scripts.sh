@@ -12,7 +12,7 @@ function cdas {
     cd $ARS
 }
 
-## Update sabayon-scripts GitHub repo
+## Update arch-scripts GitHub repo
 function shup {
     cps && cdas && push "$1" && cd - && szsh
 }
