@@ -6,6 +6,10 @@ function vpk {
 	vim PKGBUILD
 }
 
+function vrm {
+	vim README.md
+}
+
 function vsp {
 	vim *.spec
 }
