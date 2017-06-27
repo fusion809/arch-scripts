@@ -1,5 +1,5 @@
 function cdweb {
-    cd $WEB
+    cd $WEB/$1
 }
 
 function cdim {
