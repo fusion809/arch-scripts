@@ -1,3 +1,11 @@
+function cdcf {
+    cd $CFG/$1
+}
+
 function cdci3 {
-    cd $GHUBM/config/i3-configs
+    cd $CFG/i3-configs
+}
+
+function cdcsw {
+    cd $CFG/sway-configs
 }
