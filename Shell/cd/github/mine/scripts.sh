@@ -22,3 +22,8 @@ function cdjs {
 function cdpy {
 	cd $SCR/python-scripts
 }
+
+# Change into $SCR
+function cdsc {
+	cd $SCR/$1
+}
