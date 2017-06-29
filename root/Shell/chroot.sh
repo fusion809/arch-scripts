@@ -17,3 +17,13 @@ function mchroot {
   cp /etc/resolv.conf /mnt/et
   chroot /mnt /bin/bash
 }
+
+function groot {
+    mount -t proc /proc /gentoo/proc
+    mount --rbind /dev /gentoo/dev
+    mount --make-rslave /gentoo/dev
+    mount --rbind /sys /gentoo/sys
+    mount --make-rslave /gentoo/sys
+    cp -L /etc/resolv.conf /gentoo/etc
+    chroot /gentoo /bin/zsh
+}
