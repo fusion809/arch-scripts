@@ -5,7 +5,12 @@ function cdast {
 
 # My arch-scripts repo
 function cdarch {
-	cd $SCR/arch-scripts
+	cd $SCR/arch-scripts/$1
+}
+
+# My gentoo-scripts repo
+function cdgs {
+	cd $SCR/gentoo-scripts/$1
 }
 
 # - GNU_Octave
