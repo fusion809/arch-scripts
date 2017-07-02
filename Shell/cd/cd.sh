@@ -20,7 +20,7 @@ function cdbd {
 }
 
 function cdch {
-	cdh "chroot"
+	cdh "Chem"
 }
 
 # - Desktop
