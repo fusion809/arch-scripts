@@ -42,6 +42,10 @@ function cdgol {
 	cdh "go/$1"
 }
 
+function cdja {
+	cdh "Journal articles/$1"
+}
+
 # - Music
 function cdm {
 	cdh "Music/$1"
