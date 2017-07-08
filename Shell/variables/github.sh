@@ -7,6 +7,7 @@ export ATO=$GHUBM/atom
 export CFG=$GHUBM/config
 export ED=$GHUBM/editors
 export INS=$GHUBM/installers
+export OTH=$GHUBM/others
 export PK=$GHUBM/packaging
 export SCR=$GHUBM/scripts
 export WEB=$GHUBM/websites
