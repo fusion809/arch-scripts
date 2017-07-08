@@ -1,0 +1,5 @@
+#!/bin/bash
+FGI=/home/fusion809/GitHub/mine/websites/fusion809.github.io
+pushd $FGI
+gvim
+popd
