@@ -26,5 +26,6 @@ function groot {
     mount --make-rslave /gentoo/sys
     rm /gentoo/etc/resolv.conf
     cp /etc/resolv.conf /gentoo/etc
+    chroot /gentoo /usr/local/bin/md
     chroot /gentoo /bin/zsh
 }
