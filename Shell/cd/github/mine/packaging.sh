@@ -4,6 +4,10 @@ function cdpck {
 
 alias cdpack=cdpck
 
+function cdfo {
+	cdpck fusion809-overlay/$1
+}
+
 function cdgaa {
 	cdpck arch-atom/$1
 }
