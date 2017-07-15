@@ -13,16 +13,3 @@ function syncup {
 function vimupd {
     sudo chroot /gentoo /usr/local/bin/vimupd
 }
-
-function vimup {
-        vimupd
-        printf '\e[1;34m%-0s\e[m' "Running ovimup vim."
-        printf "\n"
-        ovimup vim
-        printf '\e[1;34m%-0s\e[m' "Running ovimup vim-suse."
-        printf "\n"
-        ovimup "vim-suse"
-        printf '\e[1;34m%-0s\e[m' "Running ovimup vim-redhat."
-        printf "\n"
-        ovimup "vim-redhat"
-}
