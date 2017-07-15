@@ -195,55 +195,55 @@ function atomup {
 #  fi
 #}
 
-function vimup {
-  unset verc
-  unset verl
-  unset VIMDIR
-  ORPWD=$PWD
-  pushd $GHUBO/vim-src # change into my local Vim git repo copy
-  git checkout master
-  git fetch -p
-  git pull origin master # Update local repo
+#function vimup {
+#  unset verc
+#  unset verl
+#  unset VIMDIR
+#  ORPWD=$PWD
+#  pushd $GHUBO/vim-src # change into my local Vim git repo copy
+#  git checkout master
+#  git fetch -p
+#  git pull origin master # Update local repo
   # verc is the current patch version of Vim in vim.spec
   # verl is the latest patch version of Vim.
 
-  verc=$(sed -n 's/pkgver=//p' $PK/gvim-gtk2/PKGBUILD)
-  verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
-  popd
-  if ! [[ $verc == $verl ]]; then
-    cd $PK/gvim-gtk3
-    sed -i -e "s|$verc|$verl|g" PKGBUILD
-    if [[ -f sed* ]]; then
-      rm sed*
-    fi
-    push "Bumping to $verl"
-    cd ../gvim-gtk2
-    rm *.*z
-    sed -i -e "s|$verc|$verl|g" PKGBUILD
-    updpkgsums
-    makepkg -sifC --noconfirm
-    if [[ -f sed* ]]; then
-      rm sed*
-    fi
-    push "Bumping to $verl"
-    cdpk gvim-gtk3
-    git pull origin master
-    cdpk gvim-gtk2
-    git pull origin master
-    cd ..
-    push "Bumping gvim submodules to $verl"
-    cda gvim-gtk2
-    cp $PK/gvim-gtk2/*.gz .
-    rm *.*z
-    sed -i -e "s|$verc|$verl|g" PKGBUILD
-    if [[ -f sed* ]]; then
-      rm sed*
-    fi
-    updpkgsums
-    push "Bumping pkgver to $verl"
-    cd ..
-  fi
-}
+#  verc=$(sed -n 's/pkgver=//p' $PK/gvim-gtk2/PKGBUILD)
+#  verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
+#  popd
+#  if ! [[ $verc == $verl ]]; then
+#    cd $PK/gvim-gtk3
+#    sed -i -e "s|$verc|$verl|g" PKGBUILD
+#    if [[ -f sed* ]]; then
+#      rm sed*
+#    fi
+#    push "Bumping to $verl"
+#    cd ../gvim-gtk2
+#    rm *.*z
+#    sed -i -e "s|$verc|$verl|g" PKGBUILD
+#    updpkgsums
+#    makepkg -sifC --noconfirm
+#    if [[ -f sed* ]]; then
+#      rm sed*
+#    fi
+#    push "Bumping to $verl"
+#    cdpk gvim-gtk3
+#    git pull origin master
+#    cdpk gvim-gtk2
+#    git pull origin master
+#    cd ..
+#    push "Bumping gvim submodules to $verl"
+#    cda gvim-gtk2
+#    cp $PK/gvim-gtk2/*.gz .
+#    rm *.*z
+#    sed -i -e "s|$verc|$verl|g" PKGBUILD
+#    if [[ -f sed* ]]; then
+#      rm sed*
+#    fi
+#    updpkgsums
+#    push "Bumping pkgver to $verl"
+#    cd ..
+#  fi
+#}
 
 function vimupo {
   # Make the latest version of Vim using the gvim-git package
