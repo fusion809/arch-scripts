@@ -12,4 +12,5 @@ function syncup {
 
 function vimupd {
     sudo chroot /gentoo /usr/local/bin/su-vimupd
+    pacaup
 }
