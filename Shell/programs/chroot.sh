@@ -1,14 +1,14 @@
 function groot {
     if ! [[ -f /gentoo/proc/config.gz ]]; then
-        mount -t proc /proc /gentoo/proc
-        mount --rbind /dev /gentoo/dev
-        mount --make-rslave /gentoo/dev
-        mount --rbind /sys /gentoo/sys
-        mount --make-rslave /gentoo/sys
-        rm /gentoo/etc/resolv.conf
-        cp /etc/resolv.conf /gentoo/etc
-        chroot /gentoo /usr/local/bin/md
+        sudo mount -t proc /proc /gentoo/proc
+        sudo mount --rbind /dev /gentoo/dev
+        sudo mount --make-rslave /gentoo/dev
+        sudo mount --rbind /sys /gentoo/sys
+        sudo mount --make-rslave /gentoo/sys
+        sudo rm /gentoo/etc/resolv.conf
+        sudo cp /etc/resolv.conf /gentoo/etc
+        sudo chroot /gentoo /usr/local/bin/md
     fi
 
-    chroot /gentoo /usr/local/bin/su-fusion809
+    sudo chroot /gentoo /usr/local/bin/su-fusion809
 }
