@@ -20,7 +20,7 @@ function cdbd {
 }
 
 function cdch {
-	cdh "Chem"
+	cdh "Chem/$1"
 }
 
 # - Desktop

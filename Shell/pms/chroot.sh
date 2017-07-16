@@ -11,6 +11,7 @@ function syncup {
 }
 
 function vimupd {
+    xhost +
     sudo chroot /gentoo /usr/local/bin/su-vimupd
     pacaup
 }
