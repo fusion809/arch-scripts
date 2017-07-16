@@ -1,0 +1,153 @@
+#!/bin/bash
+DATE=$(wget -cqO- https://github.com/vim/vim/releases | grep "datetime" | cut -d '"' -f 2 | head -n 1 | cut -d 'Z' -f 1)
+SEC=$(echo $DATE | cut -d 'T' -f 2 | cut -d ':' -f 3)
+MIN=$(echo $DATE | cut -d 'T' -f 2 | cut -d ':' -f 2)
+HR=$(echo $DATE | cut -d 'T' -f 2 | cut -d ':' -f 1)
+DAY=$(echo $DATE | cut -d 'T' -f 1 | cut -d '-' -f 3)
+MON=$(echo $DATE | cut -d 'T' -f 1 | cut -d '-' -f 2)
+YEAR=$(echo $DATE | cut -d 'T' -f 1 | cut -d '-' -f 1)
+HRA=$((HR+10))
+
+if [[ $HRA > 24 ]]; then
+    DAY=$((DAY+1))
+    HRA=$((HRA-24))
+fi
+
+if [[ $MON == "12" ]]; then
+    if [[ $DAY == "32" ]]; then
+         MON="1"
+         DAY="1"
+         YEAR=$((YEAR+1))
+         MONT="January"
+    else
+         MONT="December"
+    fi
+elif [[ $MON == "11" ]]; then
+    if [[ $DAY == "31" ]]; then
+         MON=$((MON+1))
+         DAY="1"
+         MONT="December"
+    else
+         MONT="November"
+    fi
+elif [[ $MON == "10" ]]; then
+    if [[ $DAY == "32" ]]; then
+         MON=$((MON+1))
+         DAY="1"
+         MONT="November"
+    else
+         MONT="October"
+    fi
+elif [[ $MON == "09" ]]; then
+    if [[ $DAY == "31" ]]; then
+         MON=$((MON+1))
+         DAY="1"
+         MONT="October"
+    else
+         MONT="September"
+    fi
+elif [[ $MON == "08" ]]; then
+    if [[ $DAY == "32" ]]; then
+         MON=$((MON+1))
+         DAY="1"
+         MONT="September"
+    else
+         MONT="August"
+    fi
+elif [[ $MON == "07" ]]; then
+    if [[ $DAY == "32" ]]; then
+         MON=$((MON+1))
+         DAY="1"
+         MONT="August"
+    else
+         MONT="July"
+    fi
+elif [[ $MON == "06" ]]; then
+    if [[ $DAY == "31" ]]; then
+         MON=$((MON+1))
+         DAY="1"
+         MONT="July"
+    else
+         MONT="June"
+    fi
+elif [[ $MON == "05" ]]; then
+    if [[ $DAY == "32" ]]; then
+         MON=$((MON+1))
+         DAY="1"
+         MONT="June"
+    else
+         MONT="May"
+    fi
+elif [[ $MON == "04" ]]; then
+    if [[ $DAY == "31" ]]; then
+         MON=$((MON+1))
+         DAY="1"
+         MONT="May"
+    else
+         MONT="April"
+    fi
+elif [[ $MON == "03" ]]; then
+    if [[ $DAY == "32" ]]; then
+         MON=$((MON+1))
+         DAY="1"
+         MONT="April"
+    else
+         MONT="March"
+    fi
+elif [[ $MON == "02" ]]; then
+    DIV=$((YEAR/4))
+    LEAP=$((YEAR-4*DIV))
+    if [[ $LEAP > "1" ]]; then
+         if [[ $DAY == "29" ]]; then
+              MON=$((MON+1))
+              DAY="1"
+              MONT="March"
+         else
+              MONT="February"
+         fi
+    else
+         if [[ $DAY == "30" ]]; then
+              MON=$((MON+1))
+              DAY="1"
+              MONT="March"
+         else
+              MONT="February"
+         fi
+    fi
+elif [[ $MON == "01" ]]; then
+    if [[ $DAY == "32" ]]; then
+         MON=$((MON+1))
+         DAY="1"
+         MONT="February"
+    else
+         MONT="January"
+    fi
+fi
+
+if [[ $HRA > "12" ]]; then
+    HOUR="$((HRA-12))"
+    REM="1"
+else
+    HOUR="$HRA"
+    REM="0"
+fi
+
+if [[ $REM == "1" ]]; then
+    if [[ $HOUR == "12" ]]; then
+         HOUR="$HOUR"
+         AMPM="AM"
+    else
+         HOUR="$HOUR"
+         AMPM="PM"
+    fi
+else
+    if [[ $HOUR == "12" ]]; then
+         HOUR="$HOUR"
+         AMPM="PM"
+    else
+         HOUR="$HOUR"
+         AMPM="AM"
+    fi
+fi
+
+printf "Last Vim update was $HOUR:$MIN:$SEC $AMPM, $DAY $MONT $YEAR.\n"
