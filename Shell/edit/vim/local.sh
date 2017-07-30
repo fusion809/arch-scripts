@@ -2,6 +2,10 @@ function vbash {
 	vim $HOME/.bashrc
 }
 
+function vcp {
+	vim *.cpp
+}
+
 function vpk {
 	vim PKGBUILD
 }
