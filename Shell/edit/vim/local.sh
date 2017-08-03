@@ -6,6 +6,10 @@ function vcp {
 	vim *.cpp
 }
 
+function vgit {
+	vim .gitignore
+}
+
 function vpk {
 	vim PKGBUILD
 }
