@@ -2,22 +2,32 @@
 # $HOME/
 # - .atom
 function cdat {
-	cd $HOME/.atom/$1
+    cd $HOME/.atom/$1
 }
 
 # - .atom/packages
 function cdatp {
-	cd $HOME/.atom/packages/$1
+    cd $HOME/.atom/packages/$1
+}
+
+# - .cache
+function cdca {
+    cd $HOME/.cache/$1
+}
+
+# - .config/pacaur
+function cdpc {
+    cdca "pacaur/$1"
 }
 
 # - .config
 function cdc {
-	cd $HOME/.config/$1
+    cd $HOME/.config/$1
 }
 
 # - .config/menus
 function cdmen {
-	cd $HOME/.config/menus/
+    cd $HOME/.config/menus/
 }
 
 # - .config/sway
@@ -27,48 +37,48 @@ function cdsw {
 
 #	- .local/share
 function cdls {
-	cd $LS/$1
+    cd $LS/$1
 }
 
 # -- applications
 function cdap {
-	cd $AP/$1
+    cd $AP/$1
 }
 
 # -- plasma/desktoptheme
 function cdpd {
-	cd $PD
+    cd $PD
 }
 
 function cdpq {
-	cd $PQ
+    cd $PQ
 }
 
 function cdapa {
-	cdap atom
+    cdap atom
 }
 
 function cdvap {
-	cdap virtualbox
+    cdap virtualbox
 }
 
 ##########################
 function cddd {
-	cd $DD
+    cd $DD
 }
 
 function cdi {
-	cd $LS/icons/$1
+    cd $LS/icons/$1
 }
 
 function cdlt {
-	cd $LS/themes/$1
+    cd $LS/themes/$1
 }
 
 function cdth {
-	cd $TH/$1
+    cd $TH/$1
 }
 
 function cdi3 {
-	cd $HOME/.i3
+    cd $HOME/.i3
 }
