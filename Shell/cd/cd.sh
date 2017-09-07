@@ -65,7 +65,11 @@ function cdsh {
 }
 
 function cdt {
-	cd $HOME/Textbooks/$1
+	cdh "Textbooks/$1"
+}
+
+function cdtg {
+	cdh "Therapeutic guidelines/$1"
 }
 
 function cdvid {
