@@ -69,6 +69,6 @@ function pacln {
 function pacrin {
     for i in $(pacln)
     do
-         pacin "$i"
+         sudo pacman -S "$i" --noconfirm
     done
 }
