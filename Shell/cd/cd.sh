@@ -33,6 +33,10 @@ function cddc {
 	cdh "Documents/$1"
 }
 
+function cdtx {
+	cddc "Text files"/$1
+}
+
 # - Downloads
 function cddo {
 	cdh "Downloads/$1"
