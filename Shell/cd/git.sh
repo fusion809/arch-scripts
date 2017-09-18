@@ -1,5 +1,10 @@
 # git-controlled repos not in $HOME/GitHub
 function cda {
+        if ! [[ -d $HOME/AUR/$1 ]]; then
+		cd $HOME/AUR
+		gitaur $1
+                cd -
+        fi
 	cd $HOME/AUR/$1
 }
 

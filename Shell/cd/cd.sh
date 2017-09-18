@@ -4,6 +4,11 @@ function cdh {
 
 # Non-hidden
 function cdabs {
+        if ! [[ -d $HOME/abs/$1 ]]; then
+		cd $HOME/abs
+                pbget $1
+                cd -
+        fi
 	cdh "abs/$1"
 }
 
