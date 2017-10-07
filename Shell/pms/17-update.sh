@@ -36,4 +36,7 @@ function update {
               makepkg -sifC --noconfirm
          fi
     cd -
+
+    # GRUB
+    update-grub
 }
