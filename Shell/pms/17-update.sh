@@ -22,18 +22,18 @@ function update {
     # Updating GitHub repos
     for i in $GHUBO/*
     do
-         pushd $i
-         git pull --all
-         popd
+         cd $i
+         git pull --all -q
+         cd -
     done
 
     # Update firefox-nightly
-    pushd $HOME/.cache/pacaur/firefox-nightly
+    cd $HOME/.cache/pacaur/firefox-nightly
          fntime=$(ls | grep "bz2$" | cut -d '-' -f 1)
          actime=$(date +%Y%m%d)
 
          if ! [[ $fntime == $actime ]]; then
               makepkg -sifC --noconfirm
          fi
-    popd
+    cd -
 }
