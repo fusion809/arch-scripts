@@ -23,7 +23,7 @@ function update {
     for i in $GHUBO/*
     do
          pushd $i
-         git pull origin --all
+         git pull --all
          popd
     done
 
