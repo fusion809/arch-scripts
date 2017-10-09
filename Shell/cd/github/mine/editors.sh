@@ -15,4 +15,3 @@ function cdev {
 }
 
 alias cdvm=cdev
-alias cdvim=cdev

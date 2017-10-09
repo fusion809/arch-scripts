@@ -25,11 +25,6 @@ function cdc {
     cd $HOME/.config/$1
 }
 
-# - .config/awesome
-function cdaw {
-    cdc "awesome/$1"
-}
-
 # - .config/menus
 function cdmen {
     cd $HOME/.config/menus/
