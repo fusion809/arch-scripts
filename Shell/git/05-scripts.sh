@@ -17,24 +17,6 @@ function shup {
     cps && cdas && push "$1" && cd - && szsh
 }
 
-## Update LFS repo
-function cplfs {
-    sudo chmod +x -R $LFS/{$HOME,/root}/Shell/
-    rm -rf $LFSS/Shell && mkdir $LFSS/Shell
-    sudo rm -rf $LFSS/root/Shell
-    cp -a $LFS/$HOME/Shell/* $LFSS/Shell
-    cp -a $LFS/$HOME/.zshrc $LFSS/
-    sudo cp -a $LFS/root/{Shell,.bashrc,.zshrc} $LFSS/root
-}
-
-function cdlfs {
-    cd $LFSS/$1
-}
-
-function lfsup {
-    cplfs && cdlfs && push "$1" && cd -
-}
-
 function sudoers {
     sudo cp -a $GHUBM/scripts/arch-scripts/etc/sudoers /etc/sudoers
 }
