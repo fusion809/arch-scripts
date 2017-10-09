@@ -3,7 +3,7 @@ function cdv {
 }
 
 function cdvi {
-	cd $VBX/ISOs
+	cd $VBX/ISOs/$1
 }
 
 function cdvdi {
