@@ -1,37 +1,37 @@
 function vbash {
-	vim $HOME/.bashrc
+    vim $HOME/.bashrc
 }
 
 function vcp {
-	vim *.cpp
+    vim *.cpp
 }
 
 function vgit {
-	vim .gitignore
+    vim .gitignore
 }
 
 function vpk {
-	vim PKGBUILD
+    vim PKGBUILD
 }
 
 function vrm {
-	vim README.md
+    vim README.md
 }
 
 function vsp {
-	vim *.spec
+    vim *.spec
 }
 
 function vvim {
-	vim $HOME/.vimrc
+    vim $HOME/.vimrc
 }
 
 alias vrc=vvim
 
 function vx {
-	vim $HOME/.xinitrc
+    vim $HOME/.xinitrc
 }
 
 function vzsh {
-	vim $HOME/.zshrc
+    vim $HOME/.zshrc
 }

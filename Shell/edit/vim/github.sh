@@ -1,7 +1,9 @@
 function vfgi {
-	pushd $FGI
-	vim
-	popd
+    vd $FGI
 }
 
 vblog=vfgi
+
+function vlfs {
+    vd $LFS
+}

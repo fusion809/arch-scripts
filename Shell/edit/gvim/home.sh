@@ -1,9 +1,7 @@
 function gvsh {
-    pushd $HOME/Shell
-    gvim
-    popd
+    gvd $HOME/Shell/$1
 }
 
 function gvcfe {
-    gvim $HOME/Documents/CodeLite/CPP-Math-Projects/$1
+    gvd $HOME/Documents/CodeLite/CPP-Math-Projects/$1
 }
