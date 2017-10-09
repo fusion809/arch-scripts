@@ -47,15 +47,6 @@ function yarm {
     yaourt -Rsc $@ --noconfirm
 }
 
-function update {
-    vimup
-    blockup
-    pacaup
-    if hash apm 2>/dev/null; then
-         apmbup
-    fi
-}
-
 # Upgrade all Yaourt packages and Atom packages
 function yaup {
     yaourt -Syua --noconfirm --needed
