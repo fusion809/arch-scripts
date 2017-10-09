@@ -10,5 +10,5 @@ function sv {
 
 for i in $HOME/Shell/edit/vim/*.sh
 do
-	. "$i"
+    . "$i"
 done

@@ -6,5 +6,5 @@ function gvd {
 
 for i in $HOME/Shell/edit/gvim/*.sh
 do
-	. "$i"
+    . "$i"
 done

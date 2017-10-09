@@ -5,10 +5,10 @@ function aemb {
 
 # Spacemacs
 function aspb {
-  atom-bleeding $HOME/.spacemacs
+    atom-bleeding $HOME/.spacemacs
 }
 
 # vimrc
 function avimb {
-	atom-bleeding $HOME/.vimrc
+    atom-bleeding $HOME/.vimrc
 }

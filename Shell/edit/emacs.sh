@@ -1,24 +1,24 @@
 # emacs
 function ebash {
-	emacs $HOME/.bashrc $SHL
+    emacs $HOME/.bashrc $SHL
 }
 
 # OBS
 function eobs {
-	emacs $HOME/OBS/home:fusion809
+    emacs $HOME/OBS/home:fusion809
 }
 
 # PKGBUILDs
 function epk {
-	emacs $PKG
+    emacs $PKG
 }
 
 # Shell Scripts
 function esh {
-	emacs $SHL
+    emacs $SHL
 }
 
 # Zsh
 function ezsh {
-  emacs $HOME/.bashrc $SHL
+    emacs $HOME/.bashrc $SHL
 }
