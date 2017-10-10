@@ -10,9 +10,7 @@ function update {
     pacaup
 
     # Nix
-    if hash nix-env 2>/dev/null; then
-         sudo nix-channel --update && sudo nix-env --upgrade
-    fi
+    nixupc
 
     # APM
     if hash apm 2>/dev/null; then
