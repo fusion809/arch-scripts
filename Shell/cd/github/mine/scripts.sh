@@ -13,11 +13,6 @@ function cdgs {
 	cd $SCR/gentoo-scripts/$1
 }
 
-# LFS scripts
-function cdlfs {
-	cd $SCR/lfs-scripts/$1
-}
-
 # - GNU_Octave
 function cdoct {
 	cd $SCR/GNU_Octave
