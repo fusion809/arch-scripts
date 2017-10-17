@@ -50,5 +50,5 @@ function lfsroot {
 		mount --rbind /sys $LFS/sys && 
 		mount --make-rslave $LFS/sys && 
 	fi
-	chroot $LFS /usr/bin/env -i HOME=/root TERM="$TERM" PS1='\u:\w\$ ' PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/zsh --login
+	chroot $LFS /usr/bin/env -i HOME=/root TERM="$TERM" PS1='\u:\w\$ ' PATH=/bin:/usr/bin:/sbin:/usr/sbin LD_LIBRARY_PATH=/lib:/usr/lib /bin/zsh --login
 }
