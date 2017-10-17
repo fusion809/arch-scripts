@@ -32,3 +32,8 @@ function cdpy {
 function cdsc {
 	cd $SCR/$1
 }
+
+# Lua scripts
+function cdlu {
+	cdsc "lua-scripts/$1"
+}
