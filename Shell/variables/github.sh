@@ -19,3 +19,4 @@ export PY=$SCR/python-scripts
 export JS=$SCR/JScripts
 export LFS=/mnt/lfs
 export LFSS=$SCR/lfs-scripts
+export LU=$SCR/lua-scripts
