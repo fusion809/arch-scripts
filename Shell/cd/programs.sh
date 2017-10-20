@@ -1,11 +1,15 @@
 function cdp {
-	cd $PRG/$1
+    cd $PRG/$1
 }
 
 function cdpa {
-	cd $PRG/atom
+    cdp "atom/$1"
 }
 
 function cdpe {
-	cd $PRG/exe
+    cdp "exe/$1"
+}
+
+function cdpf {
+    cdp "Flatpak/$1"
 }
