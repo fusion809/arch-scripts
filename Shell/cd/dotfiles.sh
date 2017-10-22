@@ -20,6 +20,8 @@ function cdpc {
     cdca "pacaur/$1"
 }
 
+alias cdcp=cdpc
+
 # - .config
 function cdc {
     cd $HOME/.config/$1
