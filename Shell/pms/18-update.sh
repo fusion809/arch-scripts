@@ -25,16 +25,6 @@ function update {
          cd -
     done
 
-    # Update firefox-nightly
-    cd $HOME/.cache/pacaur/firefox-nightly
-         fntime=$(ls | grep "bz2$" | cut -d '-' -f 1)
-         actime=$(date +%Y%m%d)
-
-         if ! [[ $fntime == $actime ]]; then
-              makepkg -sifC --noconfirm
-         fi
-    cd -
-
     # GRUB
     update-grub
 }
