@@ -25,6 +25,8 @@ function update {
          cd -
     done
 
+    flatpak update
+
     # GRUB
     update-grub
 }
