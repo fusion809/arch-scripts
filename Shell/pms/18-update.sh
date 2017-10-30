@@ -24,8 +24,22 @@ function update {
          git pull --all -q
          cd -
     done
+    
+    # Update firefox-nightly
+    if [[ -d $HOME/.cache/pacaur/firefox-nightly ]]; then
+         cd $HOME/.cache/pacaur/firefox-nightly
+              fntime=$(ls | grep "bz2$" | cut -d '-' -f 1)
+              actime=$(date +%Y%m%d)
 
-    flatpak update
+              if ! [[ $fntime == $actime ]]; then
+                   makepkg -sifC --noconfirm
+              fi
+         cd -
+    fi
+
+    if hash flatpak 2>/dev/null; then
+         flatpak update
+    fi
 
     # GRUB
     update-grub
