@@ -8,6 +8,11 @@ function edjs {
 	atom $SCR/JScripts
 }
 
+# lua-scripts
+function edlu {
+	atom $SCR/lua-scripts
+}
+
 # npm2archOBS
 function ednpm {
 	atom $SCR/npm2archOBS
