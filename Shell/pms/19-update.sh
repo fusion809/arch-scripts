@@ -12,6 +12,9 @@ function update {
     # Nix
     nixupc
 
+    # Guix
+    guixupc
+
     # APM
     if hash apm 2>/dev/null; then
          apmup
