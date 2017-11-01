@@ -3,6 +3,8 @@ function pacar {
     pacman -Qdtq | sudo pacman -Rs -
 }
 
+alias autoremove=pacar
+
 # Remove list of specified packages
 function pacrm {
     sudo pacman -Rs $@ --noconfirm
