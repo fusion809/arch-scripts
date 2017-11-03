@@ -35,3 +35,14 @@ function vx {
 function vzsh {
     vim $HOME/.zshrc
 }
+
+function vnix {
+    if [[ -f default.nix ]]; then
+         vim default.nix
+    else
+         vim *.nix
+    fi
+}
+
+alias vni=vnix
+alias vn=vnix
