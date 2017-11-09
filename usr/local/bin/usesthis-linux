@@ -1,0 +1,16 @@
+#!/bin/bash
+
+function linap {
+    wget -cqO- "https://usesthis.com/api/categories/linux/?page=$1" | jq -Msc . | sed 's/},/},\n/g' | grep -v "mac" | grep -v "windows"
+}
+
+for i in `seq 1 8`
+do
+    lines=$(linap $i | wc -l)
+    for j in `seq 1 $lines`
+    do
+         url=$(linap $i | sed -n "${j}p" | cut -d ',' -f 3 | cut -d '"' -f 4)
+         name=$(linap $i | sed -n "${j}p" | cut -d ',' -f 2 | cut -d '"' -f 4)
+         printf "Name is $name; URL: $url.\n"
+    done
+done
