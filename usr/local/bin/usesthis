@@ -1,0 +1,23 @@
+#!/bin/bash
+
+function linap {
+    wget -cqO- "https://usesthis.com/api/categories/$1/?page=$2" | jq -Msc . | sed 's/},/},\n/g'
+}
+
+for i in `seq 1 100`
+do
+    if `wget -cqO- "https://usesthis.com/api/categories/$1/?page=$i" | jq -Msc . | sed 's/},/},\n/g' | grep "{" > /dev/null 2>&1`; then
+         noup=$i
+    fi
+done
+
+for i in `seq 1 $noup`
+do
+    lines=$(linap $1 $i | wc -l)
+    for j in `seq 1 $lines`
+    do
+         url=$(linap $1 $i | sed -n "${j}p" | cut -d ',' -f 3 | cut -d '"' -f 4)
+         name=$(linap $1 $i | sed -n "${j}p" | cut -d ',' -f 2 | cut -d '"' -f 4)
+         printf "Name is $name; URL: $url.\n"
+    done
+done
