@@ -1,9 +1,13 @@
 #!/bin/bash
+# This is just a general script to query the API for pages in the category specified to this script.
+# For example, usesthis linux will look for pages with 'linux' in their name. 
 
+# Grep lines on page $2 that include $1 in them
 function linap {
     wget -cqO- "https://usesthis.com/api/categories/$1/?page=$2" | jq -Msc . | sed 's/},/},\n/g'
 }
 
+# Determine the number of pages for category $1
 for i in `seq 1 100`
 do
     if `wget -cqO- "https://usesthis.com/api/categories/$1/?page=$i" | jq -Msc . | sed 's/},/},\n/g' | grep "{" > /dev/null 2>&1`; then
@@ -11,6 +15,7 @@ do
     fi
 done
 
+# This will output the name of the person, along with the URL to their page on usesthis.com
 for i in `seq 1 $noup`
 do
     lines=$(linap $1 $i | wc -l)

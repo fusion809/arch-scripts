@@ -1,4 +1,6 @@
 #!/bin/bash
+# This script looks for people that use Linux AND at least one of the two major proprietary
+# operating systems (macOS/Windows).
 
 function linap {
     wget -cqO- "https://usesthis.com/api/categories/linux/?page=$1" | jq -Msc . | sed 's/},/},\n/g' | grep "mac\|windows"

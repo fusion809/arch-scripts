@@ -1,9 +1,14 @@
 #!/bin/bash
+# This looks for people that use Linux and, optionally, the BSDs, so long as they do not use
+# one of the two major proprietary operating systems (macOS/Windows). 
 
+# This returns a list of lines (corresponding to one particular person) of JSON data that pertains
+# to Linux and not macOS/Windows users.
 function linap {
     wget -cqO- "https://usesthis.com/api/categories/linux/?page=$1" | jq -Msc . | sed 's/},/},\n/g' | grep -v "mac" | grep -v "windows"
 }
 
+# Returns a list of names semicolon (;) their URL.
 for i in `seq 1 8`
 do
     lines=$(linap $i | wc -l)
