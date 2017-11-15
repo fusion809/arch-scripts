@@ -21,8 +21,8 @@ do
     lines=$(linap $1 $i | wc -l)
     for j in `seq 1 $lines`
     do
-         url=$(linap $1 $i | sed -n "${j}p" | cut -d ',' -f 3 | cut -d '"' -f 4)
-         name=$(linap $1 $i | sed -n "${j}p" | cut -d ',' -f 2 | cut -d '"' -f 4)
+         name=$(linap $i | sed -n "${j}p" | cut -d ',' -f 3 | cut -d '"' -f 6)
+         url=https://usesthis.com/interviews/$(linap $i | sed -n "${j}p" | cut -d ',' -f 2 | cut -d '"' -f 4)
          printf "Name is $name; URL: $url.\n"
     done
 done
