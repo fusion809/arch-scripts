@@ -13,16 +13,16 @@ function groot {
     sudo chroot /gentoo /usr/local/bin/su-fusion809
 }
 
-function mroot {
-    if ! [[ -f /mint/proc/config.gz ]]; then
-        sudo mount -t proc /proc /mint/proc
-        sudo mount --rbind /dev /mint/dev
-        sudo mount --make-rslave /mint/dev
-        sudo mount --rbind /sys /mint/sys
-        sudo mount --make-rslave /mint/sys
-        sudo rm /mint/etc/resolv.conf
-        sudo cp /etc/resolv.conf /mint/etc
+function nroot {
+    if ! [[ -f /other/proc/config.gz ]]; then
+        sudo mount -t proc /proc /other/proc
+        sudo mount --rbind /dev /other/dev
+        sudo mount --make-rslave /other/dev
+        sudo mount --rbind /sys /other/sys
+        sudo mount --make-rslave /other/sys
+        sudo rm /other/etc/resolv.conf
+        sudo cp /etc/resolv.conf /other/etc
     fi
 
-    sudo chroot /mint /bin/bash
+    sudo chroot /other /bin/bash
 }

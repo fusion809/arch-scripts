@@ -37,18 +37,18 @@ export LFS=/mnt/lfs
 
 function lfsroot {
 	if ! [[ -d $LFS/bin ]]; then
-		mount /dev/sdb2 $LFS && 
+		mount /dev/sdb2 $LFS
 	fi
 	if ! [[ -f $LFS/proc/keys ]]; then
-		mount -t proc none $LFS/proc && 
+		mount -t proc none $LFS/proc 
 	fi
 	if ! [[ -f $LFS/dev/net ]]; then
-		mount --rbind /dev $LFS/dev && 
-	        mount --make-rslave $LFS/dev && 
+		mount --rbind /dev $LFS/dev && \ 
+	        mount --make-rslave $LFS/dev
 	fi
 	if ! [[ -d $LFS/sys/cgroup ]]; then
-		mount --rbind /sys $LFS/sys && 
-		mount --make-rslave $LFS/sys && 
+		mount --rbind /sys $LFS/sys && \
+		mount --make-rslave $LFS/sys
 	fi
 	chroot $LFS /usr/bin/env -i HOME=/root TERM="$TERM" PS1='\u:\w\$ ' PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/zsh --login
 }
