@@ -37,3 +37,8 @@ function cdsc {
 function cdlu {
 	cdsc "lua-scripts/$1"
 }
+
+# Void sripts
+function cdvsc {
+    cdsc "void-scripts/$1"
+}
