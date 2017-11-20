@@ -24,5 +24,5 @@ function vroot {
         sudo cp /etc/resolv.conf /void/etc
     fi
 
-    sudo chroot /void /bin/bash
+    sudo chroot /void /usr/local/bin/su-fusion809
 }
