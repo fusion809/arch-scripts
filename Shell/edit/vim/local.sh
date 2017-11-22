@@ -6,6 +6,10 @@ function vcp {
     vim *.cpp
 }
 
+function ved {
+    vim *.ebuild
+}
+
 function vgit {
     vim .gitignore
 }
