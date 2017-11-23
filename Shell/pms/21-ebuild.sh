@@ -19,7 +19,7 @@ function ovimup {
          if [[ "$1" == "vim" ]]; then
 
               sed -i -e "s|$vim_baseversion|$baseversion|g" $HOME/AUR/gvim-gtk2/PKGBUILD
-              sed -i -e "s|$vim_baseversion|$baseversion|g" $PKG/PKGBUILDs/gvim-{gtk2,gtk3}/PKGBUILD
+              sed -i -e "s|$vim_baseversion|$baseversion|g" $PK/PKGBUILDs/gvim-{gtk2,gtk3}/PKGBUILD
 
          fi
 
@@ -36,7 +36,7 @@ function ovimup {
 
          if [[ "$1" == "vim" ]]; then
 
-              sed -i -e "s|$vim_patchversion|$patchversion|g" {$HOME/OBS/home:fusion809/gvim-gtk2,$HOME/AUR/gvim-gtk2,$PKG/PKGBUILDs/gvim-gtk2,$PKG/PKGBUILDs/gvim-gtk3}/PKGBUILD
+              sed -i -e "s|$vim_patchversion|$patchversion|g" {$HOME/OBS/home:fusion809/gvim-gtk2,$HOME/AUR/gvim-gtk2,$PK/PKGBUILDs/gvim-gtk2,$PK/PKGBUILDs/gvim-gtk3}/PKGBUILD
 
               sed -i -e "s|$vim_baseversion.$vim_patchversion|$pkgver|g" $HOME/OBS/home:fusion809/vim-debian/{debian.dsc,_service}
 
@@ -47,15 +47,15 @@ function ovimup {
               push "Bumping to $pkgver"
               cd -
 
-              cd $PKG/PKGBUILDs/gvim-gtk2
+              cd $PK/PKGBUILDs/gvim-gtk2
               push "Bumping to $pkgver"
               cd -
 
-              cd $PKG/PKGBUILDs/gvim-gtk3
+              cd $PK/PKGBUILDs/gvim-gtk3
               push "Bumping to $pkgver"
               cd -
 
-              cd $PKG/PKGBUILDs
+              cd $PK/PKGBUILDs
               push "Bumping gvim submodules to $pkgver"
               cd -
 
@@ -85,7 +85,7 @@ function vimupb {
     ############################################################
 
     # Move to app-editors/vim dir
-    pushd $PKG/fusion809-overlay/app-editors/vim
+    pushd $PK/fusion809-overlay/app-editors/vim
 
     # Determine latest ebuild for Vim's pkgver 
     lver_vim=$(ls | grep ebuild | sort -u | tail -n 2 | head -n 1 | cut -d '-' -f 2 | sed 's/\.ebuild//g')
@@ -106,7 +106,7 @@ function vimupb {
     ################### app-editors/vim-core ###################
     ############################################################
     # Change into app-editors/vim-core dir
-    pushd $PKG/fusion809-overlay/app-editors/vim-core
+    pushd $PK/fusion809-overlay/app-editors/vim-core
 
     # Get version of the newest ebuild in app-editors/vim-core
     lver_vimc=$(ls | grep ebuild | sort -u | tail -n 2 | head -n 1 | cut -d '-' -f 3 | sed 's/\.ebuild//g')
@@ -126,7 +126,7 @@ function vimupb {
     ##################### app-editors/gvim #####################
     ############################################################
     # Change into app-editors/gvim
-    pushd $PKG/fusion809-overlay/app-editors/gvim
+    pushd $PK/fusion809-overlay/app-editors/gvim
 
     # Determine version of latest ebuild
     lver_gvim=$(ls | grep ebuild | sort -u | tail -n 2 | head -n 1 | cut -d '-' -f 2 | sed 's/\.ebuild//g')
