@@ -78,6 +78,8 @@ function cdi {
     cd $LS/icons/$1
 }
 
+alias cdli=cdi
+
 function cdlt {
     cd $LS/themes/$1
 }
