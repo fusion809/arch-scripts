@@ -6,6 +6,6 @@ function vsd {
     sv /etc/sddm.conf
 }
 
-function vsf {
+function vfs {
     sv /etc/fstab
 }
