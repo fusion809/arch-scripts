@@ -72,3 +72,9 @@ function pacrin {
          sudo pacman -S "$i" --noconfirm
     done
 }
+
+function list_packages_by_size {
+    expac "%n %m" -l'\n' -Q $(pacman -Qq) | sort -rhk 2 | less
+}
+
+alias pacliss=list_packages_by_size
