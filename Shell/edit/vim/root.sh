@@ -5,3 +5,7 @@ function vpc {
 function vsd {
     sv /etc/sddm.conf
 }
+
+function vsf {
+    sv /etc/fstab
+}
