@@ -3,4 +3,4 @@ function datep {
 }
 
 AINS=$(datep sda3)
-GINS=$(datep sda2)
+GINS=$(datep sda1)
