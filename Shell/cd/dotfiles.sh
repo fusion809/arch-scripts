@@ -88,6 +88,10 @@ function cdth {
     cd $TH/$1
 }
 
+function cdlsw {
+    cd $LS/wallpapers/$1
+}
+
 function cdi3 {
     cd $HOME/.i3
 }
