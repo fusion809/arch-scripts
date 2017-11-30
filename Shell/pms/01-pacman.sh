@@ -78,3 +78,9 @@ function list_packages_by_size {
 }
 
 alias pacliss=list_packages_by_size
+
+function pacinfo {
+    pacman -Qi "$@"
+}
+
+alias pacdesc=pacinfo 
