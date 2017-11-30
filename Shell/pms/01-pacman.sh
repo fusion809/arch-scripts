@@ -84,3 +84,4 @@ function pacinfo {
 }
 
 alias pacdesc=pacinfo 
+alias pacd=pacinfo
