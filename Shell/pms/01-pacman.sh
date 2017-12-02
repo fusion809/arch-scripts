@@ -77,6 +77,14 @@ function pacsize {
     pacman -Qi "$@" | grep "Installed Size" | cut -d ':' -f 2 | sed 's/\s*//g'
 }
 
+function pacsin {
+    for i in $@
+    do
+         SIZE=$(pacsize $i)
+         printf "$i $SIZE\n"
+    done
+}
+
 function list_packages_by_size {
     expac "%n %m" -l'\n' -Q $(pacman -Qq) | sort -rhk 2 | less
 }
