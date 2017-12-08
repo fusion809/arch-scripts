@@ -38,5 +38,9 @@ function oroot {
         sudo cp /etc/resolv.conf /other/etc
     fi
 
-    sudo chroot /other /usr/local/bin/su-fusion809
+    if [[ -f /other/usr/local/bin/su-fusion809 ]]; then
+         sudo chroot /other /usr/local/bin/su-fusion809
+    else
+         sudo chroot /other /bin/bash
+    fi
 }
