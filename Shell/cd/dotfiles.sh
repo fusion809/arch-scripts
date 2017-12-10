@@ -95,3 +95,7 @@ function cdlsw {
 function cdi3 {
     cd $HOME/.i3
 }
+
+function cddvm {
+    cd $HOME/.VirtualBox/Machines/$1
+}
