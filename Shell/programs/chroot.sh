@@ -1,3 +1,17 @@
+function genroot {
+    if ! [[ -f "$@/proc/config.gz" ]]; then
+         sudo mount -t proc /proc "$@/proc"
+         sudo mount --rbind /dev "$@/dev"
+         sudo mount --make-rslave "$@/dev"
+         sudo mount --rbind /sys "$@/sys"
+         sudo mount --make-rslave "$@/sys"
+         sudo rm "$@/etc/resolv.conf"
+         sudo cp -L /etc/resolv.conf "$@/etc"
+    fi
+
+    sudo chroot "$@" /bin/bash
+}
+
 function groot {
     if ! [[ -f /gentoo/proc/config.gz ]]; then
         sudo mount -t proc /proc /gentoo/proc
