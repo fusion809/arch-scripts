@@ -1,3 +1,9 @@
+function pcas {
+    sudo du -sh /var/cache/pacman/pkg
+}
+
+alias pacman_cache_size=pcas
+
 function pacup {
     sudo pacman -Syu --noconfirm --force
 }
