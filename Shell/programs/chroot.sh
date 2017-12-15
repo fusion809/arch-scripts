@@ -1,60 +1,32 @@
 function genroot {
-    if ! [[ -f "$@/proc/config.gz" ]]; then
-         sudo mount -t proc /proc "$@/proc"
-         sudo mount --rbind /dev "$@/dev"
-         sudo mount --make-rslave "$@/dev"
-         sudo mount --rbind /sys "$@/sys"
-         sudo mount --make-rslave "$@/sys"
-         sudo rm "$@/etc/resolv.conf"
-         sudo cp -L /etc/resolv.conf "$@/etc"
+    if ! [[ -f "$1/proc/config.gz" ]]; then
+         sudo mount -t proc /proc "$1/proc"
+         sudo mount --rbind /dev "$1/dev"
+         sudo mount --make-rslave "$1/dev"
+         sudo mount --rbind /sys "$1/sys"
+         sudo mount --make-rslave "$1/sys"
+         sudo rm "$1/etc/resolv.conf"
+         sudo cp -L /etc/resolv.conf "$1/etc"
     fi
 
-    sudo chroot "$@" /bin/bash
+    if [[ -f $1/usr/local/bin/su-fusion809 ]]; then
+         sudo chroot "$1" /usr/local/bin/su-fusion809
+    elif [[ -f $1/bin/zsh ]]; then
+         sudo chroot "$1" /bin/zsh
+    else  
+         sudo chroot "$1" /bin/bash
+    fi
 }
 
 function groot {
-    if ! [[ -f /gentoo/proc/config.gz ]]; then
-        sudo mount -t proc /proc /gentoo/proc
-        sudo mount --rbind /dev /gentoo/dev
-        sudo mount --make-rslave /gentoo/dev
-        sudo mount --rbind /sys /gentoo/sys
-        sudo mount --make-rslave /gentoo/sys
-        sudo rm /gentoo/etc/resolv.conf
-        sudo cp /etc/resolv.conf /gentoo/etc
-    fi
-
-    sudo chroot /gentoo /usr/local/bin/su-fusion809
+    genroot /gentoo
 }
 
 function vroot {
-    if ! [[ -f /void/proc/config.gz ]]; then
-        sudo mount -t proc /proc /void/proc
-        sudo mount --rbind /dev /void/dev
-        sudo mount --make-rslave /void/dev
-        sudo mount --rbind /sys /void/sys
-        sudo mount --make-rslave /void/sys
-        sudo rm /void/etc/resolv.conf
-        sudo cp /etc/resolv.conf /void/etc
-    fi
-
-    sudo chroot /void /usr/local/bin/su-fusion809
+    genroot /void
 }
 
 # Whatever my "other" distro install is
 function oroot {
-    if ! [[ -f /other/proc/config.gz ]]; then
-        sudo mount -t proc /proc /other/proc
-        sudo mount --rbind /dev /other/dev
-        sudo mount --make-rslave /other/dev
-        sudo mount --rbind /sys /other/sys
-        sudo mount --make-rslave /other/sys
-        sudo rm /other/etc/resolv.conf
-        sudo cp /etc/resolv.conf /other/etc
-    fi
-
-    if [[ -f /other/usr/local/bin/su-fusion809 ]]; then
-         sudo chroot /other /usr/local/bin/su-fusion809
-    else
-         sudo chroot /other /bin/bash
-    fi
+    genroot /other
 }

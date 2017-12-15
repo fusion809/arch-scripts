@@ -18,19 +18,28 @@
 #    chroot /mnt /bin/bash
 #}
 
-function groot {
-    if ! [[ -f /gentoo/proc/config.gz ]]; then
-         mount -t proc /proc /gentoo/proc
-         mount --rbind /dev /gentoo/dev
-         mount --make-rslave /gentoo/dev
-         mount --rbind /sys /gentoo/sys
-         mount --make-rslave /gentoo/sys
-         rm /gentoo/etc/resolv.conf
-         cp /etc/resolv.conf /gentoo/etc
-         chroot /gentoo /usr/local/bin/md
+function genroot {
+    if ! [[ -f "$1/proc/config.gz" ]]; then
+         mount -t proc /proc "$1/proc"
+         mount --rbind /dev "$1/dev"
+         mount --make-rslave "$1/dev"
+         mount --rbind /sys "$1/sys"
+         mount --make-rslave "$1/sys"
+         rm "$1/etc/resolv.conf"
+         cp -L /etc/resolv.conf "$1/etc"
     fi
 
-    chroot /gentoo /usr/local/bin/su-fusion809
+    if [[ -f $1/usr/local/bin/su-fusion809 ]]; then
+         chroot $1 /usr/local/bin/su-fusion809
+    elif [[ -f $1/bin/zsh ]]; then
+         chroot $1 /bin/zsh
+    else
+         chroot $1 /bin/bash
+    fi
+}    
+
+function groot {
+    genroot /gentoo
 }
 
 export LFS=/mnt/lfs
@@ -53,28 +62,10 @@ export LFS=/mnt/lfs
 #	chroot $LFS /usr/bin/env -i HOME=/root TERM="$TERM" PS1='\u:\w\$ ' PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/zsh --login
 #}
 
-function genroot {
-    if ! [[ -f "$1/proc/config.gz" ]]; then
-         mount -t proc /proc "$1/proc"
-         mount --rbind /dev "$1/dev"
-         mount --make-rslave "$1/dev"
-         mount --rbind /sys "$1/sys"
-         mount --make-rslave "$1/sys"
-         rm "$1/etc/resolv.conf"
-         cp -L /etc/resolv.conf "$1/etc"
-    fi
-
-    if ! [[ -n $2 ]]; then
-         chroot $1 $2
-    else
-         chroot "$1" /bin/bash
-    fi
-}    
-
 function vroot {
-    genroot /void /usr/local/bin/su-fusion809
+    genroot /void
 }
 
 function oroot {
-    genroot /other /usr/local/bin/su-fusion809
+    genroot /other
 }
