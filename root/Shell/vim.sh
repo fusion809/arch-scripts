@@ -29,3 +29,7 @@ function vvim {
 function vzsh {
     vim "$HOME/.zshrc"
 }
+
+function vfs {
+    vim /etc/fstab
+}
