@@ -1,20 +1,30 @@
 function genroot {
-    if ! [[ -f "$1/proc/config.gz" ]]; then
-         sudo mount -t proc /proc "$1/proc"
-         sudo mount --rbind /dev "$1/dev"
-         sudo mount --make-rslave "$1/dev"
-         sudo mount --rbind /sys "$1/sys"
-         sudo mount --make-rslave "$1/sys"
-         sudo rm "$1/etc/resolv.conf"
-         sudo cp -L /etc/resolv.conf "$1/etc"
+    if [[ -d $1/root/dev ]]; then
+         root="$1/root"
+    else
+         root="$1"
     fi
 
-    if [[ -f $1/usr/local/bin/su-fusion809 ]]; then
-         sudo chroot "$1" /usr/local/bin/su-fusion809
-    elif [[ -f $1/bin/zsh ]]; then
-         sudo chroot "$1" /bin/zsh
+    if ! [[ -f "$root/proc/config.gz" ]]; then
+         sudo mount -t proc /proc "$root/proc"
+         sudo mount --rbind /dev "$root/dev"
+         sudo mount --make-rslave "$root/dev"
+         sudo mount --rbind /sys "$root/sys"
+         sudo mount --make-rslave "$root/sys"
+         sudo rm "$root/etc/resolv.conf"
+         sudo cp -L /etc/resolv.conf "$root/etc"
+    fi
+
+    if [[ -f $root/usr/local/bin/su-fusion809 ]]; then
+         sudo chroot "$root" /usr/local/bin/su-fusion809
+    elif [[ -f $root/bin/zsh ]]; then
+         sudo chroot "$root" /bin/zsh
     else  
-         sudo chroot "$1" /bin/bash
+         sudo chroot "$root" /bin/bash
+    fi
+
+    if [[ -f $root/usr/bin/dnf ]]; then
+         sudo touch "$root/.autorelabel"
     fi
 }
 
