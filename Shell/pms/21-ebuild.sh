@@ -148,7 +148,7 @@ function vimupb {
 
 # Update Vim in OBS, fusion809-overlay and GVim.AppImage repo to latest
 function vimup {
-    vimupb
+#    vimupb
 
     printf '\e[1;34m%-0s\e[m' "Running ovimup vim."
     printf "\n"
