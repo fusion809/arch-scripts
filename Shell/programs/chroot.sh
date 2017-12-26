@@ -40,3 +40,11 @@ function vroot {
 function oroot {
     genroot /other
 }
+
+function dproot {
+    genroot /deepin
+}
+
+function dbroot {
+    genroot /debian
+}
