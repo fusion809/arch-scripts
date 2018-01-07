@@ -18,9 +18,9 @@ function genroot {
     fi
 
     if [[ -f $root/bin/env ]]; then
-         ENV=$root/bin/env
+         ENV=/bin/env
     elif [[ -f $root/usr/bin/env ]]; then
-         ENV=$root/usr/bin/env
+         ENV=/usr/bin/env
     fi
 
     if [[ -f $root/usr/local/bin/su-fusion809 ]]; then
