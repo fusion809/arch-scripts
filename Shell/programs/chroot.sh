@@ -29,6 +29,7 @@ function genroot {
          sudo chroot "$root" $ENV -i     \
                HOME="/root"              \
                TERM="$TERM"              \
+               PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]\$\[\e[m\] \['            \
                PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin \
                /bin/zsh --login +h
     elif [[ -f $root/bin/bash ]]; then
