@@ -20,9 +20,29 @@ function genroot {
     if [[ -f $root/usr/local/bin/su-fusion809 ]]; then
          sudo chroot "$root" /usr/local/bin/su-fusion809
     elif [[ -f $root/bin/zsh ]]; then
-         sudo chroot "$root" /bin/zsh
-    else  
-         sudo chroot "$root" /bin/bash
+         sudo chroot "$root" /bin/env -i \
+               HOME="/root"              \
+               TERM="$TERM"              \
+               PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin \
+               /bin/zsh --login +h
+    elif [[ -f $root/bin/bash ]]; then
+         sudo chroot "$root" /bin/env -i \
+               HOME="/root"              \
+               TERM="$TERM"              \
+               PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]\$\[\e[m\] \['            \
+               PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin \
+               /bin/bash --login +h
+    elif [[ -f $root/bin/sh ]] && [[ -f $root/bin/env ]]; then
+         sudo chroot "$root" /bin/env -i \
+               HOME="/root"              \
+               TERM="$TERM"              \
+               PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]\$\[\e[m\] \['            \
+               PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin \
+               /bin/sh --login +h
+    elif [[ -f $root/bin/sh ]] || [[ -L $root/bin/sh ]]; then
+         sudo chroot "$root" /bin/sh
+    else
+         printf "I'm missing a shell, mate!"
     fi
 
     if [[ -f $root/usr/bin/dnf ]]; then
