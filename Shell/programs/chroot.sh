@@ -1,6 +1,8 @@
 function genroot {
     if [[ -d $1/root/dev ]]; then
          root="$1/root"
+    elif [[ -d $1/@/dev ]]; then
+         root="$1/@"
     else
          root="$1"
     fi
