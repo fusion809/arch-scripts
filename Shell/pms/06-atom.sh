@@ -24,7 +24,9 @@ function apms {
 
 # Update packages
 function apmu {
-    apm update --no-confirm "$@"
+    if hash apm 2>/dev/null; then
+         apm update --no-confirm "$@"
+    fi
 }
 
 alias apmup=apmu

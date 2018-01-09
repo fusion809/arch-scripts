@@ -16,18 +16,11 @@ function update {
     guixupc
 
     # APM
-    if hash apm 2>/dev/null; then
-         apmup
-    fi
+    apmup
 
     # Updating GitHub repos
-    for i in $GHUBO/*
-    do
-         cd $i
-         git pull --all -q
-         cd -
-    done
-    
+    gitoup   
+ 
     # Update firefox-nightly
     if [[ -d $HOME/.cache/pacaur/firefox-nightly ]]; then
          cd $HOME/.cache/pacaur/firefox-nightly
