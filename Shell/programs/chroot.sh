@@ -7,7 +7,7 @@ function genroot {
          root="$1"
     fi
 
-    if ! [[ -f "$root/proc/config.gz" ]]; then
+    if ! [[ -f "$root/proc/cgroups" ]]; then
          sudo mount -t proc /proc "$root/proc"
          sudo mount --rbind /dev "$root/dev"
          sudo mount --make-rslave "$root/dev"
@@ -29,21 +29,21 @@ function genroot {
          sudo chroot "$root" $ENV -i     \
                HOME="/root"              \
                TERM="$TERM"              \
-               PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]\$\[\e[m\] \['            \
+               PS1="($1 chroot) $PS1"    \
                PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin \
                /bin/zsh --login +h
     elif [[ -f $root/bin/bash ]]; then
          sudo chroot "$root" $ENV -i     \
                HOME="/root"              \
                TERM="$TERM"              \
-               PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]\$\[\e[m\] \['            \
+               PS1="($1 chroot) $PS1"    \
                PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin \
                /bin/bash --login +h
     elif [[ -f $root/bin/sh ]] && [[ -n $ENV ]]; then
          sudo chroot "$root" $ENV -i     \
                HOME="/root"              \
                TERM="$TERM"              \
-               PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]\$\[\e[m\] \['            \
+               PS1="($1 chroot) $PS1"    \
                PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin \
                /bin/sh --login +h
     elif [[ -f $root/bin/sh ]] || [[ -L $root/bin/sh ]]; then
@@ -58,22 +58,34 @@ function genroot {
 }
 
 function groot {
+    if ! [[ -f /gentoo/bin/bash ]]; then
+         sudo mount /dev/sda4 /gentoo
+    fi
+
+    if ! [[ -d /gentoo/data/Programs ]]; then
+         sudo mount /dev/sdb1 /gentoo/data
+    fi
     genroot /gentoo
 }
 
 function vroot {
+    if ! [[ -f /void/bin/bash ]]; then
+         sudo mount /dev/sda11 /void
+    fi
+
+    if ! [[ -d /void/data/Programs ]]; then
+         sudo mount /dev/sdb1 /void/data
+    fi
     genroot /void
 }
 
-# Whatever my "other" distro install is
-function oroot {
-    genroot /other
-}
+function sroot {
+    if ! [[ -f /slackware/bin/bash ]]; then
+         sudo mount /dev/sda16 /slackware
+    fi
 
-function dproot {
-    genroot /deepin
-}
-
-function dbroot {
-    genroot /debian
+    if ! [[ -d /slackware/data/Programs ]]; then
+         sudo mount /dev/sdb1 /slackware/data
+    fi
+    genroot /slackware
 }
