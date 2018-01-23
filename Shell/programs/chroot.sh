@@ -98,3 +98,28 @@ function droot {
 function duroot {
     genroot /debian-unstable
 }
+
+function mroot {
+    genroot /mageia
+}
+
+function dproot {
+    genroot /deepin
+}
+
+function lroot {
+    genroot /linuxmint
+}
+
+function nroot {
+    genroot /neon
+}
+
+function proot {
+    genroot /pclinuxos
+}
+
+function froot {
+    printf "Warning! You are doing a Fedora chroot here mate... \nFedora uses SELinux so you should run touch /fedora/root/.autorelabel after you're finished in the chroot!"
+    genroot /fedora
+}
