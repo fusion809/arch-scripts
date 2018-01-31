@@ -106,3 +106,7 @@ alias cdcpp=cdcfe
 function cdvirt {
     cd $HOME/.VirtualBox/Machines/$1
 }
+
+function cdpr {
+    cdp "rpm/$1"
+}
