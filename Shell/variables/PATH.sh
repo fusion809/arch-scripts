@@ -1,5 +1,6 @@
 unset PATH
-export GEMPATH=$HOME/.gem/ruby/2.5.0/bin
+export GEM_VERSION=$(ruby --version | cut -d ' ' -f 2 | sed 's/[a-z][0-9]//g')
+export GEMPATH=$HOME/.gem/ruby/$GEM_VERSION/bin
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export JVM_HOME=/usr/lib/jvm
