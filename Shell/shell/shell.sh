@@ -13,3 +13,9 @@ function cpsh {
   sudo cp -a $ARS/root/Shell /root/Shell
   sudo cp -a $ARS/root/{.bashrc,.zshrc} /root
 }
+
+function zshup {
+    pushd $HOME/.oh-my-zsh
+    git pull --all
+    popd
+}

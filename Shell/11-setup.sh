@@ -1,8 +1,3 @@
-# Install atom if missing
-if ! [[ -f /usr/bin/atom ]]; then
-    pacin atom
-fi
-
 # Install GNU Octave if missing
 if ! [[ -f /usr/bin/octave ]]; then
     pacin octave
