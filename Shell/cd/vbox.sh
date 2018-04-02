@@ -9,3 +9,7 @@ function cdvi {
 function cdvdi {
 	cd $VBX/VDIs
 }
+
+function cdvil {
+    cdvi Linux/$1
+}
