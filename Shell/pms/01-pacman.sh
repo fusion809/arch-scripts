@@ -5,7 +5,7 @@ function pcas {
 alias pacman_cache_size=pcas
 
 function pacup {
-    sudo pacman -Syu --noconfirm --force
+    sudo pacman -Syu --noconfirm --overwrite
 }
 
 function pacin {
@@ -13,7 +13,7 @@ function pacin {
 }
 
 function pacinf {
-    sudo pacman -S $@ --noconfirm --needed --force
+    sudo pacman -S $@ --noconfirm --needed --overwrite
 }
 
 function pacinr {
@@ -21,7 +21,7 @@ function pacinr {
 }
 
 function pacinrf {
-    sudo pacman -S $@ --noconfirm --force
+    sudo pacman -S $@ --noconfirm --overwrite
 }
 
 function pacs {
@@ -30,7 +30,7 @@ function pacs {
 
 function pacloc {
     if [[ -n $@ ]]; then
-         sudo pacman -U $@ --noconfirm --force
+         sudo pacman -U $@ --noconfirm --overwrite
     else
          sudo pacman -U *.pkg.tar.xz --noconfirm
     fi
@@ -40,18 +40,18 @@ function pacrlib {
     unset OUTPUT
     unset FILES
     unset BASE
-    OUTPUT=$(sudo pacman -S git --noconfirm --force)
+    OUTPUT=$(sudo pacman -S git --noconfirm --overwrite)
     FILES=$(echo $OUTPUT | sed -n -e 's/^.*File //p' | sed -n -e 's/ is empty, not checked.//p')
     BASE=$(echo $FILES | sed -n -e 's/.so.*/.so/p')
     for i in $BASE
     do
          L=$(sudo pacman -Qo $i)
-         sudo pacman -S $(echo $L | sed -n -e 's/^.*by //p' | sed -n -e 's/ .*//p') --noconfirm --force
+         sudo pacman -S $(echo $L | sed -n -e 's/^.*by //p' | sed -n -e 's/ .*//p') --noconfirm --overwrite
          unset L
     done
     unset OUTPUT
     unset FILES
-    OUTPUT=$(sudo pacman -S git --noconfirm --force)
+    OUTPUT=$(sudo pacman -S git --noconfirm --overwrite)
     FILES=$(echo $OUTPUT | sed -n -e 's/^.*File //p' | sed -n -e 's/ is empty, not checked.//p')
     sudo rm $FILES
 }
