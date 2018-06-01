@@ -56,6 +56,6 @@ function yaup {
 function yarin {
     for i in $(pacman -Q | cut -d' ' -f1)
     do
-         yaourt -Sy $i --noconfirm --force
+         yaourt -Sy $i --noconfirm --overwrite
     done
 }
