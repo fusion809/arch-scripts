@@ -252,7 +252,7 @@ function vimupo {
   cd -
 }
 
-if ! `comc mksrcinfo`; then
+if ! `which mksrcinfo > /dev/null 2>&1`; then
   echo "mksrcinfo unset; defining"
 
   # Set mksrcinfo
