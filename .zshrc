@@ -103,9 +103,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-. $HOME/Shell/01-common.sh
-
-for i in $HOME/Shell/{02,03,04,05,06,07,08,09,1}*.sh
+for i in $HOME/Shell/*.sh
 do
   . "$i"
 done
