@@ -5,7 +5,7 @@ function pcas {
 alias pacman_cache_size=pcas
 
 function pacup {
-    sudo pacman -Syu --noconfirm --overwrite
+    sudo pacman -Syu --noconfirm
 }
 
 function pacin {
