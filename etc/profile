@@ -43,3 +43,6 @@ case "$(curl -s --max-time 2 -I http://google.com | sed 's/^[^ ]*  *\([0-9]\).*/
   [23])  printf "Networking seems to be working fine, based on the Google test at /etc/profile:42\n" ;;
   *) ip link set enp24s0 up && printf "The net should be fine now, enp24s0 has been set up" ;;
 esac
+
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:$HOME/.nix-profile/share
+export PATH=$PATH:$HOME/.nix-profile/bin
