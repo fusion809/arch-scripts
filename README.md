@@ -1,8 +1,9 @@
 # arch-scripts
-Where I keep scripts for automating some processes under Arch Linux. Run the `cpsh` function in the Shell/shell.sh script, to copy these scripts to the appropriate locations on your system so that they are automatically loaded for both standard and root users.
+Where I keep scripts for automating some processes under Arch Linux.
 
-Run the following to install this repo on your Arch machine:
+This repository contains a [common-scripts](https://github.com/fusion809/common-scripts) submodule that is required in order for these scripts to work properly. In order to clone this repository and the common-scripts submodule run:
 
 ```bash
-/bin/bash -c "$(wget -cqO- https://git.io/vaKlX)"
+git clone --recursive https://github.com/fusion809/arch-scripts
 ```
+
