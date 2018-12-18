@@ -1,4 +1,5 @@
 # pacaur commands
+# pacaur has been removed from the AUR as of 19 Dec 2018
 # install package
 function pacain {
   pacaur -S "$@" --noconfirm --needed --noedit
