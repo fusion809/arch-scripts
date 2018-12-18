@@ -1,25 +1,28 @@
 function update {
-    # pacaur
-    if ! `hash pacaur 2>/dev/null`; then
-         cda cower
-         makepkg -sifC --noconfirm
-         cda pacaur
-         makepkg -sifC --noconfirm
+    # yay
+    if command -v yay &>/dev/null ; then
+	    yayup
     fi
 
-    pacaup
-
     # Nix
-    nixupc
+    if command -v nix-env &> /dev/null ; then
+    	nixupc
+    fi
 
     # Guix
-    guixupc
+    if command -v guix &> /dev/null ; then
+    	guixupc
+    fi
 
     # APM
-    apmup
+    if command -v apm &> /dev/null ; then
+    	apmup
+    fi
 
     # Updating GitHub repos
-    gitoup   
+    if ( command -v git &> /dev/null ) && [[ -d $GHUBO/OpenRA ]]; then
+    	gitoup
+    fi
  
     # Update firefox-nightly
     if [[ -d $HOME/.cache/pacaur/firefox-nightly ]]; then
@@ -33,7 +36,7 @@ function update {
          cd -
     fi
 
-    if hash flatpak 2>/dev/null; then
+    if command -v flatpak &> /dev/null; then
          flatpak update
     fi
 
