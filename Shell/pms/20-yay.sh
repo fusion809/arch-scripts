@@ -2,6 +2,8 @@ function yayup {
 	yay -Syu --noconfirm
 }
 
+alias yayu=yayup
+
 function yayi {
 	yay -S "$@" --noconfirm
 }
@@ -13,3 +15,7 @@ function yayr {
 }
 
 alias yayrm=yayr
+
+function yays {
+	yay -Ss "$@"
+}
