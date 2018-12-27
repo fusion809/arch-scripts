@@ -9,6 +9,8 @@ export ZSH_DISABLE_COMPFIX="true"
 # time that oh-my-zsh is loaded.
 ZSH_THEME="hfulldate"
 
+setopt NO_NOMATCH
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
