@@ -5,6 +5,7 @@ function yayup {
 alias yayu=yayup
 alias yau=yayup
 alias yaup=yayup
+alias pacaup=yayup
 
 function yayi {
 	yay -S "$@" --noconfirm
@@ -13,6 +14,7 @@ function yayi {
 alias yayin=yayi
 alias yain=yayi
 alias yai=yayi
+alias pacain=yayi
 
 function yayr {
 	yay -Rsc "$@" --noconfirm
@@ -27,3 +29,4 @@ function yays {
 }
 
 alias yas=yays
+alias pacas=yas
