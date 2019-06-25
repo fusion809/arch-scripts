@@ -9,6 +9,7 @@ export ZSH_DISABLE_COMPFIX="true"
 # time that oh-my-zsh is loaded.
 ZSH_THEME="hfulldate"
 
+set enable-bracketed-paste off
 setopt NO_NOMATCH
 
 # Uncomment the following line to use case-sensitive completion.
@@ -109,3 +110,4 @@ for i in $HOME/Shell/*.sh
 do
   . "$i"
 done
+unset zle_bracketed_paste
