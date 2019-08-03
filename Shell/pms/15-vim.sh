@@ -5,6 +5,7 @@ function vimup {
 	if [[ $pkgver == $pkgverupst ]]; then
 		return 1
 	fi
+	sed -i -e "s/$pkgver/$pkgverupst/g" PKGBUILD
 	makepkg -sifC --noconfirm
 	rm *.xz *.gz
 	push "$pkgver->$pkgverupst"
