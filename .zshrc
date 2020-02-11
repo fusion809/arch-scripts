@@ -118,3 +118,5 @@ source $HOME/Shell/pms/15-vim.sh
 #do
 #	sudo killall -q dde-osd
 #done
+
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
