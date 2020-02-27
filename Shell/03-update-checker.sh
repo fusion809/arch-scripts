@@ -1,20 +1,46 @@
-function updater {
-    # Avogadro2
-    pushd /home/fusion809/GitHub/others/avogadroapp
-    # Check for git command
-    if command -v git > /dev/null 2>&1; then
-        git stash -q || return
-        git pull origin master -q || ( printf "AvoAErr\n" && return )
-        orlv=$(git rev-list --branches master --count)
-    else
-        printf "git has not been detected in the system PATH. Please either install it, if it is not already installed, or add it to the system PATH if it already is.\n"
-    fi
+for i in $HOME/Shell/updater/*.sh
+do
+    . "$i"
+done
 
-    # Avogadro 2 latest packaged version
-    orpv=$(grep "Version:" < /home/fusion809/OBS/home:fusion809/avogadro2/avogadro2.spec | sed 's/Version:\s*//g')
-    if ! [[ $orlv == $orpv ]]; then
-        avoup
-    fi
+function update_all_quiet {
+    avolupq
+    avoupq
+    jmolupq
+    jupupq
+    msymupq
+    noteupq
+    openrabupq
+    caupq
+    racupq
+    d2upq
+    dot5upq
+    drupq
+    genupq
+    kkndupq
+    mwupq
+    raplusupq
+    rvupq
+    spupq
+    ssupq
+    uraupq
+    vsupq
+    yrupq
+    rofiupq
+    spglibupq
+    vimupq
+    zshupq
+}
 
-    # Avogadro libs
+function update_all_quiet_loop {
+    while :
+    do
+        printf "%s\n" "Running update_all_quiet at $(date +"%r %A, %d %B %Y")"
+        update_all_quiet
+        if [[ -n "$@" ]]; then
+            sleep "$@"
+        else
+            sleep 10m
+        fi
+    done
 }
