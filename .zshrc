@@ -120,3 +120,11 @@ source $HOME/Shell/pms/15-vim.sh
 #done
 
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+
+if [[ "$(stat -c %d:%i /)" != "$(sudo stat -c %d:%i /proc/1/root/.)" ]]; then
+  export DISPLAY=":0"
+  export PULSE_SERVER=127.0.0.1
+  printf "You may wish to run update_all_quiet_loop 5m.\n"
+else
+  echo "Business as usual"
+fi
