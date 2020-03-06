@@ -11,6 +11,7 @@ function update_all_quiet {
     msymupq
     noteupq
     openrabupq
+    ra2upq
     caupq
     racupq
     d2upq
