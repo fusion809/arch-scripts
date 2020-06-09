@@ -1,0 +1,8 @@
+#!/bin/zsh
+#if [[ -f /usr/bin/runescape-launcher ]]; then
+#	/usr/bin/runescape-launcher "$@"
+#else
+#	flatpak run com.jagex.RuneScape
+#fi
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin
+su - fusion809 -c "/usr/bin/runescape-launcher"
