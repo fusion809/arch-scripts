@@ -4,11 +4,7 @@ do
 done
 
 function update_all_quiet {
-    avolupq
-    avoupq
-    jmolupq
     jupupq
-    msymupq
     noteupq
     openrabupq
     ra2upq
@@ -28,7 +24,6 @@ function update_all_quiet {
     vsupq
     yrupq
     rofiupq
-    spglibupq
     vimupq
     zshupq
 }
