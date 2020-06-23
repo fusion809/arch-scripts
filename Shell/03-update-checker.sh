@@ -4,7 +4,7 @@ do
 done
 
 function update_all_quiet {
-    juliaupq
+#    juliaupq
     jupupq
     noteupq
     openrabupq
