@@ -24,3 +24,11 @@ function juliaup {
 		makepkg -sifC --nocheck --noconfirm
 	fi
 }
+
+function juliaup_loop {
+	while :
+	do
+		juliaup
+		sleep 300
+	done
+}
