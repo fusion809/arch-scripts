@@ -14,11 +14,11 @@ function juliaupq {
 }
 
 function juliaup {
-	pkgver=$(cat $HOME/AUR/julia-git/PKGBUILD | grep ^pkgver= | cut -d '=' -f 2)
-    cda julia-git/src/julia
-	git pull origin master
-	ver=$(git show makepkg:VERSION | sed 's/-/./g')
-	pkgver_git=$(printf "%s.r%s.g%s" $(echo $ver) "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)")
+    pkgver=$(cat $HOME/AUR/julia-git/PKGBUILD | grep ^pkgver= | cut -d '=' -f 2 | sed 's/[0-9a-z]$//g')
+    cdgo julia
+    git pull origin master
+    ver=$(git show master:VERSION | sed 's/-/./g')
+    pkgver_git=$(printf "%s.r%s.g%s" $(echo $ver) "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)")
     if ! [[ $pkgver == $pkgver_git ]]; then
 		cda julia-git
 		makepkg -sifC --nocheck --noconfirm
