@@ -15,7 +15,7 @@ function update_all_quiet {
     dot5upq
     drupq
     genupq
-    kkndupq
+#    kkndupq
     mwupq
     raplusupq
     rvupq
@@ -24,7 +24,7 @@ function update_all_quiet {
     uraupq
     vsupq
     yrupq
-    rofiupq
+#    rofiupq
     vimupq
     zshupq
 }
