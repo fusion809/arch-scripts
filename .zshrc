@@ -128,3 +128,7 @@ if [[ "$(stat -c %d:%i /)" != "$(sudo stat -c %d:%i /proc/1/root/.)" ]]; then
 fi
 
 sudo dhcpcd
+
+function picoc {
+	/data/fusion809/GitLab/picoc/picoc $@
+}
