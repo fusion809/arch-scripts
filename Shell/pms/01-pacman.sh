@@ -32,7 +32,7 @@ function pacloc {
     if [[ -n $@ ]]; then
          sudo pacman -U $@ --noconfirm
     else
-        latest_package=$(ls | grep ".pkg.tar.xz" | tail -n 1)
+        latest_package=$(ls | grep ".pkg.tar.zst" | tail -n 1)
         sudo pacman -U ${latest_package} --noconfirm
     fi
 }

@@ -24,9 +24,11 @@ alias ls='ls --color=auto'
 #\[\e[0m\]\
 # '
 
- . $HOME/Shell/01-common.sh
+. $HOME/Shell/01-common.sh
 
- for i in $HOME/Shell/02*.sh
- do
-   . "$i"
- done
+for i in $HOME/Shell/02*.sh
+do
+  . "$i"
+done
+
+set -o vi
