@@ -128,3 +128,14 @@ if [[ "$(stat -c %d:%i /)" != "$(sudo stat -c %d:%i /proc/1/root/.)" ]]; then
 fi
 
 sudo dhcpcd
+
+sudo mount /dev/sda4 /win
+fixAudio() {
+  pulseaudio --kill && sudo alsa force-reload
+}
+
+fixMic() {
+	amixer set Capture 100%
+}
+
+. ~/.download.sh

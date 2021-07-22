@@ -4,7 +4,7 @@ function manif {
 
 function ovimup {
     cdobsh $1
-    pkgver=$(wget -q https://github.com/vim/vim/releases -O - | grep "tar\.gz" | head -n 1 | cut -d '/' -f 5 | cut -d '"' -f 1 | sed 's/v//g' | sed 's/\.tar\.gz//g')
+    pkgver=$(wget -q https://github.com/vim/vim/releases -O - | grep "tar\.gz" | head -n 1 | cut -d '/' -f 7 | cut -d '"' -f 1 | sed 's/v//g' | sed 's/\.tar\.gz//g')
     baseversion=$(echo $pkgver | sed 's/\.[0-9]*$//g')
     patchversion=$(echo $pkgver | sed "s/$baseversion//g" | sed 's/\.//g')
     vim_baseversion=$(cat vim.spec | grep "%define.*baseversion" | sed 's/%define.*baseversion\s*//g' | head -n 1)
@@ -78,7 +78,7 @@ function ovimup {
 
 function vimupb {
     # Determine latest Vim version by reading Vim releases page on GitHub
-    pkgver=$(wget -q https://github.com/vim/vim/releases -O - | grep "tar\.gz" | head -n 1 | cut -d '/' -f 5 | cut -d '"' -f 1 | sed 's/v//g' | sed 's/\.tar\.gz//g')
+    pkgver=$(wget -q https://github.com/vim/vim/releases -O - | grep "tar\.gz" | head -n 1 | cut -d '/' -f 7 | cut -d '"' -f 1 | sed 's/v//g' | sed 's/\.tar\.gz//g')
 
     ############################################################
     ##################### app-editors/vim ######################
@@ -167,7 +167,7 @@ function vimup {
 function bravup {
     cdfo www-client/brave-bin
     PBRAVE_VER=$(ls | grep ebuild | cut -d '-' -f 3 | sed 's/\.ebuild//g')
-    CBRAVE_VER=$(wget -q https://github.com/brave/browser-laptop/releases -O - | grep "tar\.gz" | head -n 1 | cut -d '/' -f 5 | cut -d '"' -f 1 | sed 's/[a-z]//g' | sed 's/\.*$//g' | sed 's/\.tar\.gz//g')
+    CBRAVE_VER=$(wget -q https://github.com/brave/browser-laptop/releases -O - | grep "tar\.gz" | head -n 1 | cut -d '/' -f 7 | cut -d '"' -f 1 | sed 's/[a-z]//g' | sed 's/\.*$//g' | sed 's/\.tar\.gz//g')
     BRAVE_TAR=$(wget -q https://github.com/brave/browser-laptop/releases -O - | grep "$CBRAVE_VER" | grep "Brave.tar.bz2")
 
     if ! [[ $PBRAVE_VER == $CBRAVE_VER ]] && `echo $BRAVE_TAR > /dev/null 2>&1`; then
