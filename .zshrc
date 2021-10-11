@@ -135,7 +135,19 @@ fixAudio() {
 }
 
 fixMic() {
-	amixer set Capture 100%
+	amixer $1 set Capture 100%
 }
 
 . ~/.download.sh
+
+fixMic
+
+fixMicRep() {
+	while (:)
+	do
+		setting=$(amixer | grep Capture | tail -n 1 | cut -d '[' -f 2 | sed 's/]//g')
+		if [ $setting!="100%" ]; then
+			fixMic -q
+		fi
+	done
+}
