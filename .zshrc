@@ -151,3 +151,17 @@ fixMicRep() {
 		fi
 	done
 }
+
+. $HOME/getToken.sh
+
+function plot {
+	if [[ $# -eq 1 ]]; then
+		python plot.py $1
+	elif [[ $# -gt 1 ]]; then
+		for i in $@
+		do
+			echo "Plotting for $i"
+			python plot.py $i
+		done
+	fi
+}
