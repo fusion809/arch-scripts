@@ -161,7 +161,7 @@ function plot {
 		for i in $@
 		do
 			if [[ -s output/coords_and_vel_$i.csv ]] && [[ -s output/parameters_$i.csv ]]; then
-				echo "Plotting for $i"
+				echo "Plotting asteroid $i"
 				python plot.py $i
 			fi
 		done
