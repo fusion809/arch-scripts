@@ -155,6 +155,10 @@ fixMicRep() {
 . $HOME/getToken.sh
 
 function plot {
+	if [[ $PWD != "/data/Documents/USQ/Semester 3, 2021/Scholarship/Project/Coding" ]]; then
+		cdsem3 Scholarship/Project/Coding
+	fi
+
 	if [[ $# -eq 1 ]]; then
 		python plot.py $1
 	elif [[ $# -gt 1 ]]; then
@@ -170,4 +174,22 @@ function plot {
 
 function plotAll {
 	plot {1..48}
+}
+
+function convertToPNG {
+	if [[ $PWD != "/data/Documents/USQ/Semester 3, 2021/Scholarship/Project/Coding/plots/N1e8Noutputs1e4" ]]; then
+		cdsem3 Scholarship/Project/Coding/plots/N1e8Noutputs1e4
+	fi
+	for i in *.svg
+	do
+		convert ${i} ${i/.svg/.png}
+	done
+}
+
+alias convPNG=convertToPNG
+alias convpng=convertToPNG
+
+function plotAndConvertAll {
+	plotAll
+	convertToPNG
 }
