@@ -160,8 +160,14 @@ function plot {
 	elif [[ $# -gt 1 ]]; then
 		for i in $@
 		do
-			echo "Plotting for $i"
-			python plot.py $i
+			if [[ -s output/coords_and_vel_$i.csv ]] && [[ -s output/parameters_$i.csv ]]; then
+				echo "Plotting for $i"
+				python plot.py $i
+			fi
 		done
 	fi
+}
+
+function plotAll {
+	plot {1..48}
 }
