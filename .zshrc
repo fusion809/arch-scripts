@@ -170,6 +170,7 @@ function plot {
 			fi
 		done
 	fi
+	cd -
 }
 
 function plotAll {
@@ -184,6 +185,7 @@ function convPNG {
 	do
 		convert ${i} png/${i/.svg/.png}
 	done
+	cd -
 }
 
 function convertAllToPNG {
@@ -194,6 +196,7 @@ function convertAllToPNG {
 	do
 		convert ${i} png/${i/.svg/.png}
 	done
+	cd -
 }
 
 alias convAllPNG=convertAllToPNG
