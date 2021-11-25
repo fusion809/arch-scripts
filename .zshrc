@@ -176,7 +176,17 @@ function plotAll {
 	plot {1..48}
 }
 
-function convertToPNG {
+function convPNG {
+	if [[ $PWD != "/data/Documents/USQ/Semester 3, 2021/Scholarship/Project/Coding/plots/N1e8Noutputs1e4" ]]; then
+		cdsem3 Scholarship/Project/Coding/plots/N1e8Noutputs1e4
+	fi
+	for i in Asteroid_$i_*.svg
+	do
+		convert ${i} png/${i/.svg/.png}
+	done
+}
+
+function convertAllToPNG {
 	if [[ $PWD != "/data/Documents/USQ/Semester 3, 2021/Scholarship/Project/Coding/plots/N1e8Noutputs1e4" ]]; then
 		cdsem3 Scholarship/Project/Coding/plots/N1e8Noutputs1e4
 	fi
@@ -186,10 +196,10 @@ function convertToPNG {
 	done
 }
 
-alias convPNG=convertToPNG
-alias convpng=convertToPNG
+alias convAllPNG=convertAllToPNG
+alias convAllpng=convertAllToPNG
 
 function plotAndConvertAll {
 	plotAll
-	convertToPNG
+	convertAllToPNG
 }
