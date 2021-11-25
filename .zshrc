@@ -182,7 +182,7 @@ function convertToPNG {
 	fi
 	for i in *.svg
 	do
-		convert ${i} ${i/.svg/.png}
+		convert ${i} png/${i/.svg/.png}
 	done
 }
 
