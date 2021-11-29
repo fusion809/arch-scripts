@@ -164,7 +164,7 @@ function plot {
 	elif [[ $# -gt 1 ]]; then
 		for i in $@
 		do
-			if [[ -s output/coords_and_vel_$i.csv ]] && [[ -s output/parameters_$i.csv ]]; then
+			if [[ -s output/ordinary/coords_and_vel_$i.csv ]] && [[ -s output/ordinary/parameters_$i.csv ]]; then
 				echo "Plotting asteroid $i"
 				python plot.py $i
 			fi
@@ -181,7 +181,7 @@ function convPNG {
 	if [[ $PWD != "/data/Documents/USQ/Semester 3, 2021/Scholarship/Project/Coding/plots/N1e8Noutputs1e4" ]]; then
 		cdsem3 Scholarship/Project/Coding/plots/N1e8Noutputs1e4
 	fi
-	for i in Asteroid_$i_*.svg
+	for i in Asteroid_$i_*back*.svg
 	do
 		convert ${i} png/${i/.svg/.png}
 	done
@@ -192,7 +192,7 @@ function convertAllToPNG {
 	if [[ $PWD != "/data/Documents/USQ/Semester 3, 2021/Scholarship/Project/Coding/plots/N1e8Noutputs1e4" ]]; then
 		cdsem3 Scholarship/Project/Coding/plots/N1e8Noutputs1e4
 	fi
-	for i in *.svg
+	for i in *back*.svg
 	do
 		convert ${i} png/${i/.svg/.png}
 	done
