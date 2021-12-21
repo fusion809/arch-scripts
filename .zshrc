@@ -206,3 +206,15 @@ function plotAndConvertAll {
 	plotAll
 	convertAllToPNG
 }
+
+function getName {
+	NAME=$(wget -cqO- "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='$1'&OBJ_DATA='YES'" | grep "Target body name" | cut -d '(' -f 2 | cut -d ')' -f 1)
+	echo $NAME | xclip -selection c
+}
+
+function getAstName {
+	cdsem3 Scholarship/Project
+	getName $(cat save/416_svea.tab | head -n $1 | tail -n 1 | cut -d ' ' -f 1)
+}
+
+export PATH=$PATH:$HOME/.gem/ruby/3.0.0/bin
