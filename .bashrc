@@ -32,3 +32,4 @@ do
 done
 
 set -o vi
+export LD_PRELOAD=/lib64/libfreetype.so
