@@ -112,7 +112,7 @@ do
 done
 unset zle_bracketed_paste
 
-source $HOME/Shell/pms/15-vim.sh
+#source $HOME/Shell/pms/15-vim.sh
 
 #while :
 #do
