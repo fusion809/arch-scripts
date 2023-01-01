@@ -245,12 +245,12 @@ function atomup {
 #  fi
 #}
 
-function vimupo {
+#function vimupo {
   # Make the latest version of Vim using the gvim-git package
-  cd $PKG/../gvim-git
-    makepkg -si --noconfirm --needed
-  cd -
-}
+#  cd $PKG/../gvim-git
+#    makepkg -si --noconfirm --needed
+#  cd -
+#}
 
 if ! `which mksrcinfo > /dev/null 2>&1`; then
   echo "mksrcinfo unset; defining"

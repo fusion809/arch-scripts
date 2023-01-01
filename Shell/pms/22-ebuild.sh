@@ -147,21 +147,21 @@ function vimupb {
 }
 
 # Update Vim in OBS, fusion809-overlay and GVim.AppImage repo to latest
-function vimup {
+#function vimup {
 #    vimupb
 
-    printf '\e[1;34m%-0s\e[m' "Running ovimup vim."
-    printf "\n"
-    ovimup vim
+#    printf '\e[1;34m%-0s\e[m' "Running ovimup vim."
+#    printf "\n"
+#    ovimup vim
 
-    printf '\e[1;34m%-0s\e[m' "Running ovimup vim-suse."
-    printf "\n"
-    ovimup "vim-suse"
+#    printf '\e[1;34m%-0s\e[m' "Running ovimup vim-suse."
+#    printf "\n"
+#    ovimup "vim-suse"
 
-    printf '\e[1;34m%-0s\e[m' "Running ovimup vim-redhat."
-    printf "\n"
-    ovimup "vim-redhat"
-}
+#    printf '\e[1;34m%-0s\e[m' "Running ovimup vim-redhat."
+#    printf "\n"
+#    ovimup "vim-redhat"
+#}
 
 # Update Brave web browser in fusion809-overlay to latest version
 function bravup {
