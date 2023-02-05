@@ -1,5 +1,5 @@
 cdgo OpenRA
-git pull origin bleed
+git pull origin bleed -q
 comnoup=$(git rev-list --count HEAD)
 hashup=$(git log | head -n 1 | cut -d ' ' -f 2 | head -c 7)
 pkgverup="${comnoup}.git.${hashup}"
