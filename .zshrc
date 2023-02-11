@@ -152,8 +152,6 @@ fixMicRep() {
 	done
 }
 
-. $HOME/getToken.sh
-
 function plot {
 	if [[ $PWD != "/data/Documents/USQ/Semester 3, 2021/Scholarship/Project/Coding" ]]; then
 		cdsem3 Scholarship/Project/Coding
