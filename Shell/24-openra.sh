@@ -1,8 +1,8 @@
-pushd /data/GitHub/others/OpenRA
+pushd -q /data/GitHub/others/OpenRA
 git pull origin bleed -q
 comnoup=$(git rev-list --count HEAD)
 hashup=$(git log | head -n 1 | cut -d ' ' -f 2 | head -c 7)
-popd
+popd -q
 pkgverup="${comnoup}.git.${hashup}"
 
 pkgver=$(cat $HOME/AUR/openra-wts-git/PKGBUILD | grep '^pkgver=' | cut -d '=' -f 2)

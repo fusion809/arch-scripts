@@ -57,6 +57,9 @@ setopt NO_NOMATCH
 plugins=(git github zsh-syntax-highlighting vi-mode zsh-autosuggestions
 #safe-paste zsh-completions
 )
+function pacsearch {
+	sudo pacman -Ss $@
+}
 autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 source $HOME/.oh-my-zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -127,29 +130,13 @@ if [[ "$(stat -c %d:%i /)" != "$(sudo stat -c %d:%i /proc/1/root/.)" ]]; then
   printf "You may wish to run update_all_quiet_loop 5m.\n"
 fi
 
-sudo dhcpcd
-
-sudo mount /dev/sda4 /win
+#sudo mount /dev/sda4 /win
 fixAudio() {
   pulseaudio --kill && sudo alsa force-reload
 }
 
 fixMic() {
 	amixer $1 set Capture 100%
-}
-
-. ~/.download.sh
-
-fixMic
-
-fixMicRep() {
-	while (:)
-	do
-		setting=$(amixer | grep Capture | tail -n 1 | cut -d '[' -f 2 | sed 's/]//g')
-		if [ $setting!="100%" ]; then
-			fixMic -q
-		fi
-	done
 }
 
 function plot {
@@ -216,3 +203,6 @@ function getAstName {
 }
 
 export PATH=$PATH:$HOME/.gem/ruby/3.0.0/bin
+
+. /data/.files/download.sh
+. /data/Documents/USQ/MRes/Rcode/newRmd.sh
