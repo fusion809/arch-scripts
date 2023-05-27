@@ -207,9 +207,9 @@ export PATH=$PATH:$HOME/.gem/ruby/3.0.0/bin:$HOME/.local/bin
 . /data/.files/download.sh
 . /data/Documents/USQ/MRes/Rcode/newRmd.sh
 
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-ssh-add ~/.ssh/aur
+eval "$(ssh-agent -s)" &> /dev/null
+ssh-add -q ~/.ssh/id_ed25519
+ssh-add -q ~/.ssh/aur
 
 function openra {
 	if [[ $@ == "--version" ]]; then
