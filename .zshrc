@@ -60,7 +60,7 @@ plugins=(git github zsh-syntax-highlighting vi-mode zsh-autosuggestions
 function pacsearch {
 	sudo pacman -Ss $@
 }
-autoload -U compinit && compinit
+#autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 source $HOME/.oh-my-zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # bind UP and DOWN arrow keys
@@ -202,7 +202,18 @@ function getAstName {
 	getName $(cat save/416_svea.tab | head -n $1 | tail -n 1 | cut -d ' ' -f 1)
 }
 
-export PATH=$PATH:$HOME/.gem/ruby/3.0.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/3.0.0/bin:$HOME/.local/bin
 
 . /data/.files/download.sh
 . /data/Documents/USQ/MRes/Rcode/newRmd.sh
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+ssh-add ~/.ssh/aur
+
+function openra {
+	if [[ $@ == "--version" ]]; then
+		pkgver=$(pacman -Qi openra-wts-git | grep Version | cut -d ':' -f 2 | sed 's/ //g' | cut -d '-' -f 1)
+		echo "$pkgver"
+	fi
+}
