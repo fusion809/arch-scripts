@@ -215,5 +215,8 @@ function openra {
 	if [[ $@ == "--version" ]]; then
 		pkgver=$(pacman -Qi openra-wts-git | grep Version | cut -d ':' -f 2 | sed 's/ //g' | cut -d '-' -f 1)
 		echo "$pkgver"
+	elif [[ $@ == "--gitversion" ]]; then
+		pkgver=$(comno /data/GitHub/others/OpenRA)
+		echo "$pkgver"
 	fi
 }
