@@ -216,7 +216,9 @@ function openra {
 		pkgver=$(pacman -Qi openra-wts-git | grep Version | cut -d ':' -f 2 | sed 's/ //g' | cut -d '-' -f 1)
 		echo "$pkgver"
 	elif [[ $@ == "--gitversion" ]]; then
-		pkgver=$(comno /data/GitHub/others/OpenRA)
-		echo "$pkgver"
+		openra_path="/data/GitHub/others/OpenRA"
+		no=$(comno ${openra_path})
+		ghash=$(git -C ${openra_path} log | head -n 1 | cut -d ' ' -f 2 | head -c 7)
+		echo "$no.git.$ghash"
 	fi
 }
