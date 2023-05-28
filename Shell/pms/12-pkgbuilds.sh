@@ -253,8 +253,6 @@ function atomup {
 #}
 
 if ! `which mksrcinfo > /dev/null 2>&1`; then
-  echo "mksrcinfo unset; defining"
-
   # Set mksrcinfo
   function mksrcinfo {
     makepkg --printsrcinfo > .SRCINFO
