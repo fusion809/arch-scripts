@@ -109,6 +109,10 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+pushd /data/GitHub/others/OpenRA/
+git remote rm origin
+git remote add origin https://github.com/OpenRA/OpenRA
+popd
 for i in $HOME/Shell/*.sh
 do
   . "$i"
