@@ -5,7 +5,7 @@ function openraup {
     uphash=$(git log | head -n 1 | cut -d ' ' -f 2 | head -c 7)
     upver="${upno}.git.${uphash}"
     #pkgver=$(cat $HOME/AUR/openra-wts-git/PKGBUILD | grep "^pkgver=" | cut -d '=' -f 2)
-    pkgver=$(cat /mnt/d/GitHub/others/OpenRA/Version)
+    pkgver=$(cat /mnt/d/GitHub/others/OpenRA/VERSION)
 
     if [[ $upver != $pkgver ]]; then
         #cda openra-wts-git
