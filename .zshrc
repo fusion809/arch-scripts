@@ -208,8 +208,8 @@ function getAstName {
 
 export PATH=$PATH:$HOME/.gem/ruby/3.0.0/bin:$HOME/.local/bin
 
-. /data/.files/download.sh
-. /data/Documents/USQ/MRes/Rcode/newRmd.sh
+. /mnt/d/.files/download.sh
+. /data/Documents/USQ/MRes/MRes/Rcode/newRmd.sh
 
 eval "$(ssh-agent -s)" &> /dev/null
 ssh-add -q ~/.ssh/id_ed25519
@@ -225,4 +225,14 @@ function openra {
 		ghash=$(git -C ${openra_path} log | head -n 1 | cut -d ' ' -f 2 | head -c 7)
 		echo "$no.git.$ghash"
 	fi
+}
+dirn=/mnt/d/.files/2024-08-19
+mkdir -p $dirn
+cd $dirn
+export DONT_PROMPT_WSL_INSTALL=true
+
+function updateDate {
+	DATE=$(date +"%Y-%m-%d")
+	sed -i -e "s|/mnt/d/.files/[0-9]*-[0-9]*-[0-9]*|/mnt/d/.files/$DATE|g" $HOME/.zshrc
+	szsh
 }
