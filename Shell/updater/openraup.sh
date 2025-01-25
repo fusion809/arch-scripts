@@ -17,5 +17,8 @@ function openraup {
 	make
 	cd packaging/linux
 	./buildpackage.sh $upver ~/
+	mv ~/OpenRA-Red-Alert-devel-x86_64.AppImage ~/OpenRA-Red-Alert-$upver-x86_64.AppImage
+	mv ~/OpenRA-Dune-2000-devel-x86_64.AppImage ~/OpenRA-Dune-2000-$upver-x86_64.AppImage
+	mv ~/OpenRA-Tiberian-Dawn-devel-x86_64.AppImage ~/OpenRA-Tiberian-Dawn-$upver-x86_64.AppImage
     fi
 }

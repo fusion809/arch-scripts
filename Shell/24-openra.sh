@@ -5,8 +5,8 @@ hashup=$(git log | head -n 1 | cut -d ' ' -f 2 | head -c 7)
 popd -q
 pkgverup="${comnoup}.git.${hashup}"
 
-pkgver=$(cat $HOME/AUR/openra-wts-git/PKGBUILD | grep '^pkgver=' | cut -d '=' -f 2)
+pkgver=$(ls ~/ | grep "Red-Alert" | cut -d '-' -f 4)
 
 if [[ $pkgverup != $pkgver ]]; then
-	echo "OpenRA $pkgverup is available; run openraup to update openra-wts-git"
+	echo "OpenRA $pkgverup is available; run openraup to update AppImages"
 fi
