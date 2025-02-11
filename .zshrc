@@ -226,13 +226,20 @@ function openra {
 		echo "$no.git.$ghash"
 	fi
 }
-dirn=/mnt/d/.files/2024-08-19
-mkdir -p $dirn
-cd $dirn
 export DONT_PROMPT_WSL_INSTALL=true
 
-function updateDate {
-	DATE=$(date +"%Y-%m-%d")
-	sed -i -e "s|/mnt/d/.files/[0-9]*-[0-9]*-[0-9]*|/mnt/d/.files/$DATE|g" $HOME/.zshrc
-	szsh
+function cdcvb {
+	cd /mnt/c/Users/User/"VirtualBox VMs"/$1
+}
+
+function cdnc {
+	cd /mnt/d/VirtualBox/Shared/NixOS-configs/$1
+}
+
+function cdrec {
+	cdgm Recipes/$1
+}
+
+function openra-ra {
+	cd $HOME/Applications ; ./$(ls $HOME | grep Red-Alert)
 }
