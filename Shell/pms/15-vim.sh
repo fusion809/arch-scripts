@@ -15,5 +15,6 @@ function vimup {
 	updpkgsums
 	makepkg -sifC --noconfirm
 	rm *.xz *.gz *.zst *.pkg.tar*
+	rm -rf src pkg
 	push "$pkgver->$pkgverupst"
 }
