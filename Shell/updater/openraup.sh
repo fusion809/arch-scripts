@@ -1,3 +1,8 @@
+function appimrname {
+	cd $HOME/Applications
+	mv OpenRA-${1/ /-}-devel-x86_64.AppImage OpenRA-${1/ /-}-$2-x86_64.AppImage
+}
+
 function openraup {
     cdgo OpenRA
     git pull origin bleed
@@ -11,14 +16,14 @@ function openraup {
         #cda openra-wts-git
         #makepkg -sifC --noconfirm
         #rm *.zst
-	rm ~/OpenRA*.AppImage
+	rm ~/Applications/OpenRA*.AppImage
 	cdgo OpenRA
 	make clean
 	make
 	cd packaging/linux
-	./buildpackage.sh $upver ~/
-	mv ~/OpenRA-Red-Alert-devel-x86_64.AppImage ~/OpenRA-Red-Alert-$upver-x86_64.AppImage
-	mv ~/OpenRA-Dune-2000-devel-x86_64.AppImage ~/OpenRA-Dune-2000-$upver-x86_64.AppImage
-	mv ~/OpenRA-Tiberian-Dawn-devel-x86_64.AppImage ~/OpenRA-Tiberian-Dawn-$upver-x86_64.AppImage
+	./buildpackage.sh $upver ~/Applications
+	appimrname "Red Alert" $upver
+	appimrname "Tiberian Dawn" $upver
+	appimrname "Dune 2000" $upver
     fi
 }

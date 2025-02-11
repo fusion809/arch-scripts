@@ -5,7 +5,7 @@ hashup=$(git log | head -n 1 | cut -d ' ' -f 2 | head -c 7)
 popd -q
 pkgverup="${comnoup}.git.${hashup}"
 
-pkgver=$(ls ~/ | grep "Red-Alert" | cut -d '-' -f 4)
+pkgver=$(ls ~/Applications | grep "Red-Alert" | cut -d '-' -f 4)
 
 if [[ $pkgverup != $pkgver ]]; then
 	echo "OpenRA $pkgverup is available; run openraup to update AppImages"
