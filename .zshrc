@@ -241,5 +241,6 @@ function cdrec {
 }
 
 function openra-ra {
-	cd $HOME/Applications ; ./$(ls $HOME | grep Red-Alert)
+	cd $HOME/Applications
+	./$(ls $HOME/Applications | grep Red-Alert)
 }
