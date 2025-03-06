@@ -109,10 +109,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-pushd -q /data/GitHub/others/OpenRA/
-git remote rm origin
-git remote add origin https://github.com/OpenRA/OpenRA
-popd -q
 for i in $HOME/Shell/*.sh
 do
   . "$i"
@@ -215,12 +211,12 @@ eval "$(ssh-agent -s)" &> /dev/null
 ssh-add -q ~/.ssh/id_ed25519
 ssh-add -q ~/.ssh/aur
 
-function openra {
+ifunction openra {
 	if [[ $@ == "--version" ]]; then
 		pkgver=$(pacman -Qi openra-wts-git | grep Version | cut -d ':' -f 2 | sed 's/ //g' | cut -d '-' -f 1)
 		echo "$pkgver"
 	elif [[ $@ == "--gitversion" ]]; then
-		openra_path="/data/GitHub/others/OpenRA"
+		openra_path="$HOME/AUR/openra-wts-git/src/OpenRA"
 		no=$(comno ${openra_path})
 		ghash=$(git -C ${openra_path} log | head -n 1 | cut -d ' ' -f 2 | head -c 7)
 		echo "$no.git.$ghash"
@@ -240,7 +236,7 @@ function cdrec {
 	cdgm Recipes/$1
 }
 
-function openra-ra {
-	cd $HOME/Applications
-	./$(ls $HOME/Applications | grep Red-Alert)
-}
+#function openra-ra {
+#	cd $HOME/Applications
+#	./$(ls $HOME/Applications | grep Red-Alert)
+#}
