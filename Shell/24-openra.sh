@@ -1,4 +1,4 @@
-pushd -q /data/GitHub/others/OpenRA
+pushd -q $HOME/AUR/openra-wts-git/src/OpenRA
 git pull origin bleed -q
 comnoup=$(git rev-list --count HEAD)
 hashup=$(git log | head -n 1 | cut -d ' ' -f 2 | head -c 7)
