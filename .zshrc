@@ -204,7 +204,7 @@ function getAstName {
 
 export PATH=$PATH:$HOME/.gem/ruby/3.0.0/bin:$HOME/.local/bin
 
-. /mnt/d/.files/download.sh
+#. /mnt/d/.files/download.sh
 . /data/Documents/USQ/MRes/MRes/Rcode/newRmd.sh
 
 eval "$(ssh-agent -s)" &> /dev/null
@@ -240,3 +240,6 @@ function cdrec {
 #	cd $HOME/Applications
 #	./$(ls $HOME/Applications | grep Red-Alert)
 #}
+function cdchem {
+	cd /mnt/d/Pictures/Chem/$1
+}
