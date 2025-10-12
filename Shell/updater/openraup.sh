@@ -4,7 +4,7 @@ function appimrname {
 }
 
 function openraup {
-    cda openra-wts-git/src/OpenRA
+    cd ~/OpenRA
     git pull origin bleed
     upno=$(git rev-list --count HEAD)
     uphash=$(git log | head -n 1 | cut -d ' ' -f 2 | head -c 7)

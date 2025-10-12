@@ -205,10 +205,10 @@ function getAstName {
 export PATH=$PATH:$HOME/.gem/ruby/3.0.0/bin:$HOME/.local/bin
 
 #. /mnt/d/.files/download.sh
-. /data/Documents/USQ/MRes/MRes/Rcode/newRmd.sh
+#. /data/Documents/USQ/MRes/MRes/Rcode/newRmd.sh
 
 eval "$(ssh-agent -s)" &> /dev/null
-ssh-add -q ~/.ssh/id_ed25519
+ssh-add -q ~/.ssh/id_rsa
 ssh-add -q ~/.ssh/aur
 
 function openra {
@@ -242,4 +242,8 @@ function cdrec {
 #}
 function cdchem {
 	cd /mnt/d/Pictures/Chem/$1
+}
+
+function cdhc {
+	cd $HOME/hyprland-configs
 }
