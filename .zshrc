@@ -229,7 +229,8 @@ function cdcvb {
 }
 
 function cdnc {
-	cd /mnt/d/VirtualBox/Shared/NixOS-configs/$1
+#	cd /mnt/d/VirtualBox/Shared/NixOS-configs/$1
+	cd $CFG/niri-configs/$1
 }
 
 function cdrec {
@@ -245,5 +246,17 @@ function cdchem {
 }
 
 function cdhc {
-	cd $HOME/hyprland-configs
+	cd $CFG/hyprland-configs
 }
+
+function cdphd {
+	cd $HOME/PhD/$1
+}
+
+function vnc {
+	vim $HOME/.config/niri/config.kdl
+}
+
+function cdpw {
+	cd $HOME/Pictures/Wallpapers/$1
+}	
