@@ -260,3 +260,43 @@ function vnc {
 function cdpw {
 	cd $HOME/Pictures/Wallpapers/$1
 }	
+
+function vat {
+	vim $HOME/.config/alacritty/alacritty.toml
+}
+
+if ! `mountpoint -q /wind`; then
+	sudo mount /dev/sdc6 /wind
+fi
+
+if ! `mountpoint -q /winc`; then
+	sudo mount /dev/sdc4 /winc
+fi
+if ! `mountpoint -q /data`; then
+	sudo mount /dev/sdd1 /data
+fi
+
+function mount_nixos {
+	if ! `mountpoint -q /nixos`; then
+		sudo mount /dev/sda2 /nixos
+	else
+		echo "Already mounted!"
+	fi
+}
+
+
+function vst {
+	vim $HOME/GitHub/mine/config/hyprland-configs/style.css
+}
+
+function vcf {
+	vim /nixos$HOME/NixOS-configs/configuration.nix
+}
+
+function vhcf {
+	vim /nixos$HOME/NixOS-configs/hardware-configuration.nix
+}
+
+function vho {
+	vim /nixos$HOME/NixOS-configs/home.nix
+}
