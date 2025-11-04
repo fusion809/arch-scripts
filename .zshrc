@@ -300,3 +300,7 @@ function vhcf {
 function vho {
 	vim /nixos$HOME/NixOS-configs/home.nix
 }
+
+function cdnx {
+	cd /nixos$HOME/NixOS-configs
+}
