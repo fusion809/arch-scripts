@@ -6,6 +6,13 @@ alias pacman_cache_size=pcas
 
 function pacup {
     sudo pacman -Syu --noconfirm
+    if `which hyprland &> /dev/null`; then
+	hypVer=$(hyprland --version | head -n 1 | cut -d ' ' -f 2)
+	oldVer=$(cat $HOME/.cache/hyprland-version)
+	if [[ $hypVer != $oldVer ]]; then
+		hyprpm update
+	fi
+   fi
 }
 
 function pacin {
